@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/wig/RoboTreasure/rt_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wig/RoboTreasure/rt_ws/install -G Unix Makefiles
