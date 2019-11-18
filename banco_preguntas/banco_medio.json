@@ -1,5 +1,5 @@
 {
-	"sist_oseo" : [  
+	"sist_oseo" :   
 		
 			{ "cantidad" : [
 				
@@ -33,7 +33,9 @@
 										"Adultez" ,
 										"Vejez" ] ,
 		
-							"correct" : 0 } ] ,
+							"correct" : 0 } 
+									
+										] ,
 
 
 				"reconocer" : [
@@ -57,7 +59,32 @@
 										"Pelvis" ,
 										"Pulmón" ] ,
 
-							"correct" : 3 } ] ,
+							"correct" : 3 } ,
+
+
+						{ "question" : "El(los) hueso(s) que protege(n) al corazón y los pulmones son: " ,
+
+							"content" :
+								[ "Cráneo" ,
+									"Costillas" ,
+									"Húmero" ,
+									"Fémur y Tibia" ] ,
+
+							"correct" : 1 } ,
+
+
+						{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
+
+							"content" :
+								[ "Cráneo" ,
+									"Esternón" ,
+									"Cúbito" ,
+									"Pelvis" ] ,
+		
+							"correct" : 0 } 
+
+									] 
+								},
 
 
 
