@@ -9,4 +9,18 @@ sist oseo:
 		6. el _______ protege el cerebro y los ojos de accidentes y golpes
 		7. la _______ da soporte al cuerpo humano
 		8. los huesos que protegen el corazon y los pulmones son:
-		9. 
+
+musculos:
+	reconocer musculos:
+		9. los musculos encargados de mover los brazos son:
+		10. los musculos encargados de mover las piernas son:
+		11. los musculos que permiten juntar los brazos son:
+		12. los musculos que permiten flectar el tronco son:
+
+sist nervioso:
+	reconocer:
+		13. como se divide el sistema nervioso?
+
+alcohol:
+	reconocer:
+		14. cual NO es un efecto de consumir alcohol en exceso?
