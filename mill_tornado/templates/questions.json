@@ -5,12 +5,22 @@
 		        {
 		            "question" : "In what children's game are participants chased by someone designated \"It\"?",
 		            "content" : [
-		                "Tag",
+		                "2",
 		                "Simon Says",
 		                "Charades",
 		                "Hopscotch"
 		            ],
 		            "correct" : 0
+		        },
+		        {
+		            "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?",
+		            "content" : [
+		                "157",
+		                "206",
+		                "302",
+		                "291"
+		            ],
+		            "correct" : 1
 		        },
 		        {
 		            "question" : "On a radio, stations are changed by using what control?",
