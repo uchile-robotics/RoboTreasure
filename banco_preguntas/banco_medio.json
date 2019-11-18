@@ -1,60 +1,60 @@
 {
 	"sist_oseo" : [  [
 
-			{ "pregunta" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+			{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
 
-				"alternativas" : 
+				"content" : 
 						[ "157" ,
 							"206" ,
 							"302" ,
 							"291" ] ,
 
-				"correcta" : 1 } ,
+				"correct" : 1 } ,
 
 
-			{ "pregunta" : "El cuerpo humano en etapa adulta está formado por: " ,
+			{ "question" : "El cuerpo humano en etapa adulta está formado por: " ,
 				
-				"alternativas" : 
+				"content" : 
 						[ "206" ,
 							"532" ,
 							"105" ,
 							"309" ] ,
 			
-				"correcta" : 0 } ,
+				"correct" : 0 } ,
 
 
-			{ "pregunta" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
+			{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
 
-				"alternativas" : 
+				"content" : 
 						[ "Niñez" ,
 							"Adolescencia" ,
 							"Adultez" ,
 							"Vejez" ] ,
 		
-				"correcta" : 0 } ] ,
+				"correct" : 0 } ] ,
 
 
 		[
-			{ "pregunta" : "¿Cuál de los siguientes es un hueso?" ,
+			{ "question" : "¿Cuál de los siguientes es un hueso?" ,
 			
-				"alternativas" : 
+				"content" : 
 						[ "Estómago" ,
 							"Cerebro" ,
 							"Fémur" ,
 							"Corazón" ] ,
 			
-				"correcta" : 2 } ,
+				"correct" : 2 } ,
 
 
-			{ "pregunta" : "¿Cuál de los siguientes NO es un hueso?" ,
+			{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
 
-				"alternativas" :
+				"content" :
 						[ "Costilla" ,
 							"Cráneo" ,
 							"Pelvis" ,
 							"Pulmón" ] ,
 
-				"correcta" : 3 } ]
+				"correct" : 3 } ]
 
 
 
