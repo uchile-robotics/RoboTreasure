@@ -1,7 +1,39 @@
 {
-	"sist_oseo" : [  ] ,
-	"musculos" : [  ] ,
-	"sist_nervioso" : [  ] ,
-	"alcohol" : [  ] 
+	"sist_oseo" : [  [
+			{ "pregunta" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+
+				"alternativas" : 
+						[ "157" ,
+							"206" ,
+							"302" ,
+							"291" ] ,
+
+				"correcta" : 1 }				
+
+
+
+
+							]	] ,
+
+	"musculos" : [ 
+
+
+
+
+							 	] ,
+
+	"sist_nervioso" : [
+
+
+
+
+										] ,
+
+	"alcohol" : [
+
+
+
+
+							] 
 } 
 
