@@ -72,7 +72,7 @@
 
 							"correct" : 1 } ,
 
-
+						
 						{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
 
 							"content" :
@@ -83,30 +83,105 @@
 		
 							"correct" : 0 } 
 
-									] 
-								},
-
-
-
-	"musculos" : [ 
+										] 
+		},
 
 
 
 
-							 	] ,
+	"musculos" : 
+				
+		{ "reconocer" : [
+										
+						{ "question" : "Los músculos encargados de mover los brazos son: " ,
+	
+							"content" : 
+								[ "Pectorales" ,
+				 					"Abdominales" ,
+									"Cuádriceps y Gemelos" ,
+									"Bíceps y Tríceps" ] ,
+		
+							"correct" : 3 } ,
 
-	"sist_nervioso" : [
+
+						{ "question" : "Los músculos encargados de mover las piernas son: " ,
+	
+							"content" : 
+								[ "Pectorales" ,
+				 					"Abdominales" ,
+									"Cuádriceps y Gemelos" ,
+									"Bíceps y Tríceps" ] ,
+		
+							"correct" : 2 } ,
+
+
+						{ "question" : "Los músculos que permiten juntar los brazos son: " ,
+	
+							"content" : 
+								[ "Pectorales" ,
+				 					"Abdominales" ,
+									"Cuádriceps y Gemelos" ,
+									"Bíceps y Tríceps" ] ,
+		
+							"correct" : 0 } ,
+
+
+						{ "question" : "Los músculos que permiten flectar el tronco son: " ,
+	
+							"content" : 
+								[ "Pectorales" ,
+				 					"Abdominales" ,
+									"Cuádriceps y Gemelos" ,
+									"Bíceps y Tríceps" ] ,
+		
+							"correct" : 1 } 
+								
+										]
+		} ,
 
 
 
 
-										] ,
 
-	"alcohol" : [
+	"sist_nervioso" : 
+		
+		{ "reconocer" : [
+			
+						{ "question" : "¿Cómo se divide el Sistema Nervioso?" ,
+
+							"content" : 
+								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
+									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
+
+							"correct" : 3 }
+
+								
+											]
+		} ,
 
 
 
 
-							] 
+
+	"alcohol" : 
+
+		{ "reconocer" : [
+
+						{ "question" : "¿Cuál de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
+
+							"content" :
+								[ "Afectar los movimientos del cuerpo" ,
+									"Perder el conocimiento" ,
+									"Provocar ceguera" ,
+									"Dificultar la respiración" ] ,
+
+							"correct" : 2 }
+
+										]
+		} 
+
+
 } 
 
