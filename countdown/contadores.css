@@ -1,0 +1,68 @@
+
+body{
+    background: #1578 ;
+}
+
+.container{
+    background: white ;
+    width: 300px;
+    height: 110px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding:5px 0 0 0; 
+}
+
+#display{
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    font-family: arial;
+}
+
+#startStop{
+    border-color: lightgray;
+    width:300px;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+}
+
+#Correcto{
+    background-color: limegreen;
+    border-color: limegreen;
+    width:148px;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+}
+
+#Incorrecto{
+    background-color: crimson;
+    border-color: crimson;
+    width:148px;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+}
+
+#estado{
+    text-align:center;
+    font-size:30px;
+    font-family: verdana;
+    padding:0px 0px;
+}
+
+#pregunta{
+    text-align:center;
+    font-size:30px;
+    font-family: verdana;
+    padding:0px 0px;
+}
+
+#puntaje{
+    text-align: center;
+    font-family: verdana;
+    font-size:30px;
+    padding-top: 220px
+}
