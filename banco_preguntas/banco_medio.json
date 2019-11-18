@@ -1,68 +1,65 @@
 {
-	"sist_oseo" : [  [
-
-			{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
-
-				"content" : 
-						[ "157" ,
-							"206" ,
-							"302" ,
-							"291" ] ,
-
-				"correct" : 1 } ,
-
-
-			{ "question" : "El cuerpo humano en etapa adulta está formado por: " ,
-				
-				"content" : 
-						[ "206" ,
-							"532" ,
-							"105" ,
-							"309" ] ,
-			
-				"correct" : 0 } ,
-
-
-			{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
-
-				"content" : 
-						[ "Niñez" ,
-							"Adolescencia" ,
-							"Adultez" ,
-							"Vejez" ] ,
+	"sist_oseo" : [  
 		
-				"correct" : 0 } ] ,
+			{ "cantidad" : [
+				
+						{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
 
-
-		[
-			{ "question" : "¿Cuál de los siguientes es un hueso?" ,
+							"content" : 
+									[ "157" ,
+										"206" ,
+										"302" ,
+										"291" ] ,
 			
-				"content" : 
-						[ "Estómago" ,
-							"Cerebro" ,
-							"Fémur" ,
-							"Corazón" ] ,
+							"correct" : 1 } ,
 			
-				"correct" : 2 } ,
+			
+						{ "question" : "El cuerpo humano en etapa adulta está formado por: " ,
+				
+							"content" : 
+									[ "206" ,
+										"532" ,
+										"105" ,
+										"309" ] ,
+				
+							"correct" : 0 } ,
 
 
-			{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
-
-				"content" :
-						[ "Costilla" ,
-							"Cráneo" ,
-							"Pelvis" ,
-							"Pulmón" ] ,
-
-				"correct" : 3 } ]
-
-
+						{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
+		
+							"content" : 
+									[ "Niñez" ,
+										"Adolescencia" ,
+										"Adultez" ,
+										"Vejez" ] ,
+		
+							"correct" : 0 } ] ,
 
 
+				"reconocer" : [
+		
+						{ "question" : "¿Cuál de los siguientes es un hueso?" ,
+			
+							"content" : 
+									[ "Estómago" ,
+										"Cerebro" ,
+										"Fémur" ,
+										"Corazón" ] ,
+			
+							"correct" : 2 } ,
 
 
+						{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
 
-							  ] ,
+							"content" :
+									[ "Costilla" ,
+										"Cráneo" ,
+										"Pelvis" ,
+										"Pulmón" ] ,
+
+							"correct" : 3 } ] ,
+
+
 
 	"musculos" : [ 
 
