@@ -24,8 +24,3 @@ sist nervioso:
 alcohol:
 	reconocer:
 		14. cual NO es un efecto de consumir alcohol en exceso?
-
-
-
-
-
