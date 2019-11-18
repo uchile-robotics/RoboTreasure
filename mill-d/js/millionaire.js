@@ -18,7 +18,7 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
 	i = parseInt(n = Math.abs(+n || 0).toFixed(fixed)) + "", 
 	j = (j = i.length) > 3 ? j % 3 : 0;
 	return negative + (j ? i.substr(0, j) +
-		 breakDelim : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + breakDelim) +
+		 breakDelim : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "1" + breakDelim) +
 		  (fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
@@ -75,27 +75,6 @@ var MillionaireModel = function(data) {
  		return self.questions[self.level() - 1].content[index];
  	}
 
- 	// Uses the fifty-fifty option of the user
- 	self.fifty = function(item, event) {
- 		if(self.transitioning)
- 			return;
- 		$(event.target).fadeOut('slow');
- 		var correct = this.questions[self.level() - 1].correct;
- 		var first = (correct + 1) % 4;
- 		var second = (first + 1) % 4;
- 		if(first == 0 || second == 0) {
- 			$("#answer-one").fadeOut('slow');
- 		}
- 		if(first == 1 || second == 1) {
- 			$("#answer-two").fadeOut('slow');
- 		}
- 		if(first == 2 || second == 2) {
- 			$("#answer-three").fadeOut('slow');
- 		}
- 		if(first == 3 || second == 3) {
- 			$("#answer-four").fadeOut('slow');
- 		}
- 	}
 
  	// Fades out an option used if possible
  	self.fadeOutOption = function(item, event) {
@@ -131,6 +110,13 @@ var MillionaireModel = function(data) {
 	 					$("#game-over").fadeIn('slow');
 	 				});
  				} else {
+					question_sec = 15;
+					question_seconds = question_sec + 1
+					prep_seconds = 3;
+					document.getElementById("display").innerHTML = "03s";
+					window.clearInterval(interval);
+					interval = window.setInterval(stopWatch, 1000);
+					
  					self.level(self.level() + 1);
  					$("#" + elm).css('background', 'none');
 			 		$("#answer-one").show();
@@ -154,6 +140,13 @@ var MillionaireModel = function(data) {
 	 					$("#game-over").fadeIn('slow');
 	 				});
  				} else {
+					question_sec = 15;
+					question_seconds = question_sec + 1
+					prep_seconds = 3;
+					document.getElementById("display").innerHTML = "03s";
+					window.clearInterval(interval);
+					interval = window.setInterval(stopWatch, 1000);
+					
  					self.level(self.level() + 1);
  					$("#" + elm).css('background', 'none');
 			 		$("#answer-one").show();
@@ -184,5 +177,55 @@ $(document).ready(function() {
 		ko.applyBindings(new MillionaireModel(data.games[index]));
 		startSound('background', true);
 		$("#game").fadeIn('slow');
+		interval = window.setInterval(stopWatch, 1000);
 	});
 });
+
+
+//Countdown
+var question_sec = 15
+var question_seconds = 1 + question_sec;
+var prep_seconds = 3;
+var display_seconds = 0;
+var question_num = 0;
+var states = ["Tiempo restante:","Ya!","Listos","Preparados"];
+var interval = null;
+var status = "stopped";
+var answer_time = 0;
+var score = 0;
+
+function stopWatch(){
+	if(prep_seconds > 0){
+		prep_seconds--;
+	}   
+    if(prep_seconds < 10){
+        display_seconds = "0" + prep_seconds.toString() + "s";
+		document.getElementById("display").innerHTML = display_seconds;
+    }
+	document.getElementById("state").innerHTML = states[prep_seconds]
+    if(prep_seconds  === 0){
+		if(question_seconds > 0){
+			question_seconds--;
+		}   
+		if(question_seconds < 10){
+			display_seconds = "0" + question_seconds.toString() + "s";	
+		}	
+		else{
+			display_seconds = question_seconds + "s";
+		}	
+		document.getElementById("display").innerHTML = display_seconds;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
