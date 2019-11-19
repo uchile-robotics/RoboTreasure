@@ -1,43 +1,55 @@
 sist oseo:
+
 	cantidad: 206, son mas en la niñez
-		1. cuantos huesos tiene el cuerpo humano? 
-		2. el cuerpo humano esta formado por ________ huesos
-		3. en que etapa de la vida es que el cuerpo humano tiene mas huesos?
+		(1. cuántos huesos tiene el cuerpo humano? 
+		2. el cuerpo humano está formado por ________ huesos)
+		(3. indica la etapa de la vida en que el cuerpo humano tiene más huesos
+		4. en qué etapa de la vida es que el cuerpo humano tiene más huesos?)
+
 	reconocer:
-		4. cual de estos es un hueso?
-		5. cual de esto NO es un hueso?
-		6. el _______ protege el cerebro y los ojos de accidentes y golpes
-		7. la _______ da soporte al cuerpo humano
-		8. los huesos que protegen el corazon y los pulmones son:
-		9. cual es la funcion del sistema oseo?
+		5. cuál de estos es un hueso?
+		6. cuál de esto NO es un hueso?
+		(7. el _______ protege el cerebro y los ojos de accidentes y golpes
+		8. cual(es) es(son) el(los) hueso(s) encargado(s) de proteger el cerebro y los ojos?)
+		9. la _______ da soporte al cuerpo humano
+		10. los huesos que protegen el corazón y los pulmones son:
+		11. cuál es la función del sistema oseo?
+
 
 musculos:
+
 	reconocer:
-		10. los musculos encargados de mover los brazos son:
-		11. los musculos encargados de mover las piernas son:
-		12. los musculos que permiten juntar los brazos son:
-		13. los musculos que permiten flectar el tronco son:
+		12. los músculos encargados de mover los brazos son:
+		13. los músculos encargados de mover las piernas son:
+		14. los músculos que permiten juntar los brazos son:
+		15. los músculos que permiten flectar el tronco son:
+
 	movimiento:
-		14. los __________ unen a los huesos en cada articulacion
-		15. los musculos y los huesos se unen gracias a los __________
+		16. los __________ unen a los huesos en cada articulación
+		17. los músculos y los huesos se unen gracias a los __________
+
 	cuidados:
-		16. cuanto tiempo diario minimo se recomienda realizar actividad fisica?
-		17. 'Se refiere a la poca actividad fisica, provocando sobrepeso e incluso obesidad' esta definicion corresponde a:
+		18. cuánto tiempo diario mínimo se recomienda realizar actividad física?
+		19. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a:
 
 
 sist nervioso:
+
 	reconocer:
-		18. como se divide el sistema nervioso?
-		19. cuales son los componentes del sistema nervioso?
-	estimulos:
-		20. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definicion corresponde a:
-		21. recibimos los estimulos del exterior a traves de:
-		22. los reflejos son controlados por:
-		23. los actos voluntarios son controlados por:
+		20. cómo se divide el sistema nervioso?
+		21. cuáles son los componentes del sistema nervioso?
+
+	estímulos:
+		22. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a:
+		23. recibimos los estímulos del exterior a traves de:
+		24. los reflejos son controlados por:
+		25. los actos voluntarios son controlados por:
+
 
 alcohol:
+
 	reconocer:
-		24. cual NO es un efecto de consumir alcohol en exceso?
-		25. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definicion corresponde a:
+		26. cuál NO es un efecto de consumir alcohol en exceso?
+		27. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a:
 
 
