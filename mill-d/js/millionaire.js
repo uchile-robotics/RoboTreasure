@@ -63,6 +63,8 @@ var MillionaireModel = function(data) {
  	this.usedFifty = new ko.observable(false);
  	this.usedPhone = new ko.observable(false);
  	this.usedAudience = new ko.observable(false);
+	
+	self.second_try = false;
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
@@ -93,7 +95,36 @@ var MillionaireModel = function(data) {
  			self.rightAnswer(elm);
  		} else {
  			self.wrongAnswer(elm);
- 		}
+		}			
+ 	}
+	
+	self.timeOut = function() {
+		$("#container").fadeOut('fast', function() {
+ 			startSound('wrongsound', false);
+ 			$("#container").css('background', 'red').fadeIn('slow', function() {
+ 				if(self.level() + 1 > 15) {
+	 				$("#game").fadeOut('slow', function() {
+	 					$("#game-over").html('You Win!');
+	 					$("#game-over").fadeIn('slow');
+	 				});
+ 				} else {
+					question_sec = 5;
+					question_seconds = question_sec + 1
+					prep_seconds = 3;
+					document.getElementById("display").innerHTML = "03s";
+					window.clearInterval(interval);
+					interval = window.setInterval(stopWatch, 1000);
+					
+ 					self.level(self.level() + 1);
+ 					$("#container").css('background', 'white');
+			 		$("#answer-one").show();
+			 		$("#answer-two").show();
+			 		$("#answer-three").show();
+			 		$("#answer-four").show();
+			 		self.transitioning = false;
+ 				}
+ 			});
+ 		});
  	}
 
  	// Executes the proceedure of a correct answer guess, moving
@@ -110,7 +141,7 @@ var MillionaireModel = function(data) {
 	 					$("#game-over").fadeIn('slow');
 	 				});
  				} else {
-					question_sec = 15;
+					question_sec = 5;
 					question_seconds = question_sec + 1
 					prep_seconds = 3;
 					document.getElementById("display").innerHTML = "03s";
@@ -134,30 +165,42 @@ var MillionaireModel = function(data) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('wrongsound', false);
  			$("#" + elm).css('background', 'red').slideDown('slow', function() {
- 				if(self.level() + 1 > 15) {
-	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('You Win!');
-	 					$("#game-over").fadeIn('slow');
-	 				});
- 				} else {
-					question_sec = 15;
-					question_seconds = question_sec + 1
-					prep_seconds = 3;
-					document.getElementById("display").innerHTML = "03s";
-					window.clearInterval(interval);
-					interval = window.setInterval(stopWatch, 1000);
-					
- 					self.level(self.level() + 1);
- 					$("#" + elm).css('background', 'none');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
-			 		self.transitioning = false;
- 				}
+								
+				if(self.level() + 1 > 15) {
+					if(self.second_try){
+						$("#game").fadeOut('slow', function() {
+							$("#game-over").html('You Win!');
+							$("#game-over").fadeIn('slow');
+						});
+					}
+				
+				} else {
+						question_sec = 5;
+						question_seconds = question_sec + 1
+						prep_seconds = 3;
+						document.getElementById("display").innerHTML = "03s";
+						window.clearInterval(interval);
+						interval = window.setInterval(stopWatch, 1000);
+					if(self.second_try){						
+						self.level(self.level() + 1);
+						$("#" + elm).css('background', 'none');
+						$("#answer-one").show();
+						$("#answer-two").show();
+						$("#answer-three").show();
+						$("#answer-four").show();
+						self.second_try = false;						
+					}
+
+					else{
+						self.second_try = true;
+					}
+					$("#" + elm).css('background', 'none');
+					self.transitioning = false;
+				}
  			});
  		});
  	}
+	
 
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
@@ -165,6 +208,8 @@ var MillionaireModel = function(data) {
 	}
 };
 
+
+var myModel;
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
@@ -174,7 +219,8 @@ $(document).ready(function() {
 			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
 		}
 		var index = 0;
-		ko.applyBindings(new MillionaireModel(data.games[index]));
+		myModel = new MillionaireModel(data.games[index]);
+		ko.applyBindings(myModel);
 		startSound('background', true);
 		$("#game").fadeIn('slow');
 		interval = window.setInterval(stopWatch, 1000);
@@ -183,7 +229,7 @@ $(document).ready(function() {
 
 
 //Countdown
-var question_sec = 15
+var question_sec = 5
 var question_seconds = 1 + question_sec;
 var prep_seconds = 3;
 var display_seconds = 0;
@@ -207,12 +253,18 @@ function stopWatch(){
 		if(question_seconds > 0){
 			question_seconds--;
 		}   
+		else{
+			if(myModel.transitioning === false){
+				myModel.transitioning = true;
+				myModel.timeOut();
+			}
+		}
 		if(question_seconds < 10){
 			display_seconds = "0" + question_seconds.toString() + "s";	
 		}	
 		else{
 			display_seconds = question_seconds + "s";
-		}	
+		}
 		document.getElementById("display").innerHTML = display_seconds;
 	}
 }
