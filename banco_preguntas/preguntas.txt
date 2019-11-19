@@ -1,26 +1,37 @@
 sist oseo:
-	cantidad de huesos: 206, son mas en la niñez
+	cantidad: 206, son mas en la niñez
 		1. cuantos huesos tiene el cuerpo humano? 
 		2. el cuerpo humano esta formado por ________ huesos
 		3. en que etapa de la vida es que el cuerpo humano tiene mas huesos?
-	reconocer huesos:
+	reconocer:
 		4. cual de estos es un hueso?
 		5. cual de esto NO es un hueso?
 		6. el _______ protege el cerebro y los ojos de accidentes y golpes
 		7. la _______ da soporte al cuerpo humano
 		8. los huesos que protegen el corazon y los pulmones son:
+		9. cual es la funcion del sistema oseo?
 
 musculos:
-	reconocer musculos:
-		9. los musculos encargados de mover los brazos son:
-		10. los musculos encargados de mover las piernas son:
-		11. los musculos que permiten juntar los brazos son:
-		12. los musculos que permiten flectar el tronco son:
+	reconocer:
+		10. los musculos encargados de mover los brazos son:
+		11. los musculos encargados de mover las piernas son:
+		12. los musculos que permiten juntar los brazos son:
+		13. los musculos que permiten flectar el tronco son:
+	movimiento:
+		14. los __________ unen a los huesos en cada articulacion
+		15. los musculos y los huesos se unen gracias a los __________
+
 
 sist nervioso:
 	reconocer:
-		13. como se divide el sistema nervioso?
+		16. como se divide el sistema nervioso?
+		17. cuales son los componentes del sistema nervioso?
+	estimulos:
+		18. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definicion corresponde a:
 
 alcohol:
 	reconocer:
-		14. cual NO es un efecto de consumir alcohol en exceso?
+		19. cual NO es un efecto de consumir alcohol en exceso?
+		20. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definicion corresponde a:
+
+

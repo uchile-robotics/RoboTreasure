@@ -81,7 +81,18 @@
 									"Cúbito" ,
 									"Pelvis" ] ,
 		
-							"correct" : 0 } 
+							"correct" : 0 } ,
+
+
+						{ "question" : "¿Cuál es la función del Sistema Óseo?" ,
+
+							"content" :
+								[ "Digerir los alimentos que ingresan al cuerpo" ,
+									"Bombear sangre a todo el cuerpo" ,
+									"Recibir estímulos y dar una respuesta" ,
+									"Dar forma, soporte y protección al cuerpo" ] ,
+
+							"correct" : 3 }
 
 										] 
 		},
@@ -136,7 +147,35 @@
 		
 							"correct" : 1 } 
 								
-										]
+										] ,
+
+
+		"movimiento" : [
+										
+						{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulación' " ,
+							
+							"content" : 
+								[ "Tendones" ,
+									"Músculos" ,
+									"Ligamentos" ,
+									"Nervios" ] ,
+
+							"correct" : 2 }
+
+
+						{ "question" : "Completa: 'Los músculos y los huesos se unen gracias a los(as) _______________' " ,
+
+							"content" :
+								[ "Ligamentos" ,
+									"Nervios" ,
+									"Articulaciones" ,
+									"Tendones" ] ,
+	
+							"correct" : 3 }
+	
+										]								
+
+		
 		} ,
 
 
@@ -155,10 +194,36 @@
 									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
 									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
 
-							"correct" : 3 }
+							"correct" : 3 } ,
+
+
+						{ "question" : "¿Cuáles son los componentes del Sistema Nervioso?" ,
+
+							"content" :
+								[ "Pulmones, corazón y estómago" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
+
+							"correct" : 1 }
 
 								
-											]
+											] ,
+
+
+			"estimulos" : [
+
+						{ "question" : " 'Son señales que indican que ago ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
+
+							"content" :
+								[ "Nervios" ,
+									"Tendones" ,
+									"Estímulos" ,
+									"Sentidos" ] ,
+
+							"correct" : 2 }
+
+										]
 		} ,
 
 
@@ -177,11 +242,21 @@
 									"Provocar ceguera" ,
 									"Dificultar la respiración" ] ,
 
-							"correct" : 2 }
+							"correct" : 2 } ,
+
+
+						{ "question" : "'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica'. Esta definición corresponde a: " ,
+
+							"content" :
+								[ "Alcohol" ,
+									"Adicción" ,
+									"Estímulo" ,
+									"Neurona" ] ,
+
+							"correct" : 1 }
 
 										]
 		} 
 
 
 } 
-
