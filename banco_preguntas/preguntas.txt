@@ -1,9 +1,9 @@
 sist oseo:
-	cantidad de huesos: 206, son mas en la niñez
+	cantidad: 206, son mas en la niñez
 		1. cuantos huesos tiene el cuerpo humano? 
 		2. el cuerpo humano esta formado por ________ huesos
 		3. en que etapa de la vida es que el cuerpo humano tiene mas huesos?
-	reconocer huesos:
+	reconocer:
 		4. cual de estos es un hueso?
 		5. cual de esto NO es un hueso?
 		6. el _______ protege el cerebro y los ojos de accidentes y golpes
@@ -12,7 +12,7 @@ sist oseo:
 		9. cual es la funcion del sistema oseo?
 
 musculos:
-	reconocer musculos:
+	reconocer:
 		10. los musculos encargados de mover los brazos son:
 		11. los musculos encargados de mover las piernas son:
 		12. los musculos que permiten juntar los brazos son:
