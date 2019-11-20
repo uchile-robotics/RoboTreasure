@@ -10,50 +10,57 @@ sist oseo:
 		4. en qué etapa de la vida es que el cuerpo humano tiene más huesos?) si
 
 	reconocer:
-		5. cuál de estos es un hueso? si
-		6. cuál de esto NO es un hueso? si
-		(7. el _______ protege el cerebro y los ojos de accidentes y golpes si
-		8. cual(es) es(son) el(los) hueso(s) encargado(s) de proteger el cerebro y los ojos?) si
-		(9. la _______ da soporte al cuerpo humano si
-		10. cual es la funcion de la pelvis?) si
-		11. los huesos que protegen el corazón y los pulmones son: si
-		12. cuál es la función del sistema oseo? si 
+		(5. cuál de estos es un hueso? si
+		6. indica cual de los siguientes es un hueso) si
+		(7. indica cual de los siguientes NO es un hueso si
+		8. cuál de esto NO es un hueso? si)
+		(9. el _______ protege el cerebro y los ojos de accidentes y golpes si
+		10. cual(es) es(son) el(los) hueso(s) encargado(s) de proteger el cerebro y los ojos?) si
+		(11. la _______ da soporte al cuerpo humano si
+		12. cual es la funcion de la pelvis?) si
+		(13. los huesos que protegen el corazón y los pulmones son: si
+		14. cuáles son los huesos que protegen al corazón y los pulmones? si
+		15. las _____________ protegen al corazón y los pulmones) si
+		(16. cuál es la función del sistema oseo? si 
+		17. La función del sistema óseo es:) si
 
 
 musculos:
 
 	reconocer:
-		13. los músculos encargados de mover los brazos son:
-		14. los músculos encargados de mover las piernas son:
-		15. los músculos que permiten juntar los brazos son:
-		16. los músculos que permiten flectar el tronco son:
+		18. los músculos encargados de mover los brazos son:
+		19. los músculos encargados de mover las piernas son:
+		20. los músculos que permiten juntar los brazos son:
+		21. los músculos que permiten flectar el tronco son:
 
 	movimiento:
-		17. los __________ unen a los huesos en cada articulación si
-		18. los músculos y los huesos se unen gracias a los __________ si
+		(22. los __________ unen a los huesos en cada articulación si
+		23. cómo se unen los huesos en cada articulación?) si
+		(24. a través de qué se unen los músculos y los huesos? si
+		25. los músculos y los huesos se unen gracias a los __________) si
 
 	cuidados:
-		19. cuánto tiempo diario mínimo se recomienda realizar actividad física? si
-		20. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a: si
+		(26. cuánto tiempo diario mínimo se recomienda realizar actividad física? si
+		27. las personas deberian realizar minimo ____________ diarios de actividad física) si
+		28. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a: si
 
 
 sist nervioso: 
 
 	reconocer:
-		21. cómo se divide el sistema nervioso? si
-		22. cuáles son los componentes del sistema nervioso? si
-
+		29. cómo se divide el sistema nervioso? si
+		30. cuáles son los componentes del sistema nervioso? si
 	estímulos:
-		23. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
-		24. recibimos los estímulos del exterior a traves de: si
-		25. los reflejos son controlados por: si
-		26. los actos voluntarios son controlados por: si
+		31. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
+		32. recibimos los estímulos del exterior a traves de: si
+		33. los reflejos son controlados por: si
+		34. los actos voluntarios son controlados por: si
 
 
 alcohol:
 
 	reconocer:
-		27. cuál NO es un efecto de consumir alcohol en exceso? si
-		28. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
+		35. cuál NO es un efecto de consumir alcohol en exceso? si
+		36. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
 
 
