@@ -22,6 +22,8 @@ class MainHandler(tornado.web.RequestHandler):
         #self.set_header("Access-Control-Allow-Origin", "*")
         self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
         self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.2:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.1:8888/")
         self.set_header("Access-Control-Allow-Headers", "x-requested-with")
         self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
 
