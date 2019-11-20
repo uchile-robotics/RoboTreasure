@@ -139,11 +139,13 @@ var MillionaireModel = function(data) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
  			$("#" + elm).css('background', 'green').slideDown('slow', function() {
- 				self.money($(".active").data('amt'));
+ 				self.money(self.money()+10+question_seconds);
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('Clave:');
-	 					$("#game-over").fadeIn('slow');
+	 					$("#hint").html('Pista: '+hints[stage - 1]);
+	 					$("#hint").fadeIn('slow');
+						$("#key").html('Clave: '+keys[stage - 1]);
+	 					$("#key").fadeIn('slow');
 	 				});
  				} else {
 					question_seconds = question_sec + 1
@@ -173,8 +175,10 @@ var MillionaireModel = function(data) {
 				if(self.level() + 1 > 3) {
 					if(self.second_try){
 						$("#game").fadeOut('slow', function() {
-							$("#game-over").html('You Win!');
-							$("#game-over").fadeIn('slow');
+							$("#hint").html('Pista: '+hints[stage - 1]);
+							$("#hint").fadeIn('slow');
+							$("#key").html('Clave: '+keys[stage - 1]);
+							$("#key").fadeIn('slow');
 						});
 					}
 				
@@ -207,7 +211,7 @@ var MillionaireModel = function(data) {
 
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
-	    return self.money().money(2, '.', ',');
+	    return self.money().money(0, '', ',');
 	}
 };
 
