@@ -68,7 +68,7 @@ var MillionaireModel = function(data) {
  	this.usedPhone = new ko.observable(false);
  	this.usedAudience = new ko.observable(false);
 	
-	self.second_try = false;
+	self.tries = 0;
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
@@ -121,6 +121,7 @@ var MillionaireModel = function(data) {
 					interval = window.setInterval(stopWatch, 1000);
 					
  					self.level(self.level() + 1);
+ 					self.tries = 0;
  					$("#container").css('background', 'white');
 			 		$("#answer-one").show();
 			 		$("#answer-two").show();
@@ -139,7 +140,7 @@ var MillionaireModel = function(data) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
  			$("#" + elm).css('background', 'green').slideDown('slow', function() {
- 				self.money(self.money()+10+question_seconds);
+ 				self.money(self.money() + 10 - 2*self.tries + question_seconds);
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
 	 					$("#hint").html('Pista: '+hints[stage - 1]);
@@ -155,6 +156,7 @@ var MillionaireModel = function(data) {
 					interval = window.setInterval(stopWatch, 1000);
 					
  					self.level(self.level() + 1);
+ 					self.tries = 0;
  					$("#" + elm).css('background', 'none');
 			 		$("#answer-one").show();
 			 		$("#answer-two").show();
@@ -173,7 +175,7 @@ var MillionaireModel = function(data) {
  			$("#" + elm).css('background', 'red').slideDown('slow', function() {
 								
 				if(self.level() + 1 > 3) {
-					if(self.second_try){
+					if(self.tries >= 1){
 						$("#game").fadeOut('slow', function() {
 							$("#hint").html('Pista: '+hints[stage - 1]);
 							$("#hint").fadeIn('slow');
@@ -188,18 +190,18 @@ var MillionaireModel = function(data) {
 						document.getElementById("display").innerHTML = "03s";
 						window.clearInterval(interval);
 						interval = window.setInterval(stopWatch, 1000);
-					if(self.second_try){						
+					if(self.tries >= 2){						
 						self.level(self.level() + 1);
 						$("#" + elm).css('background', 'none');
 						$("#answer-one").show();
 						$("#answer-two").show();
 						$("#answer-three").show();
 						$("#answer-four").show();
-						self.second_try = false;						
+						self.tries = 0;						
 					}
 
 					else{
-						self.second_try = true;
+						self.tries += 1;
 					}
 					$("#" + elm).css('background', 'none');
 					self.transitioning = false;
