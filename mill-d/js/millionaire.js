@@ -22,6 +22,9 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
 		  (fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
+var question_sec = 5;
+var stage = 1;
+
 /**
 * Plays a sound via HTML5 through Audio tags on the page
 *
@@ -44,6 +47,7 @@ startSound = function(id, loop) {
 */
 var MillionaireModel = function(data) {
 	var self = this;
+	
 
 	// The 15 questions of this game
     this.questions = data.questions;
@@ -102,13 +106,14 @@ var MillionaireModel = function(data) {
 		$("#container").fadeOut('fast', function() {
  			startSound('wrongsound', false);
  			$("#container").css('background', 'red').fadeIn('slow', function() {
- 				if(self.level() + 1 > 15) {
+ 				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('You Win!');
-	 					$("#game-over").fadeIn('slow');
+	 					$("#hint").html('Pista: '+hints[stage - 1]);
+	 					$("#hint").fadeIn('slow');
+						$("#key").html('Clave: '+keys[stage - 1]);
+	 					$("#key").fadeIn('slow');
 	 				});
  				} else {
-					question_sec = 5;
 					question_seconds = question_sec + 1
 					prep_seconds = 3;
 					document.getElementById("display").innerHTML = "03s";
@@ -135,13 +140,12 @@ var MillionaireModel = function(data) {
  			startSound('rightsound', false);
  			$("#" + elm).css('background', 'green').slideDown('slow', function() {
  				self.money($(".active").data('amt'));
- 				if(self.level() + 1 > 15) {
+ 				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('You Win!');
+	 					$("#game-over").html('Clave:');
 	 					$("#game-over").fadeIn('slow');
 	 				});
  				} else {
-					question_sec = 5;
 					question_seconds = question_sec + 1
 					prep_seconds = 3;
 					document.getElementById("display").innerHTML = "03s";
@@ -166,7 +170,7 @@ var MillionaireModel = function(data) {
  			startSound('wrongsound', false);
  			$("#" + elm).css('background', 'red').slideDown('slow', function() {
 								
-				if(self.level() + 1 > 15) {
+				if(self.level() + 1 > 3) {
 					if(self.second_try){
 						$("#game").fadeOut('slow', function() {
 							$("#game-over").html('You Win!');
@@ -175,7 +179,6 @@ var MillionaireModel = function(data) {
 					}
 				
 				} else {
-						question_sec = 5;
 						question_seconds = question_sec + 1
 						prep_seconds = 3;
 						document.getElementById("display").innerHTML = "03s";
@@ -210,6 +213,8 @@ var MillionaireModel = function(data) {
 
 
 var myModel;
+var keys = [];
+var hints = [];
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
@@ -225,11 +230,13 @@ $(document).ready(function() {
 		$("#game").fadeIn('slow');
 		interval = window.setInterval(stopWatch, 1000);
 	});
+	$.getJSON("keys_hints.json", function(keys_hints) {
+		keys = keys_hints.keys; 
+		hints = keys_hints.hints; 
+	});
 });
 
-
 //Countdown
-var question_sec = 5
 var question_seconds = 1 + question_sec;
 var prep_seconds = 3;
 var display_seconds = 0;
