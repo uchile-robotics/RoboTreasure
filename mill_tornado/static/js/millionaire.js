@@ -121,12 +121,8 @@ var MillionaireModel = function(data) {
 					interval = window.setInterval(stopWatch, 1000);
 					
  					self.level(self.level() + 1);
- 					self.tries = 0;
  					$("#container").css('background', 'white');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
+			 		self.resetAnswers();
 			 		self.transitioning = false;
  				}
  			});
@@ -156,12 +152,7 @@ var MillionaireModel = function(data) {
 					interval = window.setInterval(stopWatch, 1000);
 					
  					self.level(self.level() + 1);
- 					self.tries = 0;
- 					$("#" + elm).css('background', 'none');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
+ 					self.resetAnswers();
 			 		self.transitioning = false;
  				}
  			});
@@ -185,32 +176,35 @@ var MillionaireModel = function(data) {
 					}
 				
 				} else {
-						question_seconds = question_sec + 1
-						prep_seconds = 3;
-						document.getElementById("display").innerHTML = "03s";
-						window.clearInterval(interval);
-						interval = window.setInterval(stopWatch, 1000);
-					if(self.tries >= 2){						
+					question_seconds = question_sec + 1
+					prep_seconds = 3;
+					document.getElementById("display").innerHTML = "03s";
+					window.clearInterval(interval);
+					interval = window.setInterval(stopWatch, 1000);
+					if(self.tries >= 1){						
 						self.level(self.level() + 1);
-						$("#" + elm).css('background', 'none');
-						$("#answer-one").show();
-						$("#answer-two").show();
-						$("#answer-three").show();
-						$("#answer-four").show();
-						self.tries = 0;						
+						self.resetAnswers();				
 					}
-
-					else{
+					else
 						self.tries += 1;
-					}
-					$("#" + elm).css('background', 'none');
+					
 					self.transitioning = false;
 				}
  			});
  		});
  	}
 	
-
+	self.resetAnswers = function(){
+		$("#answer-one").css('background', 'none');
+		$("#answer-two").css('background', 'none');
+		$("#answer-three").css('background', 'none');
+		$("#answer-four").css('background', 'none');
+		$("#answer-one").show();
+		$("#answer-two").show();
+		$("#answer-three").show();
+		$("#answer-four").show();
+		self.tries = 0;	
+	}
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
 	    return self.money().money(0, '', ',');
@@ -281,16 +275,3 @@ function stopWatch(){
 		document.getElementById("display").innerHTML = display_seconds;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
