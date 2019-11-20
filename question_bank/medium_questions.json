@@ -203,46 +203,46 @@
 				
 		{ "reconocer" : [
 										
-					[	{ "question" : "Los músculos encargados de mover los brazos son: " ,
+					[	{ "question" : "¿Qué son los músculos?" ,
 	
 							"content" : 
-								[ "Pectorales" ,
-				 					"Abdominales" ,
-									"Cuádriceps y Gemelos" ,
-									"Bíceps y Tríceps" ] ,
+								[ "Órganos que digieren alimentos" ,
+				 					"Receptores de estímulos" ,
+									"Estructuras duras que protegen el cuerpo" ,
+									"Órganos blandos que se contraen y relajan" ] ,
 		
 							"correct" : 3 } ],
 
 
-					[	{ "question" : "Los músculos encargados de mover las piernas son: " ,
+					[	{ "question" : "¿Cuál es la función de los músculos?" ,
 	
 							"content" : 
-								[ "Pectorales" ,
-				 					"Abdominales" ,
-									"Cuádriceps y Gemelos" ,
-									"Bíceps y Tríceps" ] ,
+								[ "Proteger al cuerpo de los daños" ,
+									"Interpretar los estímulos del exterior" ,
+									"Permitir la movilidad de los huesos" ,
+									"Dar estabilidad al cuerpo" ] ,
 		
 							"correct" : 2 } ],
 
 
-					[	{ "question" : "Los músculos que permiten juntar los brazos son: " ,
+					[	{ "question" : "El Sistema Locomotor se compone por: " ,
 	
 							"content" : 
-								[ "Pectorales" ,
-				 					"Abdominales" ,
-									"Cuádriceps y Gemelos" ,
-									"Bíceps y Tríceps" ] ,
+								[ "Huesos y músculos" ,
+									"Órganos y nervios" ,
+									"Cerebro y médula espinal" ,
+									"Brazos y piernas" ] ,
 		
 							"correct" : 0 } ],
 
 
-					[	{ "question" : "Los músculos que permiten flectar el tronco son: " ,
+					[	{ "question" : "¿Cuál es la función del Sistema Locomotor?" ,
 	
 							"content" : 
-								[ "Pectorales" ,
-				 					"Abdominales" ,
-									"Cuádriceps y Gemelos" ,
-									"Bíceps y Tríceps" ] ,
+								[ "Digerir los alimentos" ,
+									"Permitir el movimiento del cuerpo humano" ,
+									"Permitir la respiración" ,
+									"Intepretar estímulos del exterior" ] ,
 		
 							"correct" : 1 } ]
 								
@@ -352,6 +352,17 @@
 									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
 									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
 
+							"correct" : 3 } ,
+
+
+						{ "question" : "El Sistema Nervioso se divide en:" ,
+
+							"content" : 
+								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
+									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
+
 							"correct" : 3 } ],
 
 
@@ -442,7 +453,7 @@
 								[ "Alcohol" ,
 									"Adicción" ,
 									"Estímulo" ,
-									"Neurona" ] ,
+									"Atracción" ] ,
 
 							"correct" : 1 } ]
 

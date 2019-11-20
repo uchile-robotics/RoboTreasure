@@ -28,11 +28,11 @@ sist oseo:
 musculos:
 
 	reconocer:
-		18. los músculos encargados de mover los brazos son:
-		19. los músculos encargados de mover las piernas son:
-		20. los músculos que permiten juntar los brazos son:
-		21. los músculos que permiten flectar el tronco son:
-
+		18. qué son los músculos? si
+		19. cuál es la función de los músculos? si
+		20. el sistema locomotor se compone por: si 
+		21. cual es la funcion del sistema locomotor?
+		
 	movimiento:
 		(22. los __________ unen a los huesos en cada articulación si
 		23. cómo se unen los huesos en cada articulación?) si
@@ -48,19 +48,20 @@ musculos:
 sist nervioso: 
 
 	reconocer:
-		29. cómo se divide el sistema nervioso? si
-		30. cuáles son los componentes del sistema nervioso? si
+		(29. cómo se divide el sistema nervioso? si
+		30. el sistema nervioso se divide en:)
+		31. cuáles son los componentes del sistema nervioso? si
 	estímulos:
-		31. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
-		32. recibimos los estímulos del exterior a traves de: si
-		33. los reflejos son controlados por: si
-		34. los actos voluntarios son controlados por: si
+		32. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
+		33. recibimos los estímulos del exterior a traves de: si
+		34. los reflejos son controlados por: si
+		35. los actos voluntarios son controlados por: si
 
 
 alcohol:
 
 	reconocer:
-		35. cuál NO es un efecto de consumir alcohol en exceso? si
-		36. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
+		36. cuál NO es un efecto de consumir alcohol en exceso? si
+		37. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
 
 
