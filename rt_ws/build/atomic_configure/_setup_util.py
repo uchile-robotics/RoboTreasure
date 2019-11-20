@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -270,7 +270,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/robotica/uchile_ws/ros/maqui/high_ws/devel;/home/robotica/uchile_ws/ros/maqui/soft_ws/devel;/home/robotica/uchile_ws/ros/maqui/base_ws/devel;/home/robotica/uchile_ws/ros/maqui/forks_ws/devel;/opt/ros/kinetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

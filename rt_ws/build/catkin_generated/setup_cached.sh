@@ -7,7 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/wig/RoboTreasure/rt_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/wig/RoboTreasure/rt_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/wig/RoboTreasure/rt_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/wig/RoboTreasure/rt_ws/src:$ROS_PACKAGE_PATH"
+export CATKIN_SHELL="sh"
+export CMAKE_PREFIX_PATH="/home/robotica/Gio/RoboTreasure/rt_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/robotica/Gio/RoboTreasure/rt_ws/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/robotica/Gio/RoboTreasure/rt_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/robotica/Gio/RoboTreasure/rt_ws/src:$ROS_PACKAGE_PATH"
