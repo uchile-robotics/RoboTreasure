@@ -28,40 +28,44 @@ sist oseo:
 musculos:
 
 	reconocer:
-		18. qué son los músculos? si
-		19. cuál es la función de los músculos? si
-		20. el sistema locomotor se compone por: si 
-		21. cual es la funcion del sistema locomotor?
+		(18. qué son los músculos? si
+		19. los músculos son:) si
+		(20. cuál es la función de los músculos? si
+		21. la función de los músculos es:) si
+		(22. el sistema locomotor se compone por: si 
+		23. qué estructuras componen el sistema locomotor?) si
+		(24. cual es la funcion del sistema locomotor? si
+		25. la función del sistema locomotor es:) si
 		
 	movimiento:
-		(22. los __________ unen a los huesos en cada articulación si
-		23. cómo se unen los huesos en cada articulación?) si
-		(24. a través de qué se unen los músculos y los huesos? si
-		25. los músculos y los huesos se unen gracias a los __________) si
+		(26. los __________ unen a los huesos en cada articulación si
+		27. cómo se unen los huesos en cada articulación?) si
+		(28. a través de qué se unen los músculos y los huesos? si
+		29. los músculos y los huesos se unen gracias a los __________) si
 
 	cuidados:
-		(26. cuánto tiempo diario mínimo se recomienda realizar actividad física? si
-		27. las personas deberian realizar minimo ____________ diarios de actividad física) si
-		28. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a: si
+		(30. cuánto tiempo diario mínimo se recomienda realizar actividad física? si
+		31. las personas deberian realizar minimo ____________ diarios de actividad física) si
+		32. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a: si
 
 
 sist nervioso: 
 
 	reconocer:
-		(29. cómo se divide el sistema nervioso? si
-		30. el sistema nervioso se divide en:)
-		31. cuáles son los componentes del sistema nervioso? si
-	estímulos:
-		32. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
-		33. recibimos los estímulos del exterior a traves de: si
-		34. los reflejos son controlados por: si
-		35. los actos voluntarios son controlados por: si
+		(33. cómo se divide el sistema nervioso? si
+		34. el sistema nervioso se divide en:)
+		35. cuáles son los componentes del sistema nervioso? si
+	estimulos:
+		36. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
+		37. recibimos los estímulos del exterior a traves de: si
+		38. los reflejos son controlados por: si
+		39. los actos voluntarios son controlados por: si
 
 
 alcohol:
 
 	reconocer:
-		36. cuál NO es un efecto de consumir alcohol en exceso? si
-		37. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
+		40. cuál NO es un efecto de consumir alcohol en exceso? si
+		41. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
 
 

@@ -211,6 +211,17 @@
 									"Estructuras duras que protegen el cuerpo" ,
 									"Órganos blandos que se contraen y relajan" ] ,
 		
+							"correct" : 3 } ,
+
+
+						{ "question" : "Los músculos son: " ,
+
+							"content" :
+								[ "Órganos que digieren alimentos" ,
+				 					"Receptores de estímulos" ,
+									"Estructuras duras que protegen el cuerpo" ,
+									"Órganos blandos que se contraen y relajan" ] ,
+
 							"correct" : 3 } ],
 
 
@@ -222,11 +233,33 @@
 									"Permitir la movilidad de los huesos" ,
 									"Dar estabilidad al cuerpo" ] ,
 		
+							"correct" : 2 } , 
+
+
+						{ "question" : "La función de los músculos es: " ,
+
+							"content" :
+								[ "Proteger al cuerpo de los daños" ,
+									"Interpretar los estímulos del exterior" ,
+									"Permitir la movilidad de los huesos" ,
+									"Dar estabilidad al cuerpo" ] ,
+
 							"correct" : 2 } ],
 
 
 					[	{ "question" : "El Sistema Locomotor se compone por: " ,
 	
+							"content" : 
+								[ "Huesos y músculos" ,
+									"Órganos y nervios" ,
+									"Cerebro y médula espinal" ,
+									"Brazos y piernas" ] ,
+		
+							"correct" : 0 } ,
+
+
+						{ "question" : "¿Qué estructuras componen el Sistema Locomotor?" ,
+
 							"content" : 
 								[ "Huesos y músculos" ,
 									"Órganos y nervios" ,
@@ -244,7 +277,18 @@
 									"Permitir la respiración" ,
 									"Intepretar estímulos del exterior" ] ,
 		
-							"correct" : 1 } ]
+							"correct" : 1 } ,
+
+
+						{ "question" : "La función del Sistema Locomotor es: " ,
+	
+							"content" : 
+								[ "Digerir los alimentos" ,
+									"Permitir el movimiento del cuerpo humano" ,
+									"Permitir la respiración" ,
+									"Intepretar estímulos del exterior" ] ,
+		
+							"correct" : 1 }	]
 								
 										] ,
 
