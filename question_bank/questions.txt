@@ -46,26 +46,34 @@ musculos:
 	cuidados:
 		(30. cuánto tiempo diario mínimo se recomienda realizar actividad física? si
 		31. las personas deberian realizar minimo ____________ diarios de actividad física) si
-		32. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a: si
+		(32. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad' esta definición corresponde a: si
+		33. 'Poca actividad física. Provoca problemas de sobrepeso y obesidad' a que se refiere?)si
 
 
 sist nervioso: 
 
 	reconocer:
-		(33. cómo se divide el sistema nervioso? si
-		34. el sistema nervioso se divide en:)
-		35. cuáles son los componentes del sistema nervioso? si
+		(34. cómo se divide el sistema nervioso? si
+		35. el sistema nervioso se divide en:) si
+		(36. cuáles son los componentes del sistema nervioso? si
+		37. los componentes del sistema nervioso son: si
+		38. ___________________ componen el sistema nervioso) si
 	estimulos:
-		36. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
-		37. recibimos los estímulos del exterior a traves de: si
-		38. los reflejos son controlados por: si
-		39. los actos voluntarios son controlados por: si
+		39. 'son señales que indican que algo ha cambiado en el medio que nos rodea' Esta definición corresponde a: si
+		(40. recibimos los estímulos del exterior a traves de: si
+		41. a traves de que recibimos los estimulos del exterior?)
+		(42. los actos reflejos son controlados por: si
+		43. que controla los actos reflejos?) si
+		(44. los actos voluntarios son controlados por: si
+		45. que controla los actos voluntarios?) si
 
 
 alcohol:
 
 	reconocer:
-		40. cuál NO es un efecto de consumir alcohol en exceso? si
-		41. 'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica' Esta definición corresponde a: cambiar
-
+		(46. cuál NO es un efecto de consumir alcohol en exceso? si
+		47. qué es lo que NO ocurre al consumir alcohol en exceso? si
+		48. lo que NO le ocurre al cuerpo humano al consumir alcohol en exceso es:) si
+		(49. 'Hábito de consumo que es difícil de dejar' Esta definición corresponde a: si
+		50. 'Hábito de consumo que es difícil de dejar' A qué se refiere?) si
 

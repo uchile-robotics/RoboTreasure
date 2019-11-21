@@ -373,6 +373,17 @@
 									"Educación Física" ,
 									"Estudiar" ] ,
 
+							"correct" : 1 } , 
+
+
+						{ "question" : " 'Poca actividad física. Provoca problemas de sobrepeso y obesidad'. ¿A qué se refiere esta definición?" ,
+
+							"content" :
+								[ "Ejercicio" ,
+									"Sedentarismo" ,
+									"Educación Física" ,
+									"Estudiar" ] ,
+
 							"correct" : 1 } ]
 
 									]
@@ -418,7 +429,30 @@
 									"Músculos, huesos y articulaciones" ,
 									"Ojos, nariz, boca y oídos" ] ,
 
-							"correct" : 1 } ]
+							"correct" : 1 } ,
+
+
+						{ "question" : "Los componentes del Sistema Nervioso son: " ,
+
+							"content" :
+								[ "Pulmones, corazón y estómago" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
+
+							"correct" : 1 } ,
+
+
+						{ "question" : "Completa: '_______________ componen el Sistema Nervioso' " ,
+
+							"content" :
+								[ "Pulmones, corazón y estómago" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
+
+							"correct" : 1 }	]
+					 
 
 								
 											] ,
@@ -448,7 +482,7 @@
 							"correct" : 0 } ],
 
 
-					[	{ "question" : "Los reflejos son controlados por: " ,
+					[	{ "question" : "Los actos reflejos son controlados por: " ,
 
 							"content" :
 								[ "el corazón" ,
@@ -456,20 +490,42 @@
 									"los nervios" ,
 									"la cabeza" ] ,
 
+							"correct" : 1 } ,
+
+
+						{ "question" : "¿Qué controla los actos reflejos?" ,
+
+							"content" :
+								[ "el corazón" ,
+									"la médula espinal" ,
+									"los nervios" ,
+									"la cabeza"] ,
+
 							"correct" : 1 } ],
 
 
 					[	{ "question" : "Los actos voluntarios son controlados por: " ,
 
-							"content" :
+							"content" : 
 								[ "los pulmones" ,
 									"los nervios" ,
 									"el cerebro" ,
 									"los movimientos" ] ,
 
-							"correct" : 2 } ]
+							"correct" : 2 } ,
 
-										]
+
+						{ "question" : "¿Qué controla los actos voluntarios?" ,
+
+							"content" : 
+								[ "los pulmones" ,
+									"los nervios" ,
+									"el cerebro" ,
+									"los movimientos" ] ,
+
+							"correct" : 2 } ]	
+
+							]
 		} ,
 
 
@@ -485,13 +541,46 @@
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Provocar ceguera" ,
+									"Caída del pelo" ,
 									"Dificultar la respiración" ] ,
 
 							"correct" : 2 } ,
 
 
-						{ "question" : "'Hábito de consumo de determinados productos, en especial drogas, y del que no se puede prescindir por dependencia psicológica o incluso fisiológica'. Esta definición corresponde a: " ,
+							{ "question" : "¿Qué es lo que NO ocurre al consumir alcohol en exceso?" ,
+
+							"content" :
+								[ "Afectar los movimientos del cuerpo" ,
+									"Perder el conocimiento" ,
+									"Caída del pelo" ,
+									"Dificultar la respiración" ] ,
+
+							"correct" : 2 } 
+
+
+						{ "question" : "Lo que NO le ocurre al cuerpo humano al consumir alcohol en exceso es: " ,
+
+							"content" :
+								[ "Afectar los movimientos del cuerpo" ,
+									"Perder el conocimiento" ,
+									"Caída del pelo" ,
+									"Dificultar la respiración" ] ,
+
+							"correct" : 2 }	],
+
+
+					[	{ "question" : "'Hábito de consumo que es difícil de dejar'. Esta definición corresponde a: " ,
+
+							"content" :
+								[ "Alcohol" ,
+									"Adicción" ,
+									"Estímulo" ,
+									"Atracción" ] ,
+
+							"correct" : 1 } , 
+
+
+						{ "question" : "'Hábito de consumo que es difícil de dejar'. ¿A qué se refiere esta definición?" ,
 
 							"content" :
 								[ "Alcohol" ,
