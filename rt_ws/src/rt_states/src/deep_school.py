@@ -7,6 +7,8 @@ from uchile_srvs.srv import PersonDetection, PersonDetectionRequest
 from sensor_msgs.msg import Image
 
 from maqui_skills import robot_factory
+from uchile_states.interaction.states import Speak
+from uchile_states.perception.school import QRDetector, AnswerSelection
 
 class Setup(smach.State):
     def __init__(self,robot):
@@ -18,42 +20,9 @@ class Setup(smach.State):
 
     def execute(self,userdata): # Userdata es informacion que se puede mover entre estados
         self.tts.set_language("Spanish")
-        self.tts.say("Inicio prueba de deteccion de alternativas")
-        time.sleep(3)
-        self.tts.say("Cuando se le indique seleccione alternativa. Levante brazo derecho para letra a. Levante brazo izquierdo para letra b. Levante ambos para letra c. ")
-        time.sleep(7)
-
-
-        #return "preemted" 
-        #OJO esto genera un error debido a que en los outcomes definidos de las clase no se tiene el preemted , recomiendo ejecutar para ver el error
-        return "succeeded"
-
-
-class Example(smach.State):
-    def __init__(self,robot):
-        smach.State.__init__(self,outcomes=["succeeded","aborted"]) # Aca se ponen todas las salidas que pueden tener este estado
-        self.robot=robot
-        self.audition=self.robot.get("audition")
-        self.tts=self.robot.get("tts")
-        #self.skill=self.robot.get("skill")
-
-    def execute(self,userdata): # Userdata es informacion que se puede mover entre estados
-
-        server_client = rospy.ServiceProxy('/selection_detector/detect', PersonDetection)
-        request = PersonDetectionRequest()
-
-        time.sleep(3)
-        self.tts.say("Ahora indique la alternativa seleccionada")
-        time.sleep(5)
-
-        request.image = rospy.wait_for_message("/maqui/camera/front/image_raw", Image)
-        detections = server_client(request)
-
-        print(detections.labels)
-        if len(detections.labels)>0:
-            self.tts.say("Alternativa seleccionada, {}".format(detections.labels[0]))
-        else:
-            self.tts.say("Ninguna alternativa seleccionada")
+        self.tts.say("Inicio prueba de juego")
+        self.tts.wait_until_done()
+        
 
         #return "preemted" 
         #OJO esto genera un error debido a que en los outcomes definidos de las clase no se tiene el preemted , recomiendo ejecutar para ver el error
@@ -67,15 +36,30 @@ def getInstance(robot):
     with sm:
         smach.StateMachine.add('SETUP',Setup(robot),
             transitions={
+                'succeeded':'INSTRUCTIONS_QR'
+            }
+        )
+        smach.StateMachine.add('INSTRUCTIONS_QR',Speak(robot,"Cuando se le indique levante medallon con q r "),
+            transitions={
                 'succeeded':'EXAMPLE1'
             }
         )
-        smach.StateMachine.add('EXAMPLE1',Example(robot),
+        smach.StateMachine.add('EXAMPLE1',QRDetector(robot),
+            transitions={
+                'succeeded':'INSTRUCTIONS_ANSWER'
+            }
+        )
+        smach.StateMachine.add('INSTRUCTIONS_ANSWER',Speak(robot,"Ahora se probara seleccion por brazo. Levante brazos para responder cuando se indique"),
             transitions={
                 'succeeded':'EXAMPLE2'
             }
         )
-        smach.StateMachine.add('EXAMPLE2',Example(robot),
+        smach.StateMachine.add('EXAMPLE2',AnswerSelection(robot),
+            transitions={
+                'succeeded':'FINISH'
+            }
+        )
+        smach.StateMachine.add('FINISH',Speak(robot,"Muchas Gracias"),
             transitions={
                 'succeeded':'succeeded'
             }
