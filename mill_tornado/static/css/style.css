@@ -1,5 +1,5 @@
 body {
-	background: black;
+	background: white;
 	font-family: 'Roboto Slab', serif;
 }
 
@@ -17,14 +17,14 @@ body {
     width: 100%;
     font-size: 50px;
     text-align: center;
-    font-family: arial;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 #state{
-    color: white;
+    color: black;
     text-align:center;
     font-size:30px;
-    font-family: verdana;
+    font-family: 'Red Hat Display', sans-serif;
     padding:0px 0px;
 }
 
@@ -71,7 +71,7 @@ audio {
 }
 
 #question-box {
-	background: #ddd;
+	background: #F2C84B;
 	width: 960px;
 	margin: 0 auto;
 	padding: 10px;
@@ -79,8 +79,15 @@ audio {
 }
 
 .big-text {
-	color: #FF7E00;
+	color: #06ADBF;
 	font-size: 2em;
+	margin-right: 15px;
+    text-align: left;
+}
+
+.content {
+	color: black;
+	font-size: 28px;
 	margin-right: 15px;
     text-align: left;
 }
@@ -88,7 +95,7 @@ audio {
 #money {
 	font-size: 1.9em;
 	font-weight: bold;
-	color: green;
+	color: #F2884B;
 	float: right;
 	display: block;
 	height: 50px;
@@ -106,22 +113,26 @@ audio {
 	display: none;
 	font-size: 7em;
 	font-weight: bold;
-	color: white;
+	color: black;
 	width: 980px;
 	margin-top: 300px;
 	margin: 0 auto;
 	text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 50px;
 }
 
 #key {
 	display: none;
 	font-size: 7em;
 	font-weight: bold;
-	color: white;
+	color: black;
 	width: 980px;
 	margin-top: 300px;
 	margin: 0 auto;
 	text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 50px;
 }
 
 
@@ -138,7 +149,7 @@ audio {
 }
 
 #answer-box {
-	color: white;
+	color: black;
 	font-size: 1.3em;
 	text-align: left;
 	width: 960px;

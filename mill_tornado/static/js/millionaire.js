@@ -105,7 +105,7 @@ var MillionaireModel = function(data) {
 	self.timeOut = function() {
 		$("#container").fadeOut('fast', function() {
  			startSound('wrongsound', false);
- 			$("#container").css('background', 'red').fadeIn('slow', function() {
+ 			$("#container").css('background', '#FF262E').fadeIn('slow', function() {
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
 	 					$("#hint").html('Pista: '+hints[stage - 1]);
@@ -135,7 +135,7 @@ var MillionaireModel = function(data) {
  	self.rightAnswer = function(elm) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
- 			$("#" + elm).css('background', 'green').slideDown('slow', function() {
+ 			$("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
  				self.money(self.money() + 10 - 2*self.tries + question_seconds);
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
@@ -163,7 +163,7 @@ var MillionaireModel = function(data) {
  	self.wrongAnswer = function(elm) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('wrongsound', false);
- 			$("#" + elm).css('background', 'red').slideDown('slow', function() {
+ 			$("#" + elm).css('background', '#FF262E').slideDown('slow', function() {
 								
 				if(self.level() + 1 > 3) {
 					if(self.tries >= 1){
