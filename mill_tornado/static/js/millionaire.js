@@ -221,7 +221,7 @@ var hints = [];
 $(document).ready(function() {
 	$.getJSON("static/questions.json", function(data) {
 		for(var i = 1; i <= data.games.length; i++) {
-			$("#problem-set").append('<option value="' + i+ + '">' + i + '</option>');
+			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
 		}
 		var index = 0;
 		myModel = new MillionaireModel(data.games[index]);
