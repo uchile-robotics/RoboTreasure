@@ -48,12 +48,43 @@ class Subs(smach.State):
         smach.State.__init__(self, outcomes=["succeeded"])
         self.robot = robot
 
-    def execute(self, userdata):
-        rospy.Subscriber("qr", String, callback)
-
-    def callback(data):
+    def callback(self, data):
         print data.data
         return "succeeded"
+
+    def execute(self, userdata):
+        rospy.Subscriber("qr", String, self.callback)
+
+class SingleSub(smach.State):
+    """docstring for subs"""
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["succeeded"])
+        self.robot = robot
+
+    def execute(self, userdata):
+        qr = rospy.wait_for_message("qr", String)
+        print qr
+        return "succeeded"
+
+class Image(smach.State):
+    skill_req = []
+    def __init__(self, robot, url=None, timeout=5):
+        
+        self.tablet = robot.get("tablet")
+        self.url = url
+        input_keys = ['url'] if self.url is None else []
+        smach.State.__init__(self, 
+                                outcomes=["succeeded","preempted"], 
+                                input_keys=input_keys)
+    
+    def execute(self, userdata):
+
+        url = userdata.url if self.url is None else self.url
+        self.tablet.wakeUp()
+        if self.tablet.show_image(url):
+            return "succeeded"
+    
+        return "preempted"
 
 
 
@@ -78,17 +109,17 @@ def getInstance(robot):
 
         smach.StateMachine.add('SETUP', Setup(robot),
             transitions={
+                'succeeded':'QR'
+            }
+        )
+
+        smach.StateMachine.add('QR', SingleSub(robot),
+            transitions={
                 'succeeded':'WEB_SHOW'
             }
         )
 
-        # smach.StateMachine.add('QR', Subs(robot),
-        #     transitions={
-        #         'succeeded':'WEB_SHOW'
-        #     }
-        # )
-
-        # smach.StateMachine.add('WEB_SHOW', TabletControllerSkill.show_webpage(self, url="http://198.18.0.1:8888/"),
+        # smach.StateMachine.add('WEB_SHOW', Image(robot, url="http://198.18.0.1:8888/home/nao/uchile_last_ws/src/uchile_robocup/src/uchile_robocup/yay.jpg"),
         #     transitions={
         #         'succeeded':'succeeded'
         #     }

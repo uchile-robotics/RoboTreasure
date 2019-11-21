@@ -36,6 +36,26 @@ class MainHandler(tornado.web.RequestHandler):
         print "loading html"
         self.render("index.html")
 
+class WhiteHandler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        print "setting headers for main page!!!"
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.2:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.1:8888/")
+        self.set_header("Access-Control-Allow-Headers", "x-requested-with")
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.render("blank.html")
+        print "head finish"
+
+    def get(self):
+        print "loading blank html"
+        self.render("blank.html")
+
 class HMainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("horizontal/horizontal_base.html")
@@ -143,6 +163,7 @@ class CommandHandler(tornado.web.RequestHandler):
 app = tornado.web.Application([
     (r'/', MainHandler),
     (r'/vertical', VMainHandler),
+    (r'/b', WhiteHandler),
     (r'/horizontal', HMainHandler),
     (r'/link1.html', TestHandler),
     (r'/link1_vertical.html', VTestHandler),
