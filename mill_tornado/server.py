@@ -56,37 +56,22 @@ class WhiteHandler(tornado.web.RequestHandler):
         print "loading blank html"
         self.render("blank.html")
 
-class HMainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("horizontal/horizontal_base.html")
+class WSHandler(tornado.websocket.WebSocketHandler):
+    def open(self):
+        print 'new connection'
+      
+    def on_message(self, message):
+        print 'message received:  %s' % message
+        # Reverse Message and send it back
+        # print 'sending back message: %s' % message[::-1]
+        # self.write_message(message[::-1])
 
-class VMainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("vertical/vertical_base.html")
+    def on_close(self):
+        print 'connection closed'
 
-class TestHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("normal/link1.html")
+    def check_origin(self, origin):
+        return True
 
-class HTestHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("horizontal/link1_horizontal.html")
-
-class VTestHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("vertical/link1_vertical.html")
-
-class SPRHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("normal/SPR.html")
-
-class HSPRHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("horizontal/SPR_horizontal.html")
-
-class VSPRHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("vertical/SPR_vertical.html")
 
 class CommandHandler(tornado.web.RequestHandler):
     #both GET and POST requests have the same responses
@@ -162,21 +147,16 @@ class CommandHandler(tornado.web.RequestHandler):
 # Url's
 app = tornado.web.Application([
     (r'/', MainHandler),
-    (r'/vertical', VMainHandler),
     (r'/b', WhiteHandler),
-    (r'/horizontal', HMainHandler),
-    (r'/link1.html', TestHandler),
-    (r'/link1_vertical.html', VTestHandler),
-    (r'/link1_horizontal.html', HTestHandler),
-    (r'/SPR.html', SPRHandler),
-    (r'/SPR_vertical.html', VSPRHandler),
-    (r'/SPR_horizontal.html', HSPRHandler),
-    (r'/(com.*)', CommandHandler ),
+    (r'/(com.*)', CommandHandler),
     (r'/(launch_details\.json)', tornado.web.StaticFileHandler, {'path': ''}),
+    (r'/ws', WSHandler),
 ], **settings)
 
 # Corre el servidor
 if __name__ == '__main__':
     print 'running'
     app.listen(options.port)
+    myIP = socket.gethostbyname(socket.gethostname())
+    print '*** Websocket Server Started at %s***' % myIP
     tornado.ioloop.IOLoop.instance().start()
