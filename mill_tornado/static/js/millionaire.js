@@ -36,7 +36,7 @@ startSound = function(id, loop) {
 	soundHandle = document.getElementById(id);
 	if(loop)
 		soundHandle.setAttribute('loop', loop);
-	soundHandle.play();
+//	soundHandle.play();
 }
 
 /**
@@ -50,7 +50,9 @@ var MillionaireModel = function(data) {
 	
 
 	// The 15 questions of this game
-    this.questions = data.questions;
+    this.questions = data.reconocer[2];
+//  this.questions = data.reconocer;
+    
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -216,12 +218,17 @@ var MillionaireModel = function(data) {
 var myModel;
 var keys = [];
 var hints = [];
+
 var ws;
+
 
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
 $(document).ready(function() {
+
+	$.getJSON("static/medium_questions.json", function(data) {
+		for(var i = 1; i <= data.sist_oseo.length; i++) {
 
 	var host = "localhost";
 	var port = "8888"
@@ -259,7 +266,9 @@ $(document).ready(function() {
 			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
 		}
 		var index = 0;
-		myModel = new MillionaireModel(data.games[index]);
+		console.log(data)
+		console.log(Object.keys(data))
+		myModel = new MillionaireModel(data.sist_oseo);
 		ko.applyBindings(myModel);
 		startSound('background', true);
 		$("#game").fadeIn('slow');

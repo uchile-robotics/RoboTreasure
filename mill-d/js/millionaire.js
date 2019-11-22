@@ -36,7 +36,7 @@ startSound = function(id, loop) {
 	soundHandle = document.getElementById(id);
 	if(loop)
 		soundHandle.setAttribute('loop', loop);
-	soundHandle.play();
+//	soundHandle.play();
 }
 
 /**
@@ -139,7 +139,7 @@ var MillionaireModel = function(data) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
  			$("#" + elm).css('background', 'green').slideDown('slow', function() {
- 				self.money($(".active").data('amt'));
+ 				self.money(self.money()+10+question_seconds);
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
 	 					$("#game-over").html('Clave:');
@@ -207,7 +207,7 @@ var MillionaireModel = function(data) {
 
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
-	    return self.money().money(2, '.', ',');
+	    return self.money().money(0, '', ',');
 	}
 };
 

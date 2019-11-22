@@ -14,7 +14,7 @@
 							"correct" : 1 } ,
 			
 			
-						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado aproximadamente por ___________ huesos'. " ,
+						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado por ___________ huesos'. " ,
 				
 							"content" : 
 									[ "206" ,
@@ -290,10 +290,11 @@
 		
 							"correct" : 1 }	]
 								
-										] ,
+				     ] },
 
-
-			"movimiento" : [
+        
+        "movimiento" : 
+                {"reconocer":   [
 										
 					[	{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulación' " ,
 							
@@ -306,7 +307,7 @@
 							"correct" : 2 } ,
 
 
-						{ "question" : "¿A través de qué estructura se unen los huesos en cada articulación?" ,
+						{ "question" : "¿Cómo se unen los huesos en cada articulación?" ,
 
 							"content" : 
 								[ "Tendones" ,
@@ -317,7 +318,7 @@
 							"correct" : 2 } ] ,
 
 
-					[	{ "question" : "Completa: 'Los músculos se unen a los huesos gracias a los(as) __________'" ,
+					[	{ "question" : "Completa: 'Los músculos y los huesos se unen gracias a los(as) _______________' " ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -328,7 +329,7 @@
 							"correct" : 3 } , 
 
 
-						{ "question" : "¿A través de qué estructura se unen los músculos a los huesos?" ,
+						{ "question" : "¿A través de qué se unen los músculos y los huesos?" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -338,12 +339,14 @@
 	
 							"correct" : 3 } ]
 	
-										] ,
+				    ] 
+            },
 
 
-			"cuidados" : [
+			"cuidados" : 
 			
-					[	{ "question" : "¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
+                { "cantidad": [	
+                       [ { "question" : "¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -362,10 +365,13 @@
 									"90 minutos" ,
 									"120 minutos" ] ,
 
-							"correct" : 0 } ] ,
+							"correct" : 0 } ] 
+                      ]
+                    ,
 
 
-					[	{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
+				"reconocer":	[	
+                       [{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Ejercicio" ,
@@ -385,19 +391,13 @@
 									"Estudiar" ] ,
 
 							"correct" : 1 } ]
+                    ]
 
-									]
+                },
 
+	   "sist_nervioso" : 
 		
-		} ,
-
-
-
-
-
-	"sist_nervioso" : 
-		
-		{ "reconocer" : [
+		  { "reconocer" : [
 			
 					[	{ "question" : "¿Cómo se divide el Sistema Nervioso?" ,
 
@@ -453,14 +453,13 @@
 
 							"correct" : 1 }	]
 					 
+				            ] 
+                },
 
-								
-											] ,
+           "estimulos" : 
 
-
-			"estimulos" : [
-
-					[	{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
+				{"reconocer":	[	
+                    [{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Nervios" ,
@@ -555,7 +554,7 @@
 									"Caída del pelo" ,
 									"Dificultar la respiración" ] ,
 
-							"correct" : 2 } 
+							"correct" : 2 } ,
 
 
 						{ "question" : "Lo que NO le ocurre al cuerpo humano al consumir alcohol en exceso es: " ,
