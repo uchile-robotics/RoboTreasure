@@ -48,9 +48,13 @@ startSound = function(id, loop) {
 var MillionaireModel = function(data) {
 	var self = this;
 	
+	console.log(data);
+	var topics = Object.keys(data)
+	console.log(topics);
 
 	// The 15 questions of this game
     this.questions = data.reconocer[2];
+	console.log(this.questions);
 //  this.questions = data.reconocer;
     
 
@@ -74,7 +78,8 @@ var MillionaireModel = function(data) {
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
- 		ws.send(self.questions[self.level() - 1].question)
+ 		//ws.send(self.questions[self.level() - 1].question)
+		//self.questionID = Math.random(
  		return self.questions[self.level() - 1].question;
  	}
 
@@ -177,6 +182,12 @@ var MillionaireModel = function(data) {
 							$("#key").fadeIn('slow');
 						});
 					}
+					else{
+						self.tries += 1;
+					
+					self.transitioning = false;
+						
+					}
 				
 				} else {
 					question_seconds = question_sec + 1
@@ -218,26 +229,19 @@ var MillionaireModel = function(data) {
 var myModel;
 var keys = [];
 var hints = [];
-
 var ws;
-
 
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
 $(document).ready(function() {
-
-	$.getJSON("static/medium_questions.json", function(data) {
-		for(var i = 1; i <= data.sist_oseo.length; i++) {
-
 	var host = "localhost";
 	var port = "8888"
 	var uri = "/ws"
 
 	ws = new WebSocket("ws://"+host+":"+port+uri)
-
 	ws.onmessage = function(evt) {
-            log("Message Received: " + evt.data)
+            console.log("Message Received: " + evt.data);
             alert("message received: " + evt.data);
             };
  
@@ -258,26 +262,38 @@ $(document).ready(function() {
             $("#port").css("background", "#00ff00"); 
             $("#uri").css("background", "#00ff00");
             $("div#message_details").show();
-            log("***Connection Opened***");
+            console.log("***Connection Opened***");
           	};
 
-	$.getJSON("static/questions.json", function(data) {
-		for(var i = 1; i <= data.games.length; i++) {
-			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
-		}
-		var index = 0;
-		console.log(data)
-		console.log(Object.keys(data))
-		myModel = new MillionaireModel(data.sist_oseo);
-		ko.applyBindings(myModel);
-		startSound('background', true);
-		$("#game").fadeIn('slow');
-		interval = window.setInterval(stopWatch, 1000);
-	});
+
+
+	$.getJSON("static/medium_questions.json", function(data) {
+		$("#pre-start").show();
+		$("#start").click(function() {
+			$("#pre-start").fadeOut('slow', function() {
+			startSound('background', true);
+			$("#game").fadeIn('slow');
+			for(var i = 1; i <= data.sist_oseo.length; i++) {
+				$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
+			}
+			var index = 0;
+			myModel = new MillionaireModel(data.sist_oseo);
+			ko.applyBindings(myModel);
+			startSound('background', true);
+			$("#game").fadeIn('slow');
+			interval = window.setInterval(stopWatch, 1000);
+			});
+			
 	$.getJSON("static/keys_hints.json", function(keys_hints) {
 		keys = keys_hints.keys; 
 		hints = keys_hints.hints; 
 	});
+			
+			
+			
+			
+			});
+		});
 });
 
 //Countdown
