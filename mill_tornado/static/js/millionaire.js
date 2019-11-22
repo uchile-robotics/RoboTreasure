@@ -74,6 +74,7 @@ var MillionaireModel = function(data) {
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
+ 		ws.send(self.questions[self.level() - 1].question)
  		return self.questions[self.level() - 1].question;
  	}
 
@@ -218,12 +219,50 @@ var myModel;
 var keys = [];
 var hints = [];
 
+var ws;
+
+
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
 $(document).ready(function() {
+
 	$.getJSON("static/medium_questions.json", function(data) {
 		for(var i = 1; i <= data.sist_oseo.length; i++) {
+
+	var host = "localhost";
+	var port = "8888"
+	var uri = "/ws"
+
+	ws = new WebSocket("ws://"+host+":"+port+uri)
+
+	ws.onmessage = function(evt) {
+            log("Message Received: " + evt.data)
+            alert("message received: " + evt.data);
+            };
+ 
+          // Close Websocket callback
+          ws.onclose = function(evt) {
+            log("***Connection Closed***");
+            alert("Connection close");
+            $("#host").css("background", "#ff0000"); 
+            $("#port").css("background", "#ff0000"); 
+            $("#uri").css("background",  "#ff0000");
+            $("div#message_details").empty();
+ 
+            };
+ 
+          // Open Websocket callback
+          ws.onopen = function(evt) { 
+            $("#host").css("background", "#00ff00"); 
+            $("#port").css("background", "#00ff00"); 
+            $("#uri").css("background", "#00ff00");
+            $("div#message_details").show();
+            log("***Connection Opened***");
+          	};
+
+	$.getJSON("static/questions.json", function(data) {
+		for(var i = 1; i <= data.games.length; i++) {
 			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
 		}
 		var index = 0;

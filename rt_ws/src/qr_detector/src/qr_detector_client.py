@@ -12,7 +12,7 @@ from uchile_srvs.srv import PersonDetection, PersonDetectionRequest
 class QrDetectorClient:
 
 	def __init__(self):
-		self.img_sub = rospy.Subscriber("/usb_cam/image_raw", Image, self.img_callback)
+		self.img_sub = rospy.Subscriber("/maqui/camera/front/image_raw", Image, self.img_callback)
 		self.rgb_image = None
 		self.img_pub = rospy.Publisher("/qr_detector", String, queue_size=1)
 		self.bridge = CvBridge()
