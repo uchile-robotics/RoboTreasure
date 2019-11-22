@@ -14,7 +14,7 @@
 							"correct" : 1 } ,
 			
 			
-						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado por ___________ huesos'. " ,
+						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado aproximadamente por ___________ huesos'. " ,
 				
 							"content" : 
 									[ "206" ,
@@ -306,7 +306,7 @@
 							"correct" : 2 } ,
 
 
-						{ "question" : "¿Cómo se unen los huesos en cada articulación?" ,
+						{ "question" : "¿A través de qué estructura se unen los huesos en cada articulación?" ,
 
 							"content" : 
 								[ "Tendones" ,
@@ -317,7 +317,7 @@
 							"correct" : 2 } ] ,
 
 
-					[	{ "question" : "Completa: 'Los músculos y los huesos se unen gracias a los(as) _______________' " ,
+					[	{ "question" : "Completa: 'Los músculos se unen a los huesos gracias a los(as) __________'" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -328,7 +328,7 @@
 							"correct" : 3 } , 
 
 
-						{ "question" : "¿A través de qué se unen los músculos y los huesos?" ,
+						{ "question" : "¿A través de qué estructura se unen los músculos a los huesos?" ,
 
 							"content" :
 								[ "Ligamentos" ,
