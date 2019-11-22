@@ -3,7 +3,7 @@
 		
 			{ "cantidad" : [
 				
-					[	{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+						{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
 
 							"content" : 
 									[ "157" ,
@@ -22,10 +22,10 @@
 										"105" ,
 										"309" ] ,
 				
-							"correct" : 0 } ],
+							"correct" : 0 },
 
 
-					[	{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
+						{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
 		
 							"content" : 
 									[ "Niñez" ,
@@ -44,14 +44,14 @@
 									"Adultez" ,
 									"Vejez" ] ,
 		
-							"correct" : 0 } ]
+							"correct" : 0 } ],
 									
-										] ,
+										
 
 
 				"reconocer" : [
 		
-					[	{ "question" : "¿Cuál de los siguientes es un hueso?" ,
+						{ "question" : "¿Cuál de los siguientes es un hueso?" ,
 			
 							"content" : 
 									[ "Estómago" ,
@@ -70,10 +70,10 @@
 										"Fémur" ,
 										"Corazón" ] ,
 			
-							"correct" : 2 } ],
+							"correct" : 2 } ,
 
 
-					[	{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
+						{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
 
 							"content" :
 									[ "Costilla" ,
@@ -92,10 +92,10 @@
 										"Pelvis" ,
 										"Pulmón" ] ,
 
-							"correct" : 3 } ],
+							"correct" : 3 },
 
 
-					[	{ "question" : "El(los) hueso(s) que protege(n) al corazón y los pulmones son: " ,
+						{ "question" : "El(los) hueso(s) que protege(n) al corazón y los pulmones son: " ,
 
 							"content" :
 								[ "Cráneo" ,
@@ -125,10 +125,10 @@
 									"Húmero" ,
 									"Fémur y Tibia" ] ,
 
-							"correct" : 1 } ],
+							"correct" : 1 } ,
 
 						
-					[	{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
+						{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
 
 							"content" :
 								[ "Cráneo" ,
@@ -147,10 +147,10 @@
 									"Cúbito" ,
 									"Pelvis" ] ,
 
-							"correct" : 0 } ],
+							"correct" : 0 } ,
 
 
-					[	{ "question" : "¿Cuál es la función del Sistema Óseo?" ,
+						{ "question" : "¿Cuál es la función del Sistema Óseo?" ,
 
 							"content" :
 								[ "Digerir los alimentos que ingresan al cuerpo" ,
@@ -169,10 +169,10 @@
 									"Recibir estímulos y dar una respuesta" ,
 									"Dar forma, soporte y protección al cuerpo" ] ,
 
-							"correct" : 3 } ] ,
+							"correct" : 3 } ,
 
 
-					[	{ "question" : "Completa: 'La __________ le da soporte al cuerpo humano' " ,
+						{ "question" : "Completa: 'La __________ le da soporte al cuerpo humano' " ,
 
 							"content" :
 								[ "Costilla" ,
@@ -193,7 +193,7 @@
 
 							"correct" : 0 } ]
 
-										] 
+										
 		},
 
 
@@ -203,7 +203,7 @@
 				
 		{ "reconocer" : [
 										
-					[	{ "question" : "¿Qué son los músculos?" ,
+						{ "question" : "¿Qué son los músculos?" ,
 	
 							"content" : 
 								[ "Órganos que digieren alimentos" ,
@@ -222,10 +222,10 @@
 									"Estructuras duras que protegen el cuerpo" ,
 									"Órganos blandos que se contraen y relajan" ] ,
 
-							"correct" : 3 } ],
+							"correct" : 3 } ,
 
 
-					[	{ "question" : "¿Cuál es la función de los músculos?" ,
+						{ "question" : "¿Cuál es la función de los músculos?" ,
 	
 							"content" : 
 								[ "Proteger al cuerpo de los daños" ,
@@ -244,10 +244,10 @@
 									"Permitir la movilidad de los huesos" ,
 									"Dar estabilidad al cuerpo" ] ,
 
-							"correct" : 2 } ],
+							"correct" : 2 } ,
 
 
-					[	{ "question" : "El Sistema Locomotor se compone por: " ,
+					{ "question" : "El Sistema Locomotor se compone por: " ,
 	
 							"content" : 
 								[ "Huesos y músculos" ,
@@ -266,10 +266,10 @@
 									"Cerebro y médula espinal" ,
 									"Brazos y piernas" ] ,
 		
-							"correct" : 0 } ],
+							"correct" : 0 } ,
 
 
-					[	{ "question" : "¿Cuál es la función del Sistema Locomotor?" ,
+						{ "question" : "¿Cuál es la función del Sistema Locomotor?" ,
 	
 							"content" : 
 								[ "Digerir los alimentos" ,
@@ -288,14 +288,14 @@
 									"Permitir la respiración" ,
 									"Intepretar estímulos del exterior" ] ,
 		
-							"correct" : 1 }	]
+							"correct" : 1 }	
 								
 										] ,
 
 
 			"movimiento" : [
 										
-					[	{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulación' " ,
+					{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulación' " ,
 							
 							"content" : 
 								[ "Tendones" ,
@@ -314,10 +314,10 @@
 									"Ligamentos" ,
 									"Nervios" ] ,
 
-							"correct" : 2 } ] ,
+							"correct" : 2 } ,
 
 
-					[	{ "question" : "Completa: 'Los músculos se unen a los huesos gracias a los(as) __________'" ,
+						{ "question" : "Completa: 'Los músculos se unen a los huesos gracias a los(as) __________'" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -336,14 +336,14 @@
 									"Articulaciones" ,
 									"Tendones" ] ,
 	
-							"correct" : 3 } ]
+							"correct" : 3 } 
 	
-										] ,
+										],
 
 
 			"cuidados" : [
 			
-					[	{ "question" : "¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
+						{ "question" : "¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -362,10 +362,10 @@
 									"90 minutos" ,
 									"120 minutos" ] ,
 
-							"correct" : 0 } ] ,
+							"correct" : 0 } ,
 
 
-					[	{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
+						{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Ejercicio" ,
@@ -386,7 +386,7 @@
 
 							"correct" : 1 } ]
 
-									]
+									
 
 		
 		} ,
@@ -399,7 +399,7 @@
 		
 		{ "reconocer" : [
 			
-					[	{ "question" : "¿Cómo se divide el Sistema Nervioso?" ,
+						{ "question" : "¿Cómo se divide el Sistema Nervioso?" ,
 
 							"content" : 
 								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
@@ -418,10 +418,10 @@
 									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
 									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
 
-							"correct" : 3 } ],
+							"correct" : 3 } ,
 
 
-					[	{ "question" : "¿Cuáles son los componentes del Sistema Nervioso?" ,
+						{ "question" : "¿Cuáles son los componentes del Sistema Nervioso?" ,
 
 							"content" :
 								[ "Pulmones, corazón y estómago" ,
@@ -451,16 +451,16 @@
 									"Músculos, huesos y articulaciones" ,
 									"Ojos, nariz, boca y oídos" ] ,
 
-							"correct" : 1 }	]
+							"correct" : 1 }	
 					 
 
 								
-											] ,
+											],
 
 
 			"estimulos" : [
 
-					[	{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
+						{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Nervios" ,
@@ -468,10 +468,10 @@
 									"Estímulos" ,
 									"Sentidos" ] ,
 
-							"correct" : 2 } ],
+							"correct" : 2 } ,
 
 
-					[	{ "question" : "Recibimos los estímulos del exterior a través de los: " ,
+						{ "question" : "Recibimos los estímulos del exterior a través de los: " ,
 
 							"content" :
 								[ "sentidos" ,
@@ -479,10 +479,10 @@
 									"nervios" ,
 									"huesos" ] ,
 
-							"correct" : 0 } ],
+							"correct" : 0 } ,
 
 
-					[	{ "question" : "Los actos reflejos son controlados por: " ,
+						{ "question" : "Los actos reflejos son controlados por: " ,
 
 							"content" :
 								[ "el corazón" ,
@@ -501,10 +501,10 @@
 									"los nervios" ,
 									"la cabeza"] ,
 
-							"correct" : 1 } ],
+							"correct" : 1 } ,
 
 
-					[	{ "question" : "Los actos voluntarios son controlados por: " ,
+						{ "question" : "Los actos voluntarios son controlados por: " ,
 
 							"content" : 
 								[ "los pulmones" ,
@@ -523,7 +523,7 @@
 									"el cerebro" ,
 									"los movimientos" ] ,
 
-							"correct" : 2 } ]	
+							"correct" : 2 } 	
 
 							]
 		} ,
@@ -536,7 +536,7 @@
 
 		{ "reconocer" : [
 
-					[	{ "question" : "¿Cuál de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
+						{ "question" : "¿Cuál de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
 
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
@@ -555,7 +555,7 @@
 									"Caída del pelo" ,
 									"Dificultar la respiración" ] ,
 
-							"correct" : 2 } 
+							"correct" : 2 } ,
 
 
 						{ "question" : "Lo que NO le ocurre al cuerpo humano al consumir alcohol en exceso es: " ,
@@ -566,10 +566,10 @@
 									"Caída del pelo" ,
 									"Dificultar la respiración" ] ,
 
-							"correct" : 2 }	],
+							"correct" : 2 }	,
 
 
-					[	{ "question" : "'Hábito de consumo que es difícil de dejar'. Esta definición corresponde a: " ,
+						{ "question" : "'Hábito de consumo que es difícil de dejar'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Alcohol" ,
@@ -590,7 +590,7 @@
 
 							"correct" : 1 } ]
 
-										]
+										
 		} 
 
 
