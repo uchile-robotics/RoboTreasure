@@ -66,6 +66,19 @@ class SingleSub(smach.State):
         print qr
         return "succeeded"
 
+class Questions(smach.State):
+    """docstring for subs"""
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["succeeded"])
+        self.robot = robot
+        self.tts = self.robot.get("tts")
+
+    def execute(self, userdata):
+        question = rospy.wait_for_message("question", String)
+        print question
+        self.tts.say_with_gestures(question)
+        return "succeeded"
+
 class Image(smach.State):
     skill_req = []
     def __init__(self, robot, url=None, timeout=5):
@@ -126,6 +139,12 @@ def getInstance(robot):
         # )
 
         smach.StateMachine.add('WEB_SHOW', ShowWebpage(robot, page = "http://198.18.0.1:8888/"),
+            transitions={
+                'succeeded':'HEAR_QUESTIONS'
+            }
+        )
+
+        smach.StateMachine.add('HEAR_QUESTIONS', Questions(robot),
             transitions={
                 'succeeded':'succeeded'
             }

@@ -5,6 +5,9 @@ import tornado.websocket
 import socket
 import os.path
 
+from std_msgs.msg import String
+import rospy
+
 from tornado.options import define, options, parse_command_line
 
 define("port", default=8888, type=int)
@@ -62,6 +65,8 @@ class WSHandler(tornado.websocket.WebSocketHandler):
       
     def on_message(self, message):
         print 'message received:  %s' % message
+        # pub = rospy.Publisher('chatter', String, queue_size=10)
+        # pub.publish(message)
         # Reverse Message and send it back
         # print 'sending back message: %s' % message[::-1]
         # self.write_message(message[::-1])
