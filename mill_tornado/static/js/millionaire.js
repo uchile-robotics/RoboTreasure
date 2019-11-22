@@ -45,18 +45,28 @@ startSound = function(id, loop) {
 * 
 * @param data the question bank to use
 */
+var n_questions = 3;
+
 var MillionaireModel = function(data) {
 	var self = this;
 	
 	console.log(data);
 	var topics = Object.keys(data)
-	console.log(topics);
 
-	// The 15 questions of this game
-    this.questions = data.reconocer[2];
+	// Questions
+    this.questions = [];
+		
+	for(var i = 1; i <= n_questions; i++) {
+		var topic = topics[Math.floor(Math.random() * topics.length)];
+		var types = Object.keys(data[topic]);
+		var type = types[Math.floor(Math.random() * types.length)];
+		var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
+		this.questions.push(current_question);
+	}
 	console.log(this.questions);
-//  this.questions = data.reconocer;
-    
+
+
+	
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -79,7 +89,7 @@ var MillionaireModel = function(data) {
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
  		//ws.send(self.questions[self.level() - 1].question)
-		//self.questionID = Math.random(
+		//self.questionID = Math.floor(Math.random() *)
  		return self.questions[self.level() - 1].question;
  	}
 
@@ -277,7 +287,7 @@ $(document).ready(function() {
 				$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
 			}
 			var index = 0;
-			myModel = new MillionaireModel(data.sist_oseo);
+			myModel = new MillionaireModel(data);
 			ko.applyBindings(myModel);
 			startSound('background', true);
 			$("#game").fadeIn('slow');
