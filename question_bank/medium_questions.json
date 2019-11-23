@@ -482,6 +482,17 @@
 							"correct" : 0 } ,
 
 
+						{ "question" : "¿A través de qué recibimos los estímulos del exterior?" ,
+
+							"content" :
+								[ "Sentidos" ,
+									"Músculos" ,
+									"Nervios" ,
+									"Huesos" ] ,
+
+							"correct" : 0 } ,
+
+
 						{ "question" : "Los actos reflejos son controlados por: " ,
 
 							"content" :
