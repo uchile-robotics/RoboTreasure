@@ -156,8 +156,20 @@ audio {
 	margin: 0 auto;
 }
 
+#start{
+    background-color: #F2C84B;
+    border-color: #F2C84B;
+    font-size: 80px;
+    font-family: 'Red Hat Display', sans-serif;
+    padding:10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 #pre-start {
 	display: none;
+    text-align: center;
+    padding-top: 300px;
 }
 
 .answer:hover {

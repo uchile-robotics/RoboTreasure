@@ -22,7 +22,7 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
 		  (fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
-var question_sec = 5;
+var question_sec = 15;
 var stage = 1;
 
 /**
