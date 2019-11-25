@@ -3,7 +3,7 @@
 		
 			{ "cantidad" : [
 				
-						{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+						{ "question" : "¿Cuantos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
 
 							"content" : 
 									[ "157" ,
@@ -14,7 +14,7 @@
 							"correct" : 1 } ,
 			
 			
-						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado aproximadamente por ___________ huesos'. " ,
+						{ "question" : "Completa: 'El cuerpo humano en etapa adulta esta formado aproximadamente por ___________ huesos'. " ,
 				
 							"content" : 
 									[ "206" ,
@@ -25,7 +25,7 @@
 							"correct" : 0 },
 
 
-						{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
+						{ "question" : "¿En que etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
 		
 							"content" : 
 									[ "Niñez" ,
@@ -36,7 +36,7 @@
 							"correct" : 0 } ,
 
 
-						{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene más huesos" ,
+						{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene mas huesos" ,
 
 							"content" :
 								[ "Niñez" ,
@@ -51,79 +51,79 @@
 
 				"reconocer" : [
 		
-						{ "question" : "¿Cuál de los siguientes es un hueso?" ,
+						{ "question" : "¿Cual de los siguientes es un hueso?" ,
 			
 							"content" : 
-									[ "Estómago" ,
+									[ "Estomago" ,
 										"Cerebro" ,
-										"Fémur" ,
-										"Corazón" ] ,
+										"Femur" ,
+										"Corazon" ] ,
 			
 							"correct" : 2 } ,
 
 
-						{ "question" : "Indica cuál de los siguientes es un hueso" ,
+						{ "question" : "Indica cual de los siguientes es un hueso" ,
 
 							"content" :
-								[ "Estómago" ,
+								[ "Estomago" ,
 										"Cerebro" ,
-										"Fémur" ,
-										"Corazón" ] ,
+										"Femur" ,
+										"Corazon" ] ,
 			
 							"correct" : 2 } ,
 
 
-						{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
+						{ "question" : "¿Cual de los siguientes NO es un hueso?" ,
 
 							"content" :
 									[ "Costilla" ,
-										"Cráneo" ,
+										"Craneo" ,
 										"Pelvis" ,
-										"Pulmón" ] ,
+										"Pulmon" ] ,
 
 							"correct" : 3 } ,
 
 
-						{ "question" : "Indica cuál de los siguientes NO es un hueso" ,
+						{ "question" : "Indica cual de los siguientes NO es un hueso" ,
 
 							"content" :
 									[ "Costilla" ,
-										"Cráneo" ,
+										"Craneo" ,
 										"Pelvis" ,
-										"Pulmón" ] ,
+										"Pulmon" ] ,
 
 							"correct" : 3 },
 
 
-						{ "question" : "El(los) hueso(s) que protege(n) al corazón y los pulmones son: " ,
+						{ "question" : "El(los) hueso(s) que protege(n) al corazon y los pulmones son: " ,
 
 							"content" :
-								[ "Cráneo" ,
+								[ "Craneo" ,
 									"Costillas" ,
 									"Húmero" ,
-									"Fémur y Tibia" ] ,
+									"Femur y Tibia" ] ,
 
 							"correct" : 1 } ,
 
 
-						{ "question" : "¿Cuál(es) es(son) el(los) hueso(s) que protegen el corazón y los pulmones?" ,
+						{ "question" : "¿Cual(es) es(son) el(los) hueso(s) que protegen el corazon y los pulmones?" ,
 
 							"content" : 
-								[ "Cráneo" ,
+								[ "Craneo" ,
 									"Costillas" ,
 									"Húmero" ,
-									"Fémur y Tibia" ] ,
+									"Femur y Tibia" ] ,
 
 							"correct" : 1 } ,
 
 
-						{ "question" : "Completa: 'La estructura que protege al corazón y los pulmones se llama _________' " ,
+						{ "question" : "Completa: 'La estructura que protege al corazon y los pulmones se llama _________' " ,
 
 							"content" : 
-								[ "Cráneo" ,
+								[ "Craneo" ,
 									"Costillas" ,
 									"Húmero" ,
-									"Fémur y Tibia" ] ,
+									"Femur y Tibia" ] ,
 
 							"correct" : 1 } ,
 
@@ -131,43 +131,43 @@
 						{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
 
 							"content" :
-								[ "Cráneo" ,
-									"Esternón" ,
+								[ "Craneo" ,
+									"Esternon" ,
 									"Cúbito" ,
 									"Pelvis" ] ,
 		
 							"correct" : 0 } ,
 
 
-						{ "question" : "¿Cuál es el hueso encargado de proteger el cerebro y los ojos?" ,
+						{ "question" : "¿Cual es el hueso encargado de proteger el cerebro y los ojos?" ,
 
 							"content" :
-								[ "Cráneo" ,
-									"Esternón" ,
+								[ "Craneo" ,
+									"Esternon" ,
 									"Cúbito" ,
 									"Pelvis" ] ,
 
 							"correct" : 0 } ,
 
 
-						{ "question" : "¿Cuál es la función del Sistema Óseo?" ,
+						{ "question" : "¿Cual es la funcion del Sistema oseo?" ,
 
 							"content" :
 								[ "Digerir los alimentos que ingresan al cuerpo" ,
 									"Bombear sangre a todo el cuerpo" ,
-									"Recibir estímulos y dar una respuesta" ,
-									"Dar forma, soporte y protección al cuerpo" ] ,
+									"Recibir estimulos y dar una respuesta" ,
+									"Dar forma, soporte y proteccion al cuerpo" ] ,
 
 							"correct" : 3 } ,
 
 
-						{ "question" : "La función del Sistema Óseo es:" ,
+						{ "question" : "La funcion del Sistema oseo es:" ,
 
 							"content" :
 								[ "Digerir los alimentos que ingresan al cuerpo" ,
 									"Bombear sangre a todo el cuerpo" ,
-									"Recibir estímulos y dar una respuesta" ,
-									"Dar forma, soporte y protección al cuerpo" ] ,
+									"Recibir estimulos y dar una respuesta" ,
+									"Dar forma, soporte y proteccion al cuerpo" ] ,
 
 							"correct" : 3 } ,
 
@@ -178,16 +178,16 @@
 								[ "Costilla" ,
 									"Cabeza" ,
 									"Pelvis" ,
-									"Clavícula" ] ,
+									"Clavicula" ] ,
 	
 							"correct" : 2 } ,
 
 
-						{ "question" : "¿Cuál es la función de la pelvis?" ,
+						{ "question" : "¿Cual es la funcion de la pelvis?" ,
 
 							"content" :
 								[ "Dar soporte al cuerpo humano" ,
-									"Proteger el corazón y los pulmones" ,
+									"Proteger el corazon y los pulmones" ,
 									"Proteger el cerebro y los ojos" ,
 									"Permitirle caminar al ser humano" ] ,
 
@@ -203,13 +203,13 @@
 				
 		{ "reconocer" : [
 										
-						{ "question" : "¿Qué son los músculos?" ,
+						{ "question" : "¿Que son los músculos?" ,
 	
 							"content" : 
-								[ "Órganos que digieren alimentos" ,
-				 					"Receptores de estímulos" ,
+								[ "organos que digieren alimentos" ,
+				 					"Receptores de estimulos" ,
 									"Estructuras duras que protegen el cuerpo" ,
-									"Órganos blandos que se contraen y relajan" ] ,
+									"organos blandos que se contraen y relajan" ] ,
 		
 							"correct" : 3 } ,
 
@@ -217,30 +217,30 @@
 						{ "question" : "Los músculos son: " ,
 
 							"content" :
-								[ "Órganos que digieren alimentos" ,
-				 					"Receptores de estímulos" ,
+								[ "organos que digieren alimentos" ,
+				 					"Receptores de estimulos" ,
 									"Estructuras duras que protegen el cuerpo" ,
-									"Órganos blandos que se contraen y relajan" ] ,
+									"organos blandos que se contraen y relajan" ] ,
 
 							"correct" : 3 } ,
 
 
-						{ "question" : "¿Cuál es la función de los músculos?" ,
+						{ "question" : "¿Cual es la funcion de los músculos?" ,
 	
 							"content" : 
 								[ "Proteger al cuerpo de los daños" ,
-									"Interpretar los estímulos del exterior" ,
+									"Interpretar los estimulos del exterior" ,
 									"Permitir la movilidad de los huesos" ,
 									"Dar estabilidad al cuerpo" ] ,
 		
 							"correct" : 2 } , 
 
 
-						{ "question" : "La función de los músculos es: " ,
+						{ "question" : "La funcion de los músculos es: " ,
 
 							"content" :
 								[ "Proteger al cuerpo de los daños" ,
-									"Interpretar los estímulos del exterior" ,
+									"Interpretar los estimulos del exterior" ,
 									"Permitir la movilidad de los huesos" ,
 									"Dar estabilidad al cuerpo" ] ,
 
@@ -251,42 +251,42 @@
 	
 							"content" : 
 								[ "Huesos y músculos" ,
-									"Órganos y nervios" ,
-									"Cerebro y médula espinal" ,
+									"organos y nervios" ,
+									"Cerebro y medula espinal" ,
 									"Brazos y piernas" ] ,
 		
 							"correct" : 0 } ,
 
 
-						{ "question" : "¿Qué estructuras componen el Sistema Locomotor?" ,
+						{ "question" : "¿Que estructuras componen el Sistema Locomotor?" ,
 
 							"content" : 
 								[ "Huesos y músculos" ,
-									"Órganos y nervios" ,
-									"Cerebro y médula espinal" ,
+									"organos y nervios" ,
+									"Cerebro y medula espinal" ,
 									"Brazos y piernas" ] ,
 		
 							"correct" : 0 } ,
 
 
-						{ "question" : "¿Cuál es la función del Sistema Locomotor?" ,
+						{ "question" : "¿Cual es la funcion del Sistema Locomotor?" ,
 	
 							"content" : 
 								[ "Digerir los alimentos" ,
 									"Permitir el movimiento del cuerpo humano" ,
-									"Permitir la respiración" ,
-									"Intepretar estímulos del exterior" ] ,
+									"Permitir la respiracion" ,
+									"Intepretar estimulos del exterior" ] ,
 		
 							"correct" : 1 } ,
 
 
-						{ "question" : "La función del Sistema Locomotor es: " ,
+						{ "question" : "La funcion del Sistema Locomotor es: " ,
 	
 							"content" : 
 								[ "Digerir los alimentos" ,
 									"Permitir el movimiento del cuerpo humano" ,
-									"Permitir la respiración" ,
-									"Intepretar estímulos del exterior" ] ,
+									"Permitir la respiracion" ,
+									"Intepretar estimulos del exterior" ] ,
 		
 							"correct" : 1 }	
 								
@@ -295,7 +295,7 @@
 
 			"movimiento" : [
 										
-					{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulación' " ,
+					{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulacion' " ,
 							
 							"content" : 
 								[ "Tendones" ,
@@ -306,7 +306,7 @@
 							"correct" : 2 } ,
 
 
-						{ "question" : "¿A través de qué estructura se unen los huesos en cada articulación?" ,
+						{ "question" : "¿A traves de que estructura se unen los huesos en cada articulacion?" ,
 
 							"content" : 
 								[ "Tendones" ,
@@ -328,7 +328,7 @@
 							"correct" : 3 } , 
 
 
-						{ "question" : "¿A través de qué estructura se unen los músculos a los huesos?" ,
+						{ "question" : "¿A traves de que estructura se unen los músculos a los huesos?" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -343,7 +343,7 @@
 
 			"cuidados" : [
 			
-						{ "question" : "¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
+						{ "question" : "¿Cuanto tiempo diario minimo se recomienda realizar actividad fisica?" ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -354,7 +354,7 @@
 							"correct" : 0 } ,
 
 
-						{ "question" : "Completa: 'Las personas debieran realizar mínimo __________ diarios de actividad física' " ,
+						{ "question" : "Completa: 'Las personas debieran realizar minimo __________ diarios de actividad fisica' " ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -365,23 +365,23 @@
 							"correct" : 0 } ,
 
 
-						{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
+						{ "question" : " 'Se refiere a la poca actividad fisica, provocando sobrepeso e incluso obesidad'. Esta definicion corresponde a: " ,
 
 							"content" :
 								[ "Ejercicio" ,
 									"Sedentarismo" ,
-									"Educación Física" ,
+									"Educacion Fisica" ,
 									"Estudiar" ] ,
 
 							"correct" : 1 } , 
 
 
-						{ "question" : " 'Poca actividad física. Provoca problemas de sobrepeso y obesidad'. ¿A qué se refiere esta definición?" ,
+						{ "question" : " 'Poca actividad fisica. Provoca problemas de sobrepeso y obesidad'. ¿A que se refiere esta definicion?" ,
 
 							"content" :
 								[ "Ejercicio" ,
 									"Sedentarismo" ,
-									"Educación Física" ,
+									"Educacion Fisica" ,
 									"Estudiar" ] ,
 
 							"correct" : 1 } ]
@@ -399,13 +399,13 @@
 		
 		{ "reconocer" : [
 			
-						{ "question" : "¿Cómo se divide el Sistema Nervioso?" ,
+						{ "question" : "¿Como se divide el Sistema Nervioso?" ,
 
 							"content" : 
 								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
 									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
 
 							"correct" : 3 } ,
 
@@ -415,19 +415,19 @@
 							"content" : 
 								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
 									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
 
 							"correct" : 3 } ,
 
 
-						{ "question" : "¿Cuáles son los componentes del Sistema Nervioso?" ,
+						{ "question" : "¿Cuales son los componentes del Sistema Nervioso?" ,
 
 							"content" :
-								[ "Pulmones, corazón y estómago" ,
-									"Cerebro, médula espinal y nervios" ,
+								[ "Pulmones, corazon y estomago" ,
+									"Cerebro, medula espinal y nervios" ,
 									"Músculos, huesos y articulaciones" ,
-									"Ojos, nariz, boca y oídos" ] ,
+									"Ojos, nariz, boca y oidos" ] ,
 
 							"correct" : 1 } ,
 
@@ -435,10 +435,10 @@
 						{ "question" : "Los componentes del Sistema Nervioso son: " ,
 
 							"content" :
-								[ "Pulmones, corazón y estómago" ,
-									"Cerebro, médula espinal y nervios" ,
+								[ "Pulmones, corazon y estomago" ,
+									"Cerebro, medula espinal y nervios" ,
 									"Músculos, huesos y articulaciones" ,
-									"Ojos, nariz, boca y oídos" ] ,
+									"Ojos, nariz, boca y oidos" ] ,
 
 							"correct" : 1 } ,
 
@@ -446,10 +446,10 @@
 						{ "question" : "Completa: '_______________ componen el Sistema Nervioso' " ,
 
 							"content" :
-								[ "Pulmones, corazón y estómago" ,
-									"Cerebro, médula espinal y nervios" ,
+								[ "Pulmones, corazon y estomago" ,
+									"Cerebro, medula espinal y nervios" ,
 									"Músculos, huesos y articulaciones" ,
-									"Ojos, nariz, boca y oídos" ] ,
+									"Ojos, nariz, boca y oidos" ] ,
 
 							"correct" : 1 }	
 					 
@@ -460,18 +460,18 @@
 
 			"estimulos" : [
 
-						{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
+						{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definicion corresponde a: " ,
 
 							"content" :
 								[ "Nervios" ,
 									"Tendones" ,
-									"Estímulos" ,
+									"Estimulos" ,
 									"Sentidos" ] ,
 
 							"correct" : 2 } ,
 
 
-						{ "question" : "Recibimos los estímulos del exterior a través de los: " ,
+						{ "question" : "Recibimos los estimulos del exterior a traves de los: " ,
 
 							"content" :
 								[ "sentidos" ,
@@ -485,19 +485,19 @@
 						{ "question" : "Los actos reflejos son controlados por: " ,
 
 							"content" :
-								[ "el corazón" ,
-									"la médula espinal" ,
+								[ "el corazon" ,
+									"la medula espinal" ,
 									"los nervios" ,
 									"la cabeza" ] ,
 
 							"correct" : 1 } ,
 
 
-						{ "question" : "¿Qué controla los actos reflejos?" ,
+						{ "question" : "¿Que controla los actos reflejos?" ,
 
 							"content" :
-								[ "el corazón" ,
-									"la médula espinal" ,
+								[ "el corazon" ,
+									"la medula espinal" ,
 									"los nervios" ,
 									"la cabeza"] ,
 
@@ -515,7 +515,7 @@
 							"correct" : 2 } ,
 
 
-						{ "question" : "¿Qué controla los actos voluntarios?" ,
+						{ "question" : "¿Que controla los actos voluntarios?" ,
 
 							"content" : 
 								[ "los pulmones" ,
@@ -536,24 +536,24 @@
 
 		{ "reconocer" : [
 
-						{ "question" : "¿Cuál de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
+						{ "question" : "¿Cual de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
 
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Caída del pelo" ,
-									"Dificultar la respiración" ] ,
+									"Caida del pelo" ,
+									"Dificultar la respiracion" ] ,
 
 							"correct" : 2 } ,
 
 
-							{ "question" : "¿Qué es lo que NO ocurre al consumir alcohol en exceso?" ,
+							{ "question" : "¿Que es lo que NO ocurre al consumir alcohol en exceso?" ,
 
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Caída del pelo" ,
-									"Dificultar la respiración" ] ,
+									"Caida del pelo" ,
+									"Dificultar la respiracion" ] ,
 
 							"correct" : 2 } ,
 
@@ -563,30 +563,30 @@
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Caída del pelo" ,
-									"Dificultar la respiración" ] ,
+									"Caida del pelo" ,
+									"Dificultar la respiracion" ] ,
 
 							"correct" : 2 }	,
 
 
-						{ "question" : "'Hábito de consumo que es difícil de dejar'. Esta definición corresponde a: " ,
+						{ "question" : "'Habito de consumo que es dificil de dejar'. Esta definicion corresponde a: " ,
 
 							"content" :
 								[ "Alcohol" ,
-									"Adicción" ,
-									"Estímulo" ,
-									"Atracción" ] ,
+									"Adiccion" ,
+									"Estimulo" ,
+									"Atraccion" ] ,
 
 							"correct" : 1 } , 
 
 
-						{ "question" : "'Hábito de consumo que es difícil de dejar'. ¿A qué se refiere esta definición?" ,
+						{ "question" : "'Habito de consumo que es dificil de dejar'. ¿A que se refiere esta definicion?" ,
 
 							"content" :
 								[ "Alcohol" ,
-									"Adicción" ,
-									"Estímulo" ,
-									"Atracción" ] ,
+									"Adiccion" ,
+									"Estimulo" ,
+									"Atraccion" ] ,
 
 							"correct" : 1 } ]
 

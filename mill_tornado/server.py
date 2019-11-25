@@ -5,8 +5,8 @@ import tornado.websocket
 import socket
 import os.path
 
-#from std_msgs.msg import String
-#import rospy
+from std_msgs.msg import String
+import rospy
 
 from tornado.options import define, options, parse_command_line
 
@@ -32,7 +32,7 @@ class MainHandler(tornado.web.RequestHandler):
 
     def head(self):
         print "head"
-        self.render("index.html")
+        self.get()
         print "head finish"
 
     def get(self):
@@ -64,9 +64,11 @@ class WSHandler(tornado.websocket.WebSocketHandler):
         print 'new connection'
       
     def on_message(self, message):
+        message = message.encode('ascii', 'ignore').decode('ascii')
         print 'message received:  %s' % message
-        # pub = rospy.Publisher('chatter', String, queue_size=10)
-        # pub.publish(message)
+        pub = rospy.Publisher('/question', String, queue_size=10)
+        rospy.init_node("hola")
+        pub.publish(message)
         # Reverse Message and send it back
         # print 'sending back message: %s' % message[::-1]
         # self.write_message(message[::-1])
@@ -105,6 +107,7 @@ class CommandHandler(tornado.web.RequestHandler):
     def handleRequest( self ):
         # is op to decide what kind of command is being sent
         op = self.get_argument('op',None)
+        print op
 
         #received a "checkup" operation command from the browser:
         if op == "dummy":
