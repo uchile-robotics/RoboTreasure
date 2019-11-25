@@ -31,7 +31,7 @@ class Setup(smach.State):
         # self.track = self.robot.get("track_person")
     def execute(self,userdata):
         # self.track.set_search(False)
-        self.tts.set_language("English")
+        self.tts.set_language("Spanish")
         # self.tts.set_speed(110)
         self.audition.set_audio_expression(False)
         self.knowledge.pose.delete_all()
@@ -76,7 +76,8 @@ class Questions(smach.State):
     def execute(self, userdata):
         question = rospy.wait_for_message("question", String)
         print question
-        self.tts.say_with_gestures(question)
+        print type(question)
+        self.tts.say_with_gestures(str(question))
         return "succeeded"
 
 class Image(smach.State):
@@ -122,7 +123,7 @@ def getInstance(robot):
 
         smach.StateMachine.add('SETUP', Setup(robot),
             transitions={
-                'succeeded':'QR'
+                'succeeded':'WEB_SHOW'
             }
         )
 
@@ -146,7 +147,7 @@ def getInstance(robot):
 
         smach.StateMachine.add('HEAR_QUESTIONS', Questions(robot),
             transitions={
-                'succeeded':'succeeded'
+                'succeeded':'HEAR_QUESTIONS'
             }
         )
 
