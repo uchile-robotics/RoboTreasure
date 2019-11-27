@@ -22,7 +22,7 @@ Author: Aaron Nech
 		<!-- Before the game begins problem set selection -->
         <div id="pre-start">
             <p id="team">Equipo:</p>
-            <p id="stage">Etapa:</p>
+            <p id="stage">Etapa: 3</p>
 			<button id="start">Start</button>
 		</div>
 		<!-- Shown when the player wins/loses -->
@@ -33,10 +33,6 @@ Author: Aaron Nech
 
 		<!-- The actual game markup -->
 		<div id="game">
-            <p id="state">Preparados</p>
-            <div id="container">
-                <div id="display">03s</div>
-            </div>
 			<div id="top">
 				<ul id="levels">
 					<li data-bind="css: {active: level() == 15}" data-amt="1000000" data-lvl="15">100</li>
@@ -56,9 +52,6 @@ Author: Aaron Nech
 					<li data-bind="css: {active: level() == 1}" data-amt="100" data-lvl="1">100</li>
 				</ul>
 				<div class="clear"></div>
-			</div>
-			<div id="options">
-				<div id="money"><span data-bind="text: formatMoney()"></span></div>
 			</div>
 			<div id="question-box">
 				<span class="big-text"></span>
