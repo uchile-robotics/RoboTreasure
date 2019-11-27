@@ -48,6 +48,7 @@ startSound = function(id, loop) {
 var n_questions = 3;
 
 var MillionaireModel = function(data) {
+	console.log(data)
     var self = this;
 
     var topics = Object.keys(data)
@@ -73,17 +74,9 @@ var MillionaireModel = function(data) {
     // The current level(starting at 1) 
     this.level = new ko.observable(1);
 
-    // The three options the user can use to 
-    // attempt to answer a question (1 use each)
-    this.usedFifty = new ko.observable(false);
-    this.usedPhone = new ko.observable(false);
-    this.usedAudience = new ko.observable(false);
-    
-    self.tries = 0;
-
     // Grabs the question text of the current question
     self.getQuestionText = function() {
-		ws.send(self.questions[self.level() - 1].question);
+		//ws.send(self.questions[self.level() - 1].question);
         //self.questionID = Math.floor(Math.random() *)
         // params = { op: "hola" };
         // $.getJSON('http://198.18.0.2:8888/com', params);
@@ -117,115 +110,6 @@ var MillionaireModel = function(data) {
         }           
     }
     
-    self.timeOut = function() {
-        $("#container").fadeOut('fast', function() {
-            startSound('wrongsound', false);
-            $("#container").css('background', '#FF262E').fadeIn('slow', function() {
-                if(self.level() + 1 > 3) {
-                    $("#game").fadeOut('slow', function() {
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
-                    });
-                } else {
-                    question_seconds = question_sec + 1
-                    prep_seconds = 3;
-                    document.getElementById("display").innerHTML = "03s";
-                    window.clearInterval(interval);
-                    interval = window.setInterval(stopWatch, 1000);
-                    
-                    self.level(self.level() + 1);
-                    $("#container").css('background', 'white');
-                    self.resetAnswers();
-                    self.transitioning = false;
-                }
-            });
-        });
-    }
-
-    // Executes the proceedure of a correct answer guess, moving
-    // the player to the next level (or winning the game if all
-    // levels have been completed)
-    self.rightAnswer = function(elm) {
-        $("#" + elm).slideUp('slow', function() {
-            startSound('rightsound', false);
-            $("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
-                self.money(self.money() + 10 - 2*self.tries + question_seconds);
-                if(self.level() + 1 > 3) {
-                    $("#game").fadeOut('slow', function() {
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
-                    });
-                } else {
-                    question_seconds = question_sec + 1
-                    prep_seconds = 3;
-                    document.getElementById("display").innerHTML = "03s";
-                    window.clearInterval(interval);
-                    interval = window.setInterval(stopWatch, 1000);
-                    
-                    self.level(self.level() + 1);
-                    self.resetAnswers();
-                    self.transitioning = false;
-                }
-            });
-        });
-    }
-
-    // Executes the proceedure of guessing incorrectly, losing the game.
-    self.wrongAnswer = function(elm) {
-        $("#" + elm).slideUp('slow', function() {
-            startSound('wrongsound', false);
-            $("#" + elm).css('background', '#FF262E').slideDown('slow', function() {
-                                
-                if(self.level() + 1 > 3) {
-                    if(self.tries >= 1){
-                        $("#game").fadeOut('slow', function() {
-                            $("#hint").html('Pista: '+hints[stage - 1]);
-                            $("#hint").fadeIn('slow');
-                            $("#key").html('Clave: '+keys[stage - 1]);
-                            $("#key").fadeIn('slow');
-                        });
-                    }
-                    else{
-                        self.tries += 1;
-                    
-                    self.transitioning = false;
-                        
-                    }
-                
-                } else {
-                    question_seconds = question_sec + 1
-                    prep_seconds = 3;
-                    document.getElementById("display").innerHTML = "03s";
-                    window.clearInterval(interval);
-                    interval = window.setInterval(stopWatch, 1000);
-                    if(self.tries >= 1){                        
-                        self.level(self.level() + 1);
-                        self.resetAnswers();                
-                    }
-                    else
-                        self.tries += 1;
-                    
-                    self.transitioning = false;
-                }
-            });
-        });
-    }
-    
-    self.resetAnswers = function(){
-        $("#answer-one").css('background', 'none');
-        $("#answer-two").css('background', 'none');
-        $("#answer-three").css('background', 'none');
-        $("#answer-four").css('background', 'none');
-        $("#answer-one").show();
-        $("#answer-two").show();
-        $("#answer-three").show();
-        $("#answer-four").show();
-        self.tries = 0; 
-    }
     // Gets the money formatted string of the current won amount of money.
     self.formatMoney = function() {
         return self.money().money(0, '', ',');
@@ -243,7 +127,7 @@ var ws;
 // being created
 $(document).ready(function() {
     console.log("On Ready");
-    $.getJSON("static/medium_questions.json", function(data) {
+    $.getJSON("static/questions_test.json", function(data) {
         $("#pre-start").show();
         $("#start").click(function() {
 
@@ -281,7 +165,7 @@ $(document).ready(function() {
             ko.applyBindings(myModel);
             startSound('background', true);
             $("#game").fadeIn('slow');
-            interval = window.setInterval(stopWatch, 1000);
+            //interval = window.setInterval(stopWatch, 1000);
             });
             
     $.getJSON("static/keys_hints.json", function(keys_hints) {
@@ -296,42 +180,3 @@ $(document).ready(function() {
         });
 });
 
-//Countdown
-var question_seconds = 1 + question_sec;
-var prep_seconds = 3;
-var display_seconds = 0;
-var question_num = 0;
-var states = ["Tiempo restante:","Ya!","Listos","Preparados"];
-var interval = null;
-var status = "stopped";
-var answer_time = 0;
-var score = 0;
-
-function stopWatch(){
-    if(prep_seconds > 0){
-        prep_seconds--;
-    }   
-    if(prep_seconds < 10){
-        display_seconds = "0" + prep_seconds.toString() + "s";
-        document.getElementById("display").innerHTML = display_seconds;
-    }
-    document.getElementById("state").innerHTML = states[prep_seconds]
-    if(prep_seconds  === 0){
-        if(question_seconds > 0){
-            question_seconds--;
-        }   
-        else{
-            if(myModel.transitioning === false){
-                myModel.transitioning = true;
-                myModel.timeOut();
-            }
-        }
-        if(question_seconds < 10){
-            display_seconds = "0" + question_seconds.toString() + "s";  
-        }   
-        else{
-            display_seconds = question_seconds + "s";
-        }
-        document.getElementById("display").innerHTML = display_seconds;
-    }
-}
