@@ -83,7 +83,7 @@ var MillionaireModel = function(data) {
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
- 		//ws.send(self.questions[self.level() - 1].question)
+ 		ws.send(self.questions[self.level() - 1].question)
 		//self.questionID = Math.floor(Math.random() *)
  		return self.questions[self.level() - 1].question;
  	}
