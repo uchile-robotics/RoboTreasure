@@ -83,7 +83,7 @@ var MillionaireModel = function(data) {
 
     // Grabs the question text of the current question
     self.getQuestionText = function() {
-		ws.send(self.questions[self.level() - 1].question);
+// //       ws.send(self.questions[self.level() - 1].question);
         //self.questionID = Math.floor(Math.random() *)
         // params = { op: "hola" };
         // $.getJSON('http://198.18.0.2:8888/com', params);
