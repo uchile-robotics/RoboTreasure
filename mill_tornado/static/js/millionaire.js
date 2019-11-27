@@ -66,7 +66,6 @@ var team = GetURLParameter('team');
 var MillionaireModel = function(data) {
     var self = this;
 
-    console.log(data);
     var topics = Object.keys(data)
 
     // Questions
@@ -79,10 +78,6 @@ var MillionaireModel = function(data) {
         var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
         this.questions.push(current_question);
     }
-    console.log(this.questions);
-
-
-    
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -104,7 +99,7 @@ var MillionaireModel = function(data) {
 
     // Grabs the question text of the current question
     self.getQuestionText = function() {
-        ws.send(self.questions[self.level() - 1].question);
+// //       ws.send(self.questions[self.level() - 1].question);
         //self.questionID = Math.floor(Math.random() *)
         // params = { op: "hola" };
         // $.getJSON('http://198.18.0.2:8888/com', params);

@@ -3,6 +3,11 @@ body {
 	font-family: 'Roboto Slab', serif;
 }
 
+img{
+    padding-left: 380px;
+    padding-top: 50px;
+}
+
 #container{
     background: white ;
     width: 220px;
@@ -158,7 +163,7 @@ audio {
 	background: url('../img/audience.png') no-repeat 0 0;
 }
 
-#answer-box {
+.answer-box {
 	color: black;
 	font-size: 1.3em;
 	text-align: left;
