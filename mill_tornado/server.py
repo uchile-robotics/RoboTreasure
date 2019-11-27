@@ -37,8 +37,8 @@ class MainHandler(tornado.web.RequestHandler):
 
     def get(self):
         print "loading html"
-        self.render("index.html")
-		
+        self.render("index.html", team_name = "Blue")
+        
 # Clase que renderiza el index Stage2(html con el websocket)
 class Stage2Handler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
@@ -88,9 +88,9 @@ class WSHandler(tornado.websocket.WebSocketHandler):
     def on_message(self, message):
         message = message.encode('ascii', 'ignore').decode('ascii')
         print 'message received:  %s' % message
-        pub = rospy.Publisher('/question', String, queue_size=10)
-        rospy.init_node("hola")
-        pub.publish(message)
+        # pub = rospy.Publisher('/question', String, queue_size=10)
+        # rospy.init_node("hola")
+        # pub.publish(message)
         # Reverse Message and send it back
         # print 'sending back message: %s' % message[::-1]
         # self.write_message(message[::-1])
@@ -101,85 +101,11 @@ class WSHandler(tornado.websocket.WebSocketHandler):
     def check_origin(self, origin):
         return True
 
-
-class CommandHandler(tornado.web.RequestHandler):
-    #both GET and POST requests have the same responses
-    def set_default_headers(self):
-        print "setting headers!!!"
-        #self.set_header("Access-Control-Allow-Origin", "*")
-        self.set_header("Access-Control-Allow-Origin", "http://127.0.0.1:8888/com?op=kill_roscore")
-        self.set_header("Access-Control-Allow-Origin", "http://127.0.0.1:8888/com?op=run_roscore")
-        self.set_header("Access-Control-Allow-Origin", "http://127.0.0.1:8888/com?op=spr_launcher")
-        self.set_header("Access-Control-Allow-Origin", "http://127.0.0.1:8888/com?op=spr_test")
-        self.set_header("Access-Control-Allow-Origin", "http://127.0.0.1:8888/com?op=spr_kill")
-        self.set_header("Access-Control-Allow-Headers", "x-requested-with")
-        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
-        #self.set_header("Access-Control-Allow-Headers", "access-control-allow-origin,authorization,content-type")
-
-
-    def get(self, url = '/'):
-        print "get"
-        self.handleRequest()
-
-    def post(self, url = '/'):
-        print 'post'
-        self.handleRequest()
-
-    # handle both GET and POST requests with the same function
-    def handleRequest( self ):
-        # is op to decide what kind of command is being sent
-        op = self.get_argument('op',None)
-        print op
-
-        #received a "checkup" operation command from the browser:
-        if op == "dummy":
-            print "dummy"
-
-#$%&Signal DO NOT ERASE
-
-        elif op == "spr_launcher":
-            spr_launcher()
-            print 'yay: spr_launcher'
-                        
-        elif op == "spr_test":
-            spr_test()
-            print 'yay: spr_test'
-                        
-        elif op == "spr_test_kill":
-            spr_test_kill()
-            print 'yay: spr_test_kill'
-                        
-        elif op == "spr_launcher_kill":
-            spr_launcher_kill()
-            print 'yay: spr_launcher_kill'
-                        
-        elif op == "run_roscore":
-            run_roscore()
-            print 'yay: run_roscore'
-                        
-        elif op == "kill_roscore":
-            kill_roscore()
-            print 'yay: kill_roscore'
-                        
-#ENDSIGNAL
-
-        #operation was not one of the ones that we know how to handle
-        else:
-            print op
-            print self.request
-            raise tornado.web.HTTPError(404, "Missing argument 'op' or not recognized")
-
-    def options(self):
-        # no body
-        self.set_status(204)
-        self.finish()
-
 # Url's
 app = tornado.web.Application([
     (r'/', MainHandler),
-	(r'/stage2', Stage2Handler),
+    (r'/stage2/*', Stage2Handler),
     (r'/b', WhiteHandler),
-    (r'/(com.*)', CommandHandler),
     (r'/(launch_details\.json)', tornado.web.StaticFileHandler, {'path': ''}),
     (r'/ws', WSHandler),
 ], **settings)

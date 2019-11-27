@@ -47,22 +47,6 @@ startSound = function(id, loop) {
 */
 var n_questions = 3;
 
-function GetURLParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-            return sParameterName[1];
-        }
-    }
-}​
-
-var team = GetURLParameter('team');
-
 var MillionaireModel = function(data) {
     var self = this;
 
@@ -259,11 +243,14 @@ var ws;
 // being created
 $(document).ready(function() {
     console.log("On Ready");
+    var yay = document.getElementById("team").textContent;
+    console.log(yay);
     $.getJSON("static/medium_questions.json", function(data) {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            var host = "198.18.0.1";
+            // var host = "198.18.0.1"; // For Pepper
+            var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 
