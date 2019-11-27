@@ -47,6 +47,22 @@ startSound = function(id, loop) {
 */
 var n_questions = 3;
 
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}​
+
+var team = GetURLParameter('team');
+
 var MillionaireModel = function(data) {
     var self = this;
 
@@ -260,7 +276,6 @@ $(document).ready(function() {
             // Close Websocket callback
             ws.onclose = function(evt) {
                 log("***Connection Closed***");
-                alert("Connection close");
                 $("div#message_details").empty();
 
                 };

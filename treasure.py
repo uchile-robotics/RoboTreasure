@@ -133,12 +133,6 @@ def getInstance(robot):
             }
         )
 
-        # smach.StateMachine.add('WEB_SHOW', Image(robot, url="http://198.18.0.1:8888/home/nao/uchile_last_ws/src/uchile_robocup/src/uchile_robocup/yay.jpg"),
-        #     transitions={
-        #         'succeeded':'succeeded'
-        #     }
-        # )
-
         smach.StateMachine.add('WEB_SHOW', ShowWebpage(robot, page = "http://198.18.0.1:8888/"),
             transitions={
                 'succeeded':'HEAR_QUESTIONS'
