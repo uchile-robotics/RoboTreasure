@@ -1,0 +1,201 @@
+body {
+	background: white;
+	font-family: 'Roboto Slab', serif;
+}
+
+#container{
+    background: white ;
+    width: 220px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding:5px 0 0 0; 
+}
+
+#display{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#state{
+    color: black;
+    text-align:center;
+    font-size:30px;
+    font-family: 'Red Hat Display', sans-serif;
+    padding:0px 0px;
+}
+
+#team{
+    font-size:30px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#stage{
+    font-size:30px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+audio {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+#game {
+	display: none;
+	text-align: center;
+}
+
+#top {
+	width: 960px;
+    height: 0px;
+	margin: 0 auto;
+}
+
+#levels {
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: black;
+	text-align: right;
+	margin-top: 40px;
+	font-size: 0px;
+}
+
+.active {
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#options {
+	width: 960px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+#question-box {
+	background: #F2C84B;
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+.big-text {
+	color: #06ADBF;
+	font-size: 2em;
+	margin-right: 15px;
+    text-align: left;
+}
+
+.content {
+	color: black;
+	font-size: 28px;
+	margin-right: 15px;
+    text-align: left;
+}
+
+#money {
+	font-size: 1.9em;
+	font-weight: bold;
+	color: #F2884B;
+	float: right;
+	display: block;
+	height: 50px;
+	padding-top: 20px;
+}
+
+#logo {
+	width: 480px;
+	float: left;
+	margin-left: 240px;
+	margin-top: 60px;
+}
+
+#hint {
+	display: none;
+	font-size: 7em;
+	font-weight: bold;
+	color: black;
+	width: 980px;
+	margin-top: 300px;
+	margin: 0 auto;
+	text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 50px;
+}
+
+#key {
+	display: none;
+	font-size: 7em;
+	font-weight: bold;
+	color: black;
+	width: 980px;
+	margin-top: 300px;
+	margin: 0 auto;
+	text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 50px;
+}
+
+
+#fifty {
+	background: url('../img/50-50.png') no-repeat 0 0;
+}
+
+#phone-friend {
+	background: url('../img/phone-friend.png') no-repeat 0 0;
+}
+
+#audience {
+	background: url('../img/audience.png') no-repeat 0 0;
+}
+
+#answer-box {
+	color: black;
+	font-size: 1.3em;
+	text-align: left;
+	width: 960px;
+	margin: 0 auto;
+}
+
+#start{
+    background-color: #F2C84B;
+    border-color: #F2C84B;
+    font-size: 80px;
+    font-family: 'Red Hat Display', sans-serif;
+    padding:10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#pre-start {
+	display: none;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.answer:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.options-button {
+	width: 64px;
+	height: 64px;
+	margin-left: 12px;
+	float: left;
+	background-position: 0 0;
+	cursor: pointer;
+}
+
+.options-button:hover {
+	background-position: 0 -64px !important;
+}

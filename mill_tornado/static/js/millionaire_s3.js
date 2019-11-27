@@ -243,14 +243,11 @@ var ws;
 // being created
 $(document).ready(function() {
     console.log("On Ready");
-    var yay = document.getElementById("team").textContent;
-    console.log(yay);
     $.getJSON("static/medium_questions.json", function(data) {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            // var host = "198.18.0.1"; // For Pepper
-            var host = "localhost"; // For PC
+            var host = "198.18.0.1";
             var port = "8888";
             var uri = "/ws";
 
@@ -263,6 +260,7 @@ $(document).ready(function() {
             // Close Websocket callback
             ws.onclose = function(evt) {
                 log("***Connection Closed***");
+                alert("Connection close");
                 $("div#message_details").empty();
 
                 };
