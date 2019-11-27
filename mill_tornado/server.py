@@ -17,7 +17,105 @@ settings = dict(
         static_path=os.path.join(os.path.dirname(__file__), "static"),
         debug=True
 )
-# Clase que renderiza el index (html con el websocket)
+
+team_name_def = ""
+stage = ""
+
+################################################
+
+                    #STAGE1#
+
+################################################
+
+class B1Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "blue"
+        print team_name_def
+        self.redirect("/")
+
+class G1Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "green"
+        print team_name_def
+        self.redirect("/")
+
+class R1Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "red"
+        print team_name_def
+        self.redirect("/")
+
+class Y1Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "yellow"
+        print team_name_def
+        self.redirect("/")
+
+class P1Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "purple"
+        print team_name_def
+        self.redirect("/")
+
+
+
+
+# Clase que renderiza el index 
 class MainHandler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
     def set_default_headers(self):
@@ -37,9 +135,22 @@ class MainHandler(tornado.web.RequestHandler):
 
     def get(self):
         print "loading html"
-        self.render("index.html", team_name = "Blue")
-        
-# Clase que renderiza el index Stage2(html con el websocket)
+        print "################################################"
+        print team_name_def
+        print "################################################"
+        if team_name_def == "yellow":
+            self.render("index.html", team_name="yellow")
+        elif team_name_def == "red":
+            self.render("index.html", team_name="red")
+        elif team_name_def == "blue":
+            self.render("index.html", team_name="blue")
+        elif team_name_def == "purple":
+            self.render("index.html", team_name="purple")
+        elif team_name_def == "green":
+            self.render("index.html", team_name="green")
+
+
+# Clase que renderiza el index Stage2
 class Stage2Handler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
     def set_default_headers(self):
@@ -60,8 +171,9 @@ class Stage2Handler(tornado.web.RequestHandler):
     def get(self):
         print "loading html"
         self.render("index_s2.html")
-        
-# Clase que renderiza el index Stage3(html con el websocket)
+
+
+# Clase que renderiza el index Stage3
 class Stage3Handler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
     def set_default_headers(self):
@@ -128,6 +240,11 @@ app = tornado.web.Application([
     (r'/', MainHandler),
     (r'/stage2', Stage2Handler),
     (r'/stage3', Stage3Handler),
+    (r'/stage1/b1', B1Handler),
+    (r'/stage1/r1', R1Handler),
+    (r'/stage1/g1', G1Handler),
+    (r'/stage1/y1', Y1Handler),
+    (r'/stage1/p1', P1Handler),
     (r'/b', WhiteHandler),
     (r'/(launch_details\.json)', tornado.web.StaticFileHandler, {'path': ''}),
     (r'/ws', WSHandler),

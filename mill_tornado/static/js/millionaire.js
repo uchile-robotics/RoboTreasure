@@ -244,6 +244,7 @@ var ws;
 $(document).ready(function() {
     console.log("On Ready");
     var yay = document.getElementById("team").textContent;
+    console.log("Inside")
     console.log(yay);
     $.getJSON("static/medium_questions.json", function(data) {
         $("#pre-start").show();
