@@ -28,6 +28,16 @@ body {
     padding:0px 0px;
 }
 
+#team{
+    font-size:30px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#stage{
+    font-size:30px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
 audio {
 	display: none;
 }
@@ -169,7 +179,7 @@ audio {
 #pre-start {
 	display: none;
     text-align: center;
-    padding-top: 300px;
+    padding-top: 150px;
 }
 
 .answer:hover {
