@@ -5,8 +5,8 @@ import tornado.websocket
 import socket
 import os.path
 
-#from std_msgs.msg import String
-#import rospy
+from std_msgs.msg import String
+import rospy
 
 from tornado.options import define, options, parse_command_line
 
@@ -38,6 +38,28 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         print "loading html"
         self.render("index.html")
+		
+# Clase que renderiza el index Stage2(html con el websocket)
+class Stage2Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        print "setting headers for main page!!!"
+        #self.set_header("Access-Control-Allow-Origin", "*")
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.2:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.1:8888/")
+        self.set_header("Access-Control-Allow-Headers", "x-requested-with")
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        self.render("index_s2.html")
 
 class WhiteHandler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
@@ -155,6 +177,7 @@ class CommandHandler(tornado.web.RequestHandler):
 # Url's
 app = tornado.web.Application([
     (r'/', MainHandler),
+	(r'/stage2', Stage2Handler),
     (r'/b', WhiteHandler),
     (r'/(com.*)', CommandHandler),
     (r'/(launch_details\.json)', tornado.web.StaticFileHandler, {'path': ''}),
