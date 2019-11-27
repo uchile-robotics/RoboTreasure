@@ -50,7 +50,6 @@ var n_questions = 3;
 var MillionaireModel = function(data) {
     var self = this;
 
-    console.log(data);
     var topics = Object.keys(data)
 
     // Questions
@@ -63,10 +62,6 @@ var MillionaireModel = function(data) {
         var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
         this.questions.push(current_question);
     }
-    console.log(this.questions);
-
-
-    
 
     // A flag to keep multiple selections
     // out while transitioning levels

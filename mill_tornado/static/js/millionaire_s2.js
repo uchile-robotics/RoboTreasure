@@ -49,8 +49,7 @@ var n_questions = 3;
 
 var MillionaireModel = function(data) {
 	var self = this;
-	
-	console.log(data);
+
 	var topics = Object.keys(data)
 
 	// Questions
@@ -63,10 +62,6 @@ var MillionaireModel = function(data) {
 		var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
 		this.questions.push(current_question);
 	}
-	console.log(this.questions);
-
-
-	
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -110,7 +105,7 @@ var MillionaireModel = function(data) {
  	// Attempts to answer the question with the specified
  	// answer index (0-3) from a click event of elm
  	self.answerQuestion = function(index, elm) {
-		document.getElementById("img").src = "static/esqueleto.png"; 
+		document.getElementById("img").src = "static/img/esqueleto.png"; 
  		if(self.transitioning)
  			return;
  		self.transitioning = true;
