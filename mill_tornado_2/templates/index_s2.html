@@ -10,25 +10,23 @@ Author: Aaron Nech
 <html>
 	<head>
 		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="{{ static_url('css/style.css') }}" />
+        <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<!-- HTML5 Audio tags - weakly supported, works in Chrome(tested) -->
-		<audio id="background" src='sound/background.mp3'></audio>
-		<audio id="rightsound" src='sound/right.mp3'></audio>
-		<audio id="wrongsound" src='sound/wrong.mp3'></audio>
+		<audio id="background" src="{{ static_url('sound/background.mp3') }}"></audio>
+		<audio id="rightsound" src="{{ static_url('sound/right.mp3') }}"></audio>
+		<audio id="wrongsound" src="{{ static_url('sound/wrong.mp3') }}"></audio>
 
 		<!-- Before the game begins problem set selection -->
-		<div id="pre-start">
-			<select id="problem-set">
-			</select>
-			<button id="start">Start!</button>
+        <div id="pre-start">
+			<button id="start">Start</button>
 		</div>
-
 		<!-- Shown when the player wins/loses -->
 		<div id="hint">
 		</div>
-        <div id="keys">
+        <div id="key">
 		</div>
 
 		<!-- The actual game markup -->
@@ -61,28 +59,32 @@ Author: Aaron Nech
 				<div id="money"><span data-bind="text: formatMoney()"></span></div>
 			</div>
 			<div id="question-box">
-				<span class="big-text">P.</span>
+				<span class="big-text"></span>
 				<span class="content" data-bind="text: getQuestionText()"></span>
 			</div>
-			<div id="answer-box">
-				<div id="answer-one" class="answer" data-bind="click: function() { answerQuestion(0, $element.id) }">
+			<div class="answer-box">              
+				<button id="answer-one" class="answer">
 					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)"></span>
-				</div>
-				<div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(1, $element.id) }">
+				</button>
+				<button id="answer-two" class="answer">
 					<span class="big-text">B.</span><span data-bind="text: getAnswerText(1)"></span>
-				</div>
-				<div id="answer-three" class="answer" data-bind="click: function() { answerQuestion(2, $element.id) }">
+				</button>
+                <button id="answer-three" class="answer">
 					<span class="big-text">C.</span><span data-bind="text: getAnswerText(2)"></span>
-				</div>
-				<div id="answer-four" class="answer" data-bind="click: function() { answerQuestion(3, $element.id) }">
+				</button>
+                <button id="answer-four" class="answer">
 					<span class="big-text">D.</span><span data-bind="text: getAnswerText(3)"></span>
-				</div>
-			</div>
-		</div>
+				</button>
+            </div>
+            <div class="answer-box">  
+                <img id="img" src="static/img/esqueleto.png" height="400px" padding>
+            </div>
+		  </div> 
+        
 
 		<!-- Script inclusion: JQuery for effects, Knockout for MVVM, millionaire.js for application -->
-		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src="js/knockout-3.0.0.js"></script>
-		<script type="text/javascript" src="js/millionaire.js"></script>
+		<script type="text/javascript" src="{{ static_url('js/jquery-2.0.3.min.js') }}"></script>
+		<script type="text/javascript" src="{{ static_url('js/knockout-3.0.0.js') }}"></script>
+		<script type="text/javascript" src="{{ static_url('js/millionaire.js') }}"></script>
 	</body>
 </html>

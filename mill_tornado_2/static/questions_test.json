@@ -1,0 +1,203 @@
+{
+	"sist_oseo" :   
+		
+			{ "cantidad" : [
+				
+					[	{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+
+							"content" : 
+									[ "157" ,
+										"206" ,
+										"302" ,
+										"291" ] ,
+			
+							"correct" : 1 } ,
+			
+			
+						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado por ___________ huesos'. " ,
+				
+							"content" : 
+									[ "206" ,
+										"532" ,
+										"105" ,
+										"309" ] ,
+				
+							"correct" : 0 } ],
+
+
+					[	{ "question" : "¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
+		
+							"content" : 
+									[ "Niñez" ,
+										"Adolescencia" ,
+										"Adultez" ,
+										"Vejez" ] ,
+		
+							"correct" : 0 } ,
+
+
+						{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene más huesos" ,
+
+							"content" :
+								[ "Niñez" ,
+									"Adolescencia" ,
+									"Adultez" ,
+									"Vejez" ] ,
+		
+							"correct" : 0 } ]
+									
+										] ,
+
+
+				"reconocer" : [
+		
+					[	{ "question" : "¿Cuál de los siguientes es un hueso?" ,
+			
+							"content" : 
+									[ "Estómago" ,
+										"Cerebro" ,
+										"Fémur" ,
+										"Corazón" ] ,
+			
+							"correct" : 2 } ,
+
+
+						{ "question" : "Indica cuál de los siguientes es un hueso" ,
+
+							"content" :
+								[ "Estómago" ,
+										"Cerebro" ,
+										"Fémur" ,
+										"Corazón" ] ,
+			
+							"correct" : 2 } ],
+
+
+					[	{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
+
+							"content" :
+									[ "Costilla" ,
+										"Cráneo" ,
+										"Pelvis" ,
+										"Pulmón" ] ,
+
+							"correct" : 3 } ,
+
+
+						{ "question" : "Indica cuál de los siguientes NO es un hueso" ,
+
+							"content" :
+									[ "Costilla" ,
+										"Cráneo" ,
+										"Pelvis" ,
+										"Pulmón" ] ,
+
+							"correct" : 3 } ],
+
+
+					[	{ "question" : "El(los) hueso(s) que protege(n) al corazón y los pulmones son: " ,
+
+							"content" :
+								[ "Cráneo" ,
+									"Costillas" ,
+									"Húmero" ,
+									"Fémur y Tibia" ] ,
+
+							"correct" : 1 } ,
+
+
+						{ "question" : "¿Cuál(es) es(son) el(los) hueso(s) que protegen el corazón y los pulmones?" ,
+
+							"content" : 
+								[ "Cráneo" ,
+									"Costillas" ,
+									"Húmero" ,
+									"Fémur y Tibia" ] ,
+
+							"correct" : 1 } ,
+
+
+						{ "question" : "Completa: 'La estructura que protege al corazón y los pulmones se llama _________' " ,
+
+							"content" : 
+								[ "Cráneo" ,
+									"Costillas" ,
+									"Húmero" ,
+									"Fémur y Tibia" ] ,
+
+							"correct" : 1 } ],
+
+						
+					[	{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
+
+							"content" :
+								[ "Cráneo" ,
+									"Esternón" ,
+									"Cúbito" ,
+									"Pelvis" ] ,
+		
+							"correct" : 0 } ,
+
+
+						{ "question" : "¿Cuál es el hueso encargado de proteger el cerebro y los ojos?" ,
+
+							"content" :
+								[ "Cráneo" ,
+									"Esternón" ,
+									"Cúbito" ,
+									"Pelvis" ] ,
+
+							"correct" : 0 } ],
+
+
+					[	{ "question" : "¿Cuál es la función del Sistema Óseo?" ,
+
+							"content" :
+								[ "Digerir los alimentos que ingresan al cuerpo" ,
+									"Bombear sangre a todo el cuerpo" ,
+									"Recibir estímulos y dar una respuesta" ,
+									"Dar forma, soporte y protección al cuerpo" ] ,
+
+							"correct" : 3 } ,
+
+
+						{ "question" : "La función del Sistema Óseo es:" ,
+
+							"content" :
+								[ "Digerir los alimentos que ingresan al cuerpo" ,
+									"Bombear sangre a todo el cuerpo" ,
+									"Recibir estímulos y dar una respuesta" ,
+									"Dar forma, soporte y protección al cuerpo" ] ,
+
+							"correct" : 3 } ] ,
+
+
+					[	{ "question" : "Completa: 'La __________ le da soporte al cuerpo humano' " ,
+
+							"content" :
+								[ "Costilla" ,
+									"Cabeza" ,
+									"Pelvis" ,
+									"Clavícula" ] ,
+	
+							"correct" : 2 } ,
+
+
+						{ "question" : "¿Cuál es la función de la pelvis?" ,
+
+							"content" :
+								[ "Dar soporte al cuerpo humano" ,
+									"Proteger el corazón y los pulmones" ,
+									"Proteger el cerebro y los ojos" ,
+									"Permitirle caminar al ser humano" ] ,
+
+							"correct" : 0 } ]
+
+				] 
+		}
+}
+
+
+
+
+

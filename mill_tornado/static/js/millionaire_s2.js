@@ -45,12 +45,23 @@ startSound = function(id, loop) {
 * 
 * @param data the question bank to use
 */
+var n_questions = 3;
+
 var MillionaireModel = function(data) {
 	var self = this;
-	
 
-	// The 15 questions of this game
-    this.questions = data.questions;
+	var topics = Object.keys(data)
+
+	// Questions
+    this.questions = [];
+		
+	for(var i = 1; i <= n_questions; i++) {
+		var topic = topics[Math.floor(Math.random() * topics.length)];
+		var types = Object.keys(data[topic]);
+		var type = types[Math.floor(Math.random() * types.length)];
+		var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
+		this.questions.push(current_question);
+	}
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -68,10 +79,12 @@ var MillionaireModel = function(data) {
  	this.usedPhone = new ko.observable(false);
  	this.usedAudience = new ko.observable(false);
 	
-	self.second_try = false;
+	self.tries = 0;
 
  	// Grabs the question text of the current question
  	self.getQuestionText = function() {
+ 		ws.send(self.questions[self.level() - 1].question)
+		//self.questionID = Math.floor(Math.random() *)
  		return self.questions[self.level() - 1].question;
  	}
 
@@ -92,6 +105,7 @@ var MillionaireModel = function(data) {
  	// Attempts to answer the question with the specified
  	// answer index (0-3) from a click event of elm
  	self.answerQuestion = function(index, elm) {
+		document.getElementById("img").src = "static/img/esqueleto.png"; 
  		if(self.transitioning)
  			return;
  		self.transitioning = true;
@@ -102,10 +116,11 @@ var MillionaireModel = function(data) {
 		}			
  	}
 	
+	
 	self.timeOut = function() {
 		$("#container").fadeOut('fast', function() {
  			startSound('wrongsound', false);
- 			$("#container").css('background', 'red').fadeIn('slow', function() {
+ 			$("#container").css('background', '#FF262E').fadeIn('slow', function() {
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
 	 					$("#hint").html('Pista: '+hints[stage - 1]);
@@ -122,10 +137,7 @@ var MillionaireModel = function(data) {
 					
  					self.level(self.level() + 1);
  					$("#container").css('background', 'white');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
+			 		self.resetAnswers();
 			 		self.transitioning = false;
  				}
  			});
@@ -138,12 +150,14 @@ var MillionaireModel = function(data) {
  	self.rightAnswer = function(elm) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('rightsound', false);
- 			$("#" + elm).css('background', 'green').slideDown('slow', function() {
- 				self.money(self.money()+10+question_seconds);
+ 			$("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
+ 				self.money(self.money() + 10 - 2*self.tries + question_seconds);
  				if(self.level() + 1 > 3) {
 	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('Clave:');
-	 					$("#game-over").fadeIn('slow');
+	 					$("#hint").html('Pista: '+hints[stage - 1]);
+	 					$("#hint").fadeIn('slow');
+						$("#key").html('Clave: '+keys[stage - 1]);
+	 					$("#key").fadeIn('slow');
 	 				});
  				} else {
 					question_seconds = question_sec + 1
@@ -153,11 +167,7 @@ var MillionaireModel = function(data) {
 					interval = window.setInterval(stopWatch, 1000);
 					
  					self.level(self.level() + 1);
- 					$("#" + elm).css('background', 'none');
-			 		$("#answer-one").show();
-			 		$("#answer-two").show();
-			 		$("#answer-three").show();
-			 		$("#answer-four").show();
+ 					self.resetAnswers();
 			 		self.transitioning = false;
  				}
  			});
@@ -168,43 +178,54 @@ var MillionaireModel = function(data) {
  	self.wrongAnswer = function(elm) {
  		$("#" + elm).slideUp('slow', function() {
  			startSound('wrongsound', false);
- 			$("#" + elm).css('background', 'red').slideDown('slow', function() {
+ 			$("#" + elm).css('background', '#FF262E').slideDown('slow', function() {
 								
 				if(self.level() + 1 > 3) {
-					if(self.second_try){
+					if(self.tries >= 1){
 						$("#game").fadeOut('slow', function() {
-							$("#game-over").html('You Win!');
-							$("#game-over").fadeIn('slow');
+							$("#hint").html('Pista: '+hints[stage - 1]);
+							$("#hint").fadeIn('slow');
+							$("#key").html('Clave: '+keys[stage - 1]);
+							$("#key").fadeIn('slow');
 						});
+					}
+					else{
+						self.tries += 1;
+					
+					self.transitioning = false;
+						
 					}
 				
 				} else {
-						question_seconds = question_sec + 1
-						prep_seconds = 3;
-						document.getElementById("display").innerHTML = "03s";
-						window.clearInterval(interval);
-						interval = window.setInterval(stopWatch, 1000);
-					if(self.second_try){						
+					question_seconds = question_sec + 1
+					prep_seconds = 3;
+					document.getElementById("display").innerHTML = "03s";
+					window.clearInterval(interval);
+					interval = window.setInterval(stopWatch, 1000);
+					if(self.tries >= 1){						
 						self.level(self.level() + 1);
-						$("#" + elm).css('background', 'none');
-						$("#answer-one").show();
-						$("#answer-two").show();
-						$("#answer-three").show();
-						$("#answer-four").show();
-						self.second_try = false;						
+						self.resetAnswers();				
 					}
-
-					else{
-						self.second_try = true;
-					}
-					$("#" + elm).css('background', 'none');
+					else
+						self.tries += 1;
+					
 					self.transitioning = false;
 				}
  			});
  		});
  	}
 	
-
+	self.resetAnswers = function(){
+		$("#answer-one").css('background', 'none');
+		$("#answer-two").css('background', 'none');
+		$("#answer-three").css('background', 'none');
+		$("#answer-four").css('background', 'none');
+		$("#answer-one").show();
+		$("#answer-two").show();
+		$("#answer-three").show();
+		$("#answer-four").show();
+		self.tries = 0;	
+	}
  	// Gets the money formatted string of the current won amount of money.
  	self.formatMoney = function() {
 	    return self.money().money(0, '', ',');
@@ -215,25 +236,71 @@ var MillionaireModel = function(data) {
 var myModel;
 var keys = [];
 var hints = [];
+var ws;
+
 // Executes on page load, bootstrapping
 // the start game functionality to trigger a game model
 // being created
 $(document).ready(function() {
-	$.getJSON("questions.json", function(data) {
-		for(var i = 1; i <= data.games.length; i++) {
-			$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
-		}
-		var index = 0;
-		myModel = new MillionaireModel(data.games[index]);
-		ko.applyBindings(myModel);
-		startSound('background', true);
-		$("#game").fadeIn('slow');
-		interval = window.setInterval(stopWatch, 1000);
-	});
-	$.getJSON("keys_hints.json", function(keys_hints) {
+	var host = "localhost";
+	var port = "8888"
+	var uri = "/ws"
+
+	ws = new WebSocket("ws://"+host+":"+port+uri)
+	ws.onmessage = function(evt) {
+            console.log("Message Received: " + evt.data);
+            alert("message received: " + evt.data);
+            };
+ 
+          // Close Websocket callback
+          ws.onclose = function(evt) {
+            log("***Connection Closed***");
+            alert("Connection close");
+            $("#host").css("background", "#ff0000"); 
+            $("#port").css("background", "#ff0000"); 
+            $("#uri").css("background",  "#ff0000");
+            $("div#message_details").empty();
+ 
+            };
+ 
+          // Open Websocket callback
+          ws.onopen = function(evt) { 
+            $("#host").css("background", "#00ff00"); 
+            $("#port").css("background", "#00ff00"); 
+            $("#uri").css("background", "#00ff00");
+            $("div#message_details").show();
+            console.log("***Connection Opened***");
+          	};
+
+
+
+	$.getJSON("static/medium_questions.json", function(data) {
+		$("#pre-start").show();
+		$("#start").click(function() {
+			$("#pre-start").fadeOut('slow', function() {
+			startSound('background', true);
+			$("#game").fadeIn('slow');
+			for(var i = 1; i <= data.sist_oseo.length; i++) {
+				$("#problem-set").append('<option value="' + i + '">' + i + '</option>');
+			}
+			var index = 0;
+			myModel = new MillionaireModel(data);
+			ko.applyBindings(myModel);
+			startSound('background', true);
+			$("#game").fadeIn('slow');
+			interval = window.setInterval(stopWatch, 1000);
+			});
+			
+	$.getJSON("static/keys_hints.json", function(keys_hints) {
 		keys = keys_hints.keys; 
 		hints = keys_hints.hints; 
 	});
+			
+			
+			
+			
+			});
+		});
 });
 
 //Countdown
@@ -278,13 +345,35 @@ function stopWatch(){
 
 
 
-
-
-
-
-
-
-
+var mouseState;
+$( "#answer-one" ).mousedown(function() {
+	document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
+	mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
+});
+$( "#answer-one" ).mouseup(function() {
+	clearTimeout(mouseState);
+});
+$( "#answer-two" ).mousedown(function() {
+	document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
+	mouseState = setTimeout(myModel.answerQuestion, 3000, 1, "answer-two");
+});
+$( "#answer-two" ).mouseup(function() {
+	clearTimeout(mouseState);
+});
+$( "#answer-three" ).mousedown(function() {
+	document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
+	mouseState = setTimeout(myModel.answerQuestion, 3000, 2, "answer-three");
+});
+$( "#answer-three" ).mouseup(function() {
+	clearTimeout(mouseState);
+});
+$( "#answer-four" ).mousedown(function() {
+	document.getElementById("img").src = "static/img/esqueleto_torso.png"; 
+	mouseState = setTimeout(myModel.answerQuestion, 3000, 3, "answer-four");
+});
+$( "#answer-four" ).mouseup(function() {
+	clearTimeout(mouseState);
+});
 
 
 

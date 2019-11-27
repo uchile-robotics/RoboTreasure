@@ -31,7 +31,7 @@ class Setup(smach.State):
         # self.track = self.robot.get("track_person")
     def execute(self,userdata):
         # self.track.set_search(False)
-        self.tts.set_language("English")
+        self.tts.set_language("Spanish")
         # self.tts.set_speed(110)
         self.audition.set_audio_expression(False)
         self.knowledge.pose.delete_all()
@@ -64,6 +64,20 @@ class SingleSub(smach.State):
     def execute(self, userdata):
         qr = rospy.wait_for_message("qr", String)
         print qr
+        return "succeeded"
+
+class Questions(smach.State):
+    """docstring for subs"""
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["succeeded"])
+        self.robot = robot
+        self.tts = self.robot.get("tts")
+
+    def execute(self, userdata):
+        question = rospy.wait_for_message("question", String)
+        print question
+        print type(question)
+        self.tts.say_with_gestures(str(question))
         return "succeeded"
 
 class Image(smach.State):
@@ -109,7 +123,7 @@ def getInstance(robot):
 
         smach.StateMachine.add('SETUP', Setup(robot),
             transitions={
-                'succeeded':'QR'
+                'succeeded':'WEB_SHOW'
             }
         )
 
@@ -119,15 +133,15 @@ def getInstance(robot):
             }
         )
 
-        # smach.StateMachine.add('WEB_SHOW', Image(robot, url="http://198.18.0.1:8888/home/nao/uchile_last_ws/src/uchile_robocup/src/uchile_robocup/yay.jpg"),
-        #     transitions={
-        #         'succeeded':'succeeded'
-        #     }
-        # )
-
         smach.StateMachine.add('WEB_SHOW', ShowWebpage(robot, page = "http://198.18.0.1:8888/"),
             transitions={
-                'succeeded':'succeeded'
+                'succeeded':'HEAR_QUESTIONS'
+            }
+        )
+
+        smach.StateMachine.add('HEAR_QUESTIONS', Questions(robot),
+            transitions={
+                'succeeded':'HEAR_QUESTIONS'
             }
         )
 

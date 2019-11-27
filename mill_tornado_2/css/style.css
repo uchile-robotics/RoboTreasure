@@ -1,41 +1,6 @@
 body {
-	background: white;
+	background: black;
 	font-family: 'Roboto Slab', serif;
-}
-
-#container{
-    background: white ;
-    width: 220px;
-    height: 60px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding:5px 0 0 0; 
-}
-
-#display{
-    width: 100%;
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Red Hat Display', sans-serif;
-}
-
-#state{
-    color: black;
-    text-align:center;
-    font-size:30px;
-    font-family: 'Red Hat Display', sans-serif;
-    padding:0px 0px;
-}
-
-#team{
-    font-size:30px;
-    font-family: 'Red Hat Display', sans-serif;
-}
-
-#stage{
-    font-size:30px;
-    font-family: 'Red Hat Display', sans-serif;
 }
 
 audio {
@@ -53,7 +18,6 @@ audio {
 
 #top {
 	width: 960px;
-    height: 0px;
 	margin: 0 auto;
 }
 
@@ -62,14 +26,14 @@ audio {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	color: black;
+	color: white;
 	text-align: right;
 	margin-top: 40px;
-	font-size: 0px;
+	font-size: 1.3em;
 }
 
 .active {
-	color: black;
+	color: green;
 	font-weight: bold;
 	text-decoration: underline;
 }
@@ -81,7 +45,7 @@ audio {
 }
 
 #question-box {
-	background: #F2C84B;
+	background: #ddd;
 	width: 960px;
 	margin: 0 auto;
 	padding: 10px;
@@ -89,23 +53,15 @@ audio {
 }
 
 .big-text {
-	color: #06ADBF;
+	color: #FF7E00;
 	font-size: 2em;
 	margin-right: 15px;
-    text-align: left;
-}
-
-.content {
-	color: black;
-	font-size: 28px;
-	margin-right: 15px;
-    text-align: left;
 }
 
 #money {
 	font-size: 1.9em;
 	font-weight: bold;
-	color: #F2884B;
+	color: green;
 	float: right;
 	display: block;
 	height: 50px;
@@ -119,32 +75,16 @@ audio {
 	margin-top: 60px;
 }
 
-#hint {
+#game-over {
 	display: none;
-	font-size: 7em;
+	font-size: 8em;
 	font-weight: bold;
-	color: black;
+	color: white;
 	width: 980px;
 	margin-top: 300px;
 	margin: 0 auto;
 	text-align: center;
-    font-family: 'Red Hat Display', sans-serif;
-    padding: 50px;
 }
-
-#key {
-	display: none;
-	font-size: 7em;
-	font-weight: bold;
-	color: black;
-	width: 980px;
-	margin-top: 300px;
-	margin: 0 auto;
-	text-align: center;
-    font-family: 'Red Hat Display', sans-serif;
-    padding: 50px;
-}
-
 
 #fifty {
 	background: url('../img/50-50.png') no-repeat 0 0;
@@ -159,27 +99,15 @@ audio {
 }
 
 #answer-box {
-	color: black;
+	color: white;
 	font-size: 1.3em;
 	text-align: left;
 	width: 960px;
 	margin: 0 auto;
 }
 
-#start{
-    background-color: #F2C84B;
-    border-color: #F2C84B;
-    font-size: 80px;
-    font-family: 'Red Hat Display', sans-serif;
-    padding:10px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
 #pre-start {
 	display: none;
-    text-align: center;
-    padding-top: 150px;
 }
 
 .answer:hover {
