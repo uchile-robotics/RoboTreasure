@@ -78,7 +78,10 @@ Author: Aaron Nech
 					<span class="big-text">D.</span><span data-bind="text: getAnswerText(3)"></span>
 				</button>
             </div>
-            <div class="answer-box">  
+            <div class="answer-box"> 
+				<p>Alternativa seleccionada:</p>
+				<h3 id="detected_answer">c</h3>
+				<input type="hidden">
                 <img id="img" src="static/img/esqueleto.png" height="400px" padding>
             </div>
 		  </div> 
@@ -88,5 +91,44 @@ Author: Aaron Nech
 		<script type="text/javascript" src="{{ static_url('js/jquery-2.0.3.min.js') }}"></script>
 		<script type="text/javascript" src="{{ static_url('js/knockout-3.0.0.js') }}"></script>
 		<script type="text/javascript" src="{{ static_url('js/millionaire_s2.js') }}"></script>
+
+		<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+		<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+
+		<script type="text/javascript" type="text/javascript">
+		  // Connecting to ROS
+		  // -----------------
+
+		  var ros = new ROSLIB.Ros({
+		    url : 'ws://localhost:8888'
+		  });
+
+		  ros.on('connection', function() {
+		    console.log('Connected to websocket server.');
+		  });
+
+		  ros.on('error', function(error) {
+		    console.log('Error connecting to websocket server: ', error);
+		  });
+
+		  ros.on('close', function() {
+		    console.log('Connection to websocket server closed.');
+		  });
+
+		  // Subscribing to a Topic
+		  // ----------------------
+
+		  var listener = new ROSLIB.Topic({
+		    ros : ros,
+		    name : '/listener',
+		    messageType : 'std_msgs/String'
+		  });
+
+		  listener.subscribe(function(message) {
+		    console.log('Received message on ' + listener.name + ': ' + message.data);
+		    document.getElementById("detected_answer").innerHTML = message.data;
+		    $("input").change();
+		    listener.unsubscribe();
+		  });
 	</body>
 </html>

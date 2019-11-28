@@ -346,34 +346,29 @@ function stopWatch(){
 
 
 var mouseState;
-$( "#answer-one" ).mousedown(function() {
-	document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
-	mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
-});
-$( "#answer-one" ).mouseup(function() {
+$( "input" ).change(function() {
+	console.log("Answer changed");
+	if(document.getElementById("detected_answer").innerHTML == "a"){
+		document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
+		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
+	}
+	else if(document.getElementById("detected_answer").innerHTML == "b"){
+		document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
+		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-two");
+	}
+	else if(document.getElementById("detected_answer").innerHTML == "c"){
+		document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
+		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-three");
+	}
+	else if(document.getElementById("detected_answer").innerHTML == "d"){
+		document.getElementById("img").src = "static/img/esqueleto_torse.png"; 
+		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-four");
+	}
+	else{
+	console.log(document.getElementById("detected_answer").innerHTML);
 	clearTimeout(mouseState);
+	}
 });
-$( "#answer-two" ).mousedown(function() {
-	document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
-	mouseState = setTimeout(myModel.answerQuestion, 3000, 1, "answer-two");
+$("#answer-two").click(function() {
+    $("input").change();
 });
-$( "#answer-two" ).mouseup(function() {
-	clearTimeout(mouseState);
-});
-$( "#answer-three" ).mousedown(function() {
-	document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
-	mouseState = setTimeout(myModel.answerQuestion, 3000, 2, "answer-three");
-});
-$( "#answer-three" ).mouseup(function() {
-	clearTimeout(mouseState);
-});
-$( "#answer-four" ).mousedown(function() {
-	document.getElementById("img").src = "static/img/esqueleto_torso.png"; 
-	mouseState = setTimeout(myModel.answerQuestion, 3000, 3, "answer-four");
-});
-$( "#answer-four" ).mouseup(function() {
-	clearTimeout(mouseState);
-});
-
-
-
