@@ -24,7 +24,7 @@ Sistema Óseo:
 			d. Vejez
 
 
-		4. Indica en qué etapa de la vida en que el cuerpo humano tiene más huesos.
+		4. Indica la etapa de la vida en que el cuerpo humano tiene más huesos.
 			a. Niñez <--
 			b. Adolescencia
 			c. Adultez
@@ -63,14 +63,14 @@ Sistema Óseo:
 			d. Pulmón <--
 
 
-		9. El(los) hueso(s) que protege(n) al corazón y los pulmones son:
+		9. El o los huesos que protegen al corazón y los pulmones son:
 			a. Cráneo
 			b. Costillas <--
 			c. Húmero
 			d. Fémur y Tibia
 
 
-		10. ¿Cuál(es) es(son) el(los) hueso(s) que protege(n) el corazón y los pulmones?
+		10. ¿Cuál o cuáles son los huesos que protegen el corazón y los pulmones?
 			a. Cráneo
 			b. Costillas <--
 			c. Húmero
@@ -84,7 +84,7 @@ Sistema Óseo:
 			d. Fémur y Tibia
 
 
-		12. Completa: 'El(la) ________________ protege al cerebro de daños externos y accidentes'.
+		12. Completa: 'El o la ________________ protege al cerebro de daños externos y accidentes'.
 			a. Cráneo <--
 			b. Esternón
 			c. Cúbito
@@ -208,7 +208,7 @@ Músculos y movimiento:
 			d. Nervios
 
 
-		28. Completa: 'Los músculos se unen a los huesos gracias a los(as) __________'.
+		28. Completa: 'Los músculos se unen a los huesos gracias a los o las __________'.
 			a. Ligamentos
 			b. Nervios
 			c. Articulaciones
@@ -392,6 +392,33 @@ Alcohol:
 			b. Adicción <--
 			c. Estímulo
 			d. Atracción
+
+
+
+
+
+
+Desarrollo:
+		51. ¿Qué medidas de prevención debes tomar cuando andas en bicicleta?
+
+		52. ¿Qué medidas de prevención debes tomar cuando trotas?
+
+		53. Explica el proceso desde que se capta un estímulo hasta que se ejecuta una respuesta involuntaria
+
+		54. Explica el proceso desde que se capta un estímulo hasta que se ejecuta una respuesta voluntaria
+
+		55. Menciona 3 efectos de consumir alcohol en exceso
+
+		56. Menciona 3 factores de riesgo que favorecen el consumo de alcohol
+
+		57. Menciona 3 factores de protección que previenen el consumo de alcohol
+
+		58. Menciona 2 actividades que contribuyen al cuidado y fortalecimiento del sistema locomotor
+
+		59. Explica qué ocurre en tu sistema nervioso cuando tocas algo caliente con la mano
+
+		60. Explica qué ocurre en tu sistema nervioso cuando tocas algo que te pincha
+
 
 
 

@@ -1,0 +1,398 @@
+{
+	"sist_oseo" :   
+		
+			{ "cantidad" : [
+				
+					[	{ "question" : "¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+
+							"content" : 
+									[ "157" ,
+										"206" ,
+										"302" ,
+										"291" ] ,
+			
+							"correct" : 1 } ,
+			
+			
+						{ "question" : "Completa: 'El cuerpo humano en etapa adulta está formado aproximadamente por ___________ huesos'. " ,
+				
+							"content" : 
+									[ "206" ,
+										"532" ,
+										"105" ,
+										"309" ] ,
+				
+							"correct" : 0 } ] 
+
+
+					 ],
+									
+										
+
+
+				"reconocer" : [
+		
+					[	{ "question" : "¿Cuál de los siguientes es un hueso?" ,
+			
+							"content" : 
+									[ "Estómago" ,
+										"Cerebro" ,
+										"Fémur" ,
+										"Corazón" ] ,
+			
+							"correct" : 2 } ,
+
+
+						{ "question" : "Indica cuál de los siguientes es un hueso" ,
+
+							"content" :
+								[ "Estómago" ,
+										"Cerebro" ,
+										"Fémur" ,
+										"Corazón" ] ,
+			
+							"correct" : 2 } ],
+
+
+					[	{ "question" : "¿Cuál de los siguientes NO es un hueso?" ,
+
+							"content" :
+									[ "Costilla" ,
+										"Cráneo" ,
+										"Pelvis" ,
+										"Pulmón" ] ,
+
+							"correct" : 3 } ,
+
+
+						{ "question" : "Indica cuál de los siguientes NO es un hueso" ,
+
+							"content" :
+									[ "Costilla" ,
+										"Cráneo" ,
+										"Pelvis" ,
+										"Pulmón" ] ,
+
+							"correct" : 3 } ] ,
+
+
+					
+						
+					
+
+
+					[	{ "question" : "Completa: 'La __________ le da soporte al cuerpo humano' " ,
+
+							"content" :
+								[ "Costilla" ,
+									"Cabeza" ,
+									"Pelvis" ,
+									"Clavícula" ] ,
+	
+							"correct" : 2 } ,
+
+
+						{ "question" : "¿Cuál es la función de la pelvis?" ,
+
+							"content" :
+								[ "Dar soporte al cuerpo humano" ,
+									"Proteger el corazón y los pulmones" ,
+									"Proteger el cerebro y los ojos" ,
+									"Permitirle caminar al ser humano" ] ,
+
+							"correct" : 0 } ] ]
+
+										
+		},
+
+
+
+
+	"musculos" : 
+				
+		{ "reconocer" : [
+										
+					[	{ "question" : "¿Qué son los músculos?" ,
+	
+							"content" : 
+								[ "Órganos que digieren alimentos" ,
+				 					"Receptores de estímulos" ,
+									"Estructuras duras que protegen el cuerpo" ,
+									"Órganos blandos que se contraen y relajan" ] ,
+		
+							"correct" : 3 } ,
+
+
+						{ "question" : "Los músculos son: " ,
+
+							"content" :
+								[ "Órganos que digieren alimentos" ,
+				 					"Receptores de estímulos" ,
+									"Estructuras duras que protegen el cuerpo" ,
+									"Órganos blandos que se contraen y relajan" ] ,
+
+							"correct" : 3 } ],
+
+
+					[	{ "question" : "¿Cuál es la función de los músculos?" ,
+	
+							"content" : 
+								[ "Proteger al cuerpo de los daños" ,
+									"Interpretar los estímulos del exterior" ,
+									"Permitir la movilidad de los huesos" ,
+									"Dar estabilidad al cuerpo" ] ,
+		
+							"correct" : 2 } , 
+
+
+						{ "question" : "La función de los músculos es: " ,
+
+							"content" :
+								[ "Proteger al cuerpo de los daños" ,
+									"Interpretar los estímulos del exterior" ,
+									"Permitir la movilidad de los huesos" ,
+									"Dar estabilidad al cuerpo" ] ,
+
+							"correct" : 2 } ] ] ,
+
+
+				
+
+
+			"movimiento" : [
+										
+				[	{ "question" : "Completa: 'Los ___________ unen a los huesos en cada articulación' " ,
+							
+							"content" : 
+								[ "Tendones" ,
+									"Músculos" ,
+									"Ligamentos" ,
+									"Nervios" ] ,
+
+							"correct" : 2 } ,
+
+
+						{ "question" : "¿A través de qué estructura se unen los huesos en cada articulación?" ,
+
+							"content" : 
+								[ "Tendones" ,
+									"Músculos" ,
+									"Ligamentos" ,
+									"Nervios" ] ,
+
+							"correct" : 2 } ],
+
+
+					[	{ "question" : "Completa: 'Los músculos se unen a los huesos gracias a los o las __________'" ,
+
+							"content" :
+								[ "Ligamentos" ,
+									"Nervios" ,
+									"Articulaciones" ,
+									"Tendones" ] ,
+	
+							"correct" : 3 } , 
+
+
+						{ "question" : "¿A través de qué estructura se unen los músculos a los huesos?" ,
+
+							"content" :
+								[ "Ligamentos" ,
+									"Nervios" ,
+									"Articulaciones" ,
+									"Tendones" ] ,
+	
+							"correct" : 3 } ]
+	
+										],
+
+
+			"cuidados" : [
+			
+					[	{ "question" : "¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
+
+							"content" :
+								[ "60 minutos" ,
+									"30 minutos" ,
+									"90 minutos" ,
+									"120 minutos" ] ,
+
+							"correct" : 0 } ,
+
+
+						{ "question" : "Completa: 'Las personas debieran realizar mínimo __________ diarios de actividad física' " ,
+
+							"content" :
+								[ "60 minutos" ,
+									"30 minutos" ,
+									"90 minutos" ,
+									"120 minutos" ] ,
+
+							"correct" : 0 } ],
+
+
+					[	{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
+
+							"content" :
+								[ "Ejercicio" ,
+									"Sedentarismo" ,
+									"Educación Física" ,
+									"Estudiar" ] ,
+
+							"correct" : 1 } , 
+
+
+						{ "question" : " 'Poca actividad física. Provoca problemas de sobrepeso y obesidad'. ¿A qué se refiere esta definición?" ,
+
+							"content" :
+								[ "Ejercicio" ,
+									"Sedentarismo" ,
+									"Educación Física" ,
+									"Estudiar" ] ,
+
+							"correct" : 1 } ] ]
+
+									
+
+		
+		} ,
+
+
+
+
+
+	"sist_nervioso" : 
+		
+		{ "reconocer" : [
+			
+					[	{ "question" : "¿Cómo se divide el Sistema Nervioso?" ,
+
+							"content" : 
+								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
+									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
+
+							"correct" : 3 } ,
+
+
+						{ "question" : "El Sistema Nervioso se divide en:" ,
+
+							"content" : 
+								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
+									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
+
+							"correct" : 3 } ] ,
+
+
+					[	{ "question" : "¿Cuáles son los componentes del Sistema Nervioso?" ,
+
+							"content" :
+								[ "Pulmones, corazón y estómago" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
+
+							"correct" : 1 } ,
+
+
+						{ "question" : "Los componentes del Sistema Nervioso son: " ,
+
+							"content" :
+								[ "Pulmones, corazón y estómago" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
+
+							"correct" : 1 } ,
+
+
+						{ "question" : "Completa: '_______________ componen el Sistema Nervioso' " ,
+
+							"content" :
+								[ "Pulmones, corazón y estómago" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
+
+							"correct" : 1 }	]
+					 
+
+								
+											],
+
+
+			"estimulos" : [
+
+					[	{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
+
+							"content" :
+								[ "Nervios" ,
+									"Tendones" ,
+									"Estímulos" ,
+									"Sentidos" ] ,
+
+							"correct" : 2 } ],
+
+
+					[	{ "question" : "Recibimos los estímulos del exterior a través de los: " ,
+
+							"content" :
+								[ "sentidos" ,
+									"músculos" ,
+									"nervios" ,
+									"huesos" ] ,
+
+							"correct" : 0 } ,
+
+
+						{ "question" : "¿A través de qué recibimos los estímulos del exterior?" ,
+
+							"content" :
+								[ "Sentidos" ,
+									"Músculos" ,
+									"Nervios" ,
+									"Huesos" ] ,
+
+							"correct" : 0 } ] 
+
+						
+	
+
+							]
+		} ,
+
+
+
+
+
+	"alcohol" : 
+
+		{ "reconocer" : [
+
+
+					[	{ "question" : "'Hábito de consumo que es difícil de dejar'. Esta definición corresponde a: " ,
+
+							"content" :
+								[ "Alcohol" ,
+									"Adicción" ,
+									"Estímulo" ,
+									"Atracción" ] ,
+
+							"correct" : 1 } , 
+
+
+						{ "question" : "'Hábito de consumo que es difícil de dejar'. ¿A qué se refiere esta definición?" ,
+
+							"content" :
+								[ "Alcohol" ,
+									"Adicción" ,
+									"Estímulo" ,
+									"Atracción" ] ,
+
+							"correct" : 1 } ] ] }
+
+
+} 
