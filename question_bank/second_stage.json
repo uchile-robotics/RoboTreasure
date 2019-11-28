@@ -24,7 +24,7 @@
 
 			"reconocer" : [ 
 			
-			[	{ "question" : "El(los) hueso(s) que protege(n) al corazón y los pulmones son: " ,
+			[	{ "question" : "El o los huesos que protegen al corazón y los pulmones son: " ,
 
 							"content" :
 								[ "Cráneo" ,
@@ -35,7 +35,7 @@
 							"correct" : 1 } ,
 
 
-				{ "question" : "¿Cuál(es) es(son) el(los) hueso(s) que protegen el corazón y los pulmones?" ,
+				{ "question" : "¿Cuál o cuáles son los huesos que protegen el corazón y los pulmones?" ,
 
 							"content" : 
 								[ "Cráneo" ,
@@ -57,7 +57,7 @@
 							"correct" : 1 } ] ,
 
 
-			[	{ "question" : "Completa: 'El(la) _________ protege al cerebro de daños externos y accidentes' " ,
+			[	{ "question" : "Completa: 'El o la _________ protege al cerebro de daños externos y accidentes' " ,
 
 							"content" :
 								[ "Cráneo" ,
