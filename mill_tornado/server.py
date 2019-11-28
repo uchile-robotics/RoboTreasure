@@ -5,8 +5,8 @@ import tornado.websocket
 import socket
 import os.path
 
-# from std_msgs.msg import String
-# import rospy
+from std_msgs.msg import String
+import rospy
 
 from tornado.options import define, options, parse_command_line
 
@@ -139,15 +139,15 @@ class MainHandler(tornado.web.RequestHandler):
         print team_name_def
         print "################################################"
         if team_name_def == "yellow":
-            self.render("index.html", team_name="yellow")
+            self.render("index.html", team_name="Equipo Amarillo")
         elif team_name_def == "red":
-            self.render("index.html", team_name="red")
+            self.render("index.html", team_name="Equipo Rojo")
         elif team_name_def == "blue":
-            self.render("index.html", team_name="blue")
+            self.render("index.html", team_name="Equipo Azul")
         elif team_name_def == "purple":
-            self.render("index.html", team_name="purple")
+            self.render("index.html", team_name="Equipo Morado")
         elif team_name_def == "green":
-            self.render("index.html", team_name="green")
+            self.render("index.html", team_name="Equipo Verde")
 
 
 # Clase que renderiza el index Stage2
@@ -222,9 +222,9 @@ class WSHandler(tornado.websocket.WebSocketHandler):
     def on_message(self, message):
         message = message.encode('ascii', 'ignore').decode('ascii')
         print 'message received:  %s' % message
-        # pub = rospy.Publisher('/question', String, queue_size=10)
-        # rospy.init_node("hola")
-        # pub.publish(message)
+        pub = rospy.Publisher('/question', String, queue_size=10)
+        rospy.init_node("hola")
+        pub.publish(message)
         # Reverse Message and send it back
         # print 'sending back message: %s' % message[::-1]
         # self.write_message(message[::-1])

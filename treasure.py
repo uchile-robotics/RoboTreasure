@@ -12,10 +12,11 @@ from maqui_skills.capabilities.tablet import TabletControllerSkill
 #States
 from uchile_states.navigation.states import GoState
 from uchile_states.interaction.states import Speak
-from uchile_states.interaction.tablet_states import ShowWebpage
+from uchile_states.interaction.tablet_states import ShowWebpage, WaitTouchScreen
+# from uchile_states.perception.school import QRDetector, AnswerSelection
 #########from uchile_states.interaction.tablet_states import OperationMessage
 
-
+page = ""
 
 class Setup(smach.State):
     def __init__(self,robot):
@@ -42,28 +43,48 @@ class Setup(smach.State):
         self.facial_features._set_resolution(4)
         return 'succeeded'
 
-class Subs(smach.State):
-    """docstring for subs"""
-    def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded"])
-        self.robot = robot
-
-    def callback(self, data):
-        print data.data
-        return "succeeded"
-
-    def execute(self, userdata):
-        rospy.Subscriber("qr", String, self.callback)
-
 class SingleSub(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded"])
+        smach.State.__init__(self, outcomes=["succeeded"], io_keys=["qr"])
         self.robot = robot
 
     def execute(self, userdata):
         qr = rospy.wait_for_message("qr", String)
+        userdata.qr = qr
         print qr
+        return "succeeded"
+
+class ChangeURL(smach.State):
+    """docstring for subs"""
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["succeeded"], io_keys=["qr", "page", "base_page"])
+        self.robot = robot
+
+    def execute(self, userdata):
+        qr_split = str(userdata.qr)
+        qr_split = qr_split.split()
+        print qr_split
+        equipo = qr_split[4]
+        stage = qr_split[2]
+        userdata.page = userdata.base_page+"stage"+stage+"/"+equipo
+        print "#####################"
+        print "Equipo: "+equipo
+        print "Stage: "+stage
+        print "URL: "+userdata.page
+        print "#####################"
+        return "succeeded"
+
+class LoadURL(smach.State):
+    """docstring for subs"""
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["succeeded"], io_keys=["page"])
+        self.robot = robot
+
+    def execute(self, userdata):
+        global page
+        page = userdata.page
+        print "Page: "+page
         return "succeeded"
 
 class Questions(smach.State):
@@ -103,37 +124,58 @@ class Image(smach.State):
 
 
 def getInstance(robot):
-    """
-    parameters of the test:
-        *Places of interaction:
-            -START
-            -RECEPTION
-            -LIVING
-
-    """
     start_place = 'start'
     RECEPTION_PLACE = 'start'
     JOHN_PLACE = 'near_couch'
 
     sm = smach.StateMachine(outcomes=['succeeded', 'aborted', 'preempted'])
     sm.userdata.qr = ""
-    sm.userdata.page = "http://198.18.0.1:8888/"
+    sm.userdata.page = "http://198.18.0.1:8888/stage1/r1"
+    sm.userdata.base_page = "http://198.18.0.1:8888/"
+
+    global page
 
     with sm:
 
         smach.StateMachine.add('SETUP', Setup(robot),
             transitions={
-                'succeeded':'WEB_SHOW'
+                'succeeded':'PRE_WAIT'
+            }
+        )
+
+        smach.StateMachine.add('PRE_WAIT', ShowWebpage(robot, page = "http://198.18.0.1:8888/b"),
+            transitions={
+                'succeeded':'WAIT',
+                'preempted':'WAIT'
+            }
+        )
+
+        smach.StateMachine.add('WAIT', WaitTouchScreen(robot),
+            transitions={
+                'succeeded':'QR'
             }
         )
 
         smach.StateMachine.add('QR', SingleSub(robot),
             transitions={
+                'succeeded':'CHANGE_URL'
+            }
+        )
+
+        smach.StateMachine.add('CHANGE_URL', ChangeURL(robot),
+            transitions={
                 'succeeded':'WEB_SHOW'
             }
         )
 
-        smach.StateMachine.add('WEB_SHOW', ShowWebpage(robot, page = "http://198.18.0.1:8888/"),
+        # smach.StateMachine.add('LOAD_URL', LoadURL(robot),
+        #     transitions={
+        #         'succeeded':'WEB_SHOW'
+        #     }
+        # )
+
+
+        smach.StateMachine.add('WEB_SHOW', ShowWebpage(robot),
             transitions={
                 'succeeded':'HEAR_QUESTIONS'
             }
