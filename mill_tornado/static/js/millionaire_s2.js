@@ -367,6 +367,7 @@ $( "input" ).change(function() {
 		}
 		else{
 			console.log(document.getElementById("detected_answer").innerHTML);
+			document.getElementById("img").src = "static/img/esqueleto.png"; 
 			clearTimeout(mouseState);
 		}
 	}
