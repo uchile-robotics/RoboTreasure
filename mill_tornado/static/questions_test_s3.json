@@ -1,0 +1,30 @@
+{
+	"sist_oseo" :   
+		
+			{ "cantidad" : 
+				
+						[{ "question" : "¿bla bla bla bla?" ,
+
+							"content" : 
+									[ "Sí" ,
+										"No"  ] } ,
+			
+			
+						 {"question" : "Completa: 'El cuerpo humano en etapa adulta está formado por ___________ huesos'. " ,
+				
+							"content" : 
+									[ "206" ,
+										"532" ] },
+                        
+                         {"question" : "Completa: 'La cuerpa humana en etapa adulta está formado por ___________ huesos'. " ,
+				
+							"content" : 
+									[ "206" ,
+										"532" ] }]
+		}
+}
+
+
+
+
+

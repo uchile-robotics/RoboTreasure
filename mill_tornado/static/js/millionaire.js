@@ -244,13 +244,14 @@ var ws;
 $(document).ready(function() {
     console.log("On Ready");
     var yay = document.getElementById("team").textContent;
+    console.log("Inside")
     console.log(yay);
     $.getJSON("static/medium_questions.json", function(data) {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            // var host = "198.18.0.1"; // For Pepper
-            var host = "localhost"; // For PC
+            var host = "198.18.0.1"; // For Pepper
+             // var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 

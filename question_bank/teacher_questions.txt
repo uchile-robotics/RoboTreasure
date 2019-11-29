@@ -1,30 +1,30 @@
 
-Sistema Óseo:
+Sistema oseo:
 
 	Cantidad de huesos:
 
-		1. ¿Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?
+		1. Cuantos huesos tiene aproximadamente el cuerpo humano en etapa adulta?
 			a. 157
 			b. 206 <--
 			c. 302
 			d. 291
 
 
-		2. Completa: 'El cuerpo humano en etapa adulta está formado aproximadamente por _______________ huesos'.
+		2. Completa: 'El cuerpo humano en etapa adulta esta formado aproximadamente por _______________ huesos'.
 			a. 206 <--
 			b. 532
 			c. 105
 			d. 309
 
 
-		3. ¿En qué etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?
+		3. En que etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?
 			a. Niñez <--
 			b. Adolescencia
 			c. Adultez
 			d. Vejez
 
 
-		4. Indica en qué etapa de la vida en que el cuerpo humano tiene más huesos.
+		4. Indica la etapa de la vida en que el cuerpo humano tiene mas huesos.
 			a. Niñez <--
 			b. Adolescencia
 			c. Adultez
@@ -33,95 +33,95 @@ Sistema Óseo:
 
 
 
-	Reconocer estructuras óseas:
+	Reconocer estructuras oseas:
 
-		5. ¿Cuál de los siguientes es un hueso?
-			a. Estómago
+		5. Cual de los siguientes es un hueso?
+			a. Estomago
 			b. Cerebro
-			c. Fémur <--
-			d. Corazón
+			c. Femur <--
+			d. Corazon
 
 
-		6. Indica cuál de los siguientes es un hueso.
-			a. Estómago
+		6. Indica cual de los siguientes es un hueso.
+			a. Estomago
 			b. Cerebro
-			c. Fémur <--
-			d. Corazón
+			c. Femur <--
+			d. Corazon
 
 
-		7. ¿Cuál de los siguientes NO es un hueso?
+		7. Cual de los siguientes no es un hueso?
 			a. Costilla
-			b. Cráneo
+			b. Craneo
 			c. Pelvis
-			d. Pulmón <--
+			d. Pulmon <--
 
 
-		8. Indica cuál de los siguientes NO es un hueso.
+		8. Indica cual de los siguientes no es un hueso.
 			a. Costilla
-			b. Cráneo
+			b. Craneo
 			c. Pelvis
-			d. Pulmón <--
+			d. Pulmon <--
 
 
-		9. El(los) hueso(s) que protege(n) al corazón y los pulmones son:
-			a. Cráneo
+		9. El o los huesos que protegen al corazon y los pulmones son:
+			a. Craneo
 			b. Costillas <--
-			c. Húmero
-			d. Fémur y Tibia
+			c. Humero
+			d. Femur y Tibia
 
 
-		10. ¿Cuál(es) es(son) el(los) hueso(s) que protege(n) el corazón y los pulmones?
-			a. Cráneo
+		10. Cual o cuales son los huesos que protegen el corazon y los pulmones?
+			a. Craneo
 			b. Costillas <--
-			c. Húmero
-			d. Fémur y Tibia
+			c. Humero
+			d. Femur y Tibia
 
 
-		11. Completa: 'La estructura que protege el corazón y los pulmones se llama _______'.
-			a. Cráneo
+		11. Completa: 'La estructura que protege el corazon y los pulmones se llama _______'.
+			a. Craneo
 			b. Costillas <--
-			c. Húmero
-			d. Fémur y Tibia
+			c. Humero
+			d. Femur y Tibia
 
 
-		12. Completa: 'El(la) ________________ protege al cerebro de daños externos y accidentes'.
-			a. Cráneo <--
-			b. Esternón
-			c. Cúbito
+		12. Completa: 'El o la ________________ protege al cerebro de daños externos y accidentes'.
+			a. Craneo <--
+			b. Esternon
+			c. Cubito
 			d. Pelvis
 
 
-		13. ¿Cuál es el hueso encargado de proteger el cerebro y los ojos?
-			a. Cráneo <--
-			b. Esternón
-			c. Cúbito
+		13. Cual es el hueso encargado de proteger el cerebro y los ojos?
+			a. Craneo <--
+			b. Esternon
+			c. Cubito
 			d. Pelvis
 
 
-		14. ¿Cuál es la función del Sistema Óseo?
+		14. Cual es la funcion del Sistema oseo?
 			a. Digerir los alimentos que ingresan al cuerpo
 			b. Bombear sangre a todo el cuerpo
-			c. Recibir estímulos y dar una respuesta
-			d. Dar forma, soporte y protección al cuerpo <--
+			c. Recibir estimulos y dar una respuesta
+			d. Dar forma, soporte y proteccion al cuerpo <--
 
 
-		15. La función del Sistema Óseo es:
+		15. La funcion del Sistema oseo es:
 			a. Digerir los alimentos que ingresan al cuerpo
 			b. Bombear sangre a todo el cuerpo
-			c. Recibir estímulos y dar una respuesta
-			d. Dar forma, soporte y protección al cuerpo <--
+			c. Recibir estimulos y dar una respuesta
+			d. Dar forma, soporte y proteccion al cuerpo <--
 
 
 		16. Completa: 'La ____________ le da soporte al cuerpo humano'.
 			a. Costilla
 			b. Cabeza
 			c. Pelvis <--
-			d. Clavícula
+			d. Clavicula
 
 
-		17. ¿Cuál es la función de la pelvis?
+		17. Cual es la funcion de la pelvis?
 			a. Dar soporte al cuerpo humano <--
-			b. Proteger el corazón y los pulmones
+			b. Proteger el corazon y los pulmones
 			c. Proteger el cerebro y los ojos
 			d. Permitirle caminar al ser humano
 
@@ -130,92 +130,92 @@ Sistema Óseo:
 
 
 
-Músculos y movimiento:
+Musculos y movimiento:
 
-	Reconocer músculos:
+	Reconocer musculos:
 
-		18. ¿Qué son los músculos?
-			a. Órganos que digieren alimentos
-			b. Receptores de estímulos
+		18. Que son los musculos?
+			a. organos que digieren alimentos
+			b. Receptores de estimulos
 			c. Estructuras duras que protegen el cuerpo
-			d. Órganos blandos que se contraen y relajan <--
+			d. organos blandos que se contraen y relajan <--
 
 
-		19. Los músculos son:
-			a. Órganos que digieren alimentos
-			b. Receptores de estímulos
+		19. Los musculos son:
+			a. organos que digieren alimentos
+			b. Receptores de estimulos
 			c. Estructuras duras que protegen el cuerpo
-			d. Órganos blandos que se contraen y relajan <--
+			d. organos blandos que se contraen y relajan <--
 
 
-		20. ¿Cuál es la función de los músculos?
+		20. Cual es la funcion de los musculos?
 			a. Proteger al cuerpo de los daños
-			b. Interpretar los estímulos del exterior
+			b. Interpretar los estimulos del exterior
 			c. Permitir la movilidad de los huesos <--
 			d. Dar estabilidad al cuerpo
 
 
-		21. La función de los músculos es:
+		21. La funcion de los musculos es:
 			a. Proteger al cuerpo de los daños
-			b. Interpretar los estímulos del exterior
+			b. Interpretar los estimulos del exterior
 			c. Permitir la movilidad de los huesos <--
 			d. Dar estabilidad al cuerpo
 
 
 		22. El Sistema Locomotor se compone por:
-			a. Huesos y músculos <--
-			b. Órganos y nervios
-			c. Cerebro y médula espinal
+			a. Huesos y musculos <--
+			b. organos y nervios
+			c. Cerebro y medula espinal
 			d. Brazos y piernas
 
 
-		23. ¿Qué estructuras componen el Sistema Locomotor?
-			a. Huesos y músculos <--
-			b. Órganos y nervios
-			c. Cerebro y médula espinal
+		23. Que estructuras componen el Sistema Locomotor?
+			a. Huesos y musculos <--
+			b. organos y nervios
+			c. Cerebro y medula espinal
 			d. Brazos y piernas
 
 
-		24. ¿Cuál es la función del Sistema Locomotor?
+		24. Cual es la funcion del Sistema Locomotor?
 			a. Digerir los alimentos
 			b. Permitir el movimiento del cuerpo humano <--
-			c. Permitir la respiración
-			d. Interpretar estímulos del exterior
+			c. Permitir la respiracion
+			d. Interpretar estimulos del exterior
 
 
-		25. La función del Sistema Locomotor es:
+		25. La funcion del Sistema Locomotor es:
 			a. Digerir los alimentos
 			b. Permitir el movimiento del cuerpo humano <--
-			c. Permitir la respiración
-			d. Interpretar estímulos del exterior
+			c. Permitir la respiracion
+			d. Interpretar estimulos del exterior
 
 
 
 
 	Movimiento del cuerpo:
 	
-		26. Completa: 'Los ___________ unen a los huesos en cada articulación'.
+		26. Completa: 'Los ___________ unen a los huesos en cada articulacion'.
 			a. Tendones
-			b. Músculos
+			b. Musculos
 			c. Ligamentos <--
 			d. Nervios
 
 
-		27. ¿A través de qué estructura se unen los huesos en cada articulación?
+		27. A traves de que estructura se unen los huesos en cada articulacion?
 			a. Tendones
-			b. Músculos
+			b. Musculos
 			c. Ligamentos <--
 			d. Nervios
 
 
-		28. Completa: 'Los músculos se unen a los huesos gracias a los(as) __________'.
+		28. Completa: 'Los musculos se unen a los huesos gracias a los o las __________'.
 			a. Ligamentos
 			b. Nervios
 			c. Articulaciones
 			d. Tendones <--
 
 
-		29. ¿A través de qué estructura se unen los músculos a los huesos?
+		29. A traves de que estructura se unen los musculos a los huesos?
 			a. Ligamentos
 			b. Nervios
 			c. Articulaciones
@@ -226,31 +226,31 @@ Músculos y movimiento:
 
 	Cuidados del cuerpo:
 			
-		30. ¿Cuánto tiempo diario mínimo se recomienda realizar actividad física?
+		30. Cuanto tiempo diario minimo se recomienda realizar actividad fisica?
 			a. 60 minutos <--
 			b. 30 minutos
 			c. 90 minutos
 			d. 120 minutos
 
 
-		31. Completa: 'Las personas debieran realizar mínimo ____________ diarios de actividad física'.
+		31. Completa: 'Las personas debieran realizar minimo ____________ diarios de actividad fisica'.
 			a. 60 minutos <--
 			b. 30 minutos
 			c. 90 minutos
 			d. 120 minutos
 
 
-		32. 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a:
+		32. 'Se refiere a la poca actividad fisica, provocando sobrepeso e incluso obesidad'. Esta definicion corresponde a:
 			a. Ejercicio
 			b. Sedentarismo <--
-			c. Educación Física
+			c. Educacion Fisica
 			d. Estudiar
 
 
-		33. 'Poca actividad física. Provoca problemas de sobrepeso y obesidad'. ¿A qué se refiere esta definición?
+		33. 'Poca actividad fisica. Provoca problemas de sobrepeso y obesidad'. A que se refiere esta definicion?
 			a. Ejercicio
 			b. Sedentarismo <--
-			c. Educación Física
+			c. Educacion Fisica
 			d. Estudiar
 
 
@@ -262,77 +262,77 @@ Sistema Nervioso:
 
 	Reconocer estructuras:
 
-		34. ¿Cómo se divide el Sistema Nervioso?
+		34. Como se divide el Sistema Nervioso?
 			a. Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)
 			b. Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)
-			c. Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)
-			d. Sistema Nervioso Central (SNC) y Sistema Nerivoso Periférico (SNP) <--
+			c. Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (Sno)
+			d. Sistema Nervioso Central (SNC) y Sistema Nerivoso Periferico (SNP) <--
 
 
 		35. El Sistema Nervioso se divide en:
 			a. Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)
 			b. Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)
-			c. Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)
-			d. Sistema Nervioso Central (SNC) y Sistema Nerivoso Periférico (SNP) <--
+			c. Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (Sno)
+			d. Sistema Nervioso Central (SNC) y Sistema Nerivoso Periferico (SNP) <--
 
 
-		36. ¿Cuáles son los componentes del Sistema Nervioso?
-			a. Pulmones, corazón y estómago
-			b. Cerebro, médula espinal y nervios <--
-			c. Músculos, huesos y articulaciones
-			d. Ojos, nariz, boca y oídos
+		36. Cuales son los componentes del Sistema Nervioso?
+			a. Pulmones, corazon y estomago
+			b. Cerebro, medula espinal y nervios <--
+			c. Musculos, huesos y articulaciones
+			d. Ojos, nariz, boca y oidos
 
 
 		37. Los componentes del Sistema Nervioso son:
-			a. Pulmones, corazón y estómago
-			b. Cerebro, médula espinal y nervios <--
-			c. Músculos, huesos y articulaciones
-			d. Ojos, nariz, boca y oídos
+			a. Pulmones, corazon y estomago
+			b. Cerebro, medula espinal y nervios <--
+			c. Musculos, huesos y articulaciones
+			d. Ojos, nariz, boca y oidos
 	
 
 
 		38. Completa: '___________ componen el Sistema Nervioso'
-			a. Pulmones, corazón y estómago
-			b. Cerebro, médula espinal y nervios <--
-			c. Músculos, huesos y articulaciones
-			d. Ojos, nariz, boca y oídos
+			a. Pulmones, corazon y estomago
+			b. Cerebro, medula espinal y nervios <--
+			c. Musculos, huesos y articulaciones
+			d. Ojos, nariz, boca y oidos
 
 
 
 
-	Estímulos:
+	Estimulos:
 
-		39. 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a:
+		39. 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definicion corresponde a:
 			a. Nervios
 			b. Tendones
-			c. Estímulos <--
+			c. Estimulos <--
 			d. Sentidos
 
 
-		40. Recibimos los estímulos del exterior a través de los:
+		40. Recibimos los estimulos del exterior a traves de los:
 			a. Sentidos <--
-			b. Músculos
+			b. Musculos
 			c. Nervios
 			d. Huesos
 
 
-		41. ¿A través de qué recibimos los estimulos del exterior?
+		41. A traves de que recibimos los estimulos del exterior?
 			a. Sentidos <--
-			b. Músculos
+			b. Musculos
 			c. Nervios
 			d. Huesos
 
 
 		42. Los actos reflejos son controlados por:
-			a. el corazón
-			b. la médula espinal <--
+			a. el corazon
+			b. la medula espinal <--
 			c. los nervios
 			d. la cabeza
 
 
-		43. ¿Qué controla los actos reflejos?
-			a. el corazón
-			b. la médula espinal <--
+		43. Que controla los actos reflejos?
+			a. el corazon
+			b. la medula espinal <--
 			c. los nervios
 			d. la cabeza
 
@@ -344,7 +344,7 @@ Sistema Nervioso:
 			d. los movimientos
 
 
-		45. ¿Qué controla los actos voluntarios?
+		45. Que controla los actos voluntarios?
 			a. los pulmones
 			b. los nervios
 			c. el cerebro <--
@@ -359,39 +359,66 @@ Alcohol:
 
 	Reconocer conceptos:
 
-		46. ¿Cuál de los siguientes NO es un efecto de consumir alcohol en exceso?
+		46. Cual de los siguientes no es un efecto de consumir alcohol en exceso?
 			a. Afectar los movimientos del cuerpo
 			b. Perder el conocimiento
-			c. Caída del pelo <--
-			d. Dificultar la respiración
+			c. Caida del pelo <--
+			d. Dificultar la respiracion
 
 
-		47. ¿Qué es lo que NO ocurre al consumir alcohol en exceso?
+		47. Que es lo que no ocurre al consumir alcohol en exceso?
 			a. Afectar los movimientos del cuerpo
 			b. Perder el conocimiento
-			c. Caída del pelo <--
-			d. Dificultar la respiración
+			c. Caida del pelo <--
+			d. Dificultar la respiracion
 
 
-		48. Lo que NO le ocurre al cuerpo humano al consumir alcohol en exceso es:
+		48. Lo que no le ocurre al cuerpo humano al consumir alcohol en exceso es:
 			a. Afectar los movimientos del cuerpo
 			b. Perder el conocimiento
-			c. Caída del pelo <--
-			d. Dificultar la respiración
+			c. Caida del pelo <--
+			d. Dificultar la respiracion
 
 
-		49. 'Hábito de consumo que es muy difícil de dejar'. Esta definición corresponde a:
+		49. 'Habito de consumo que es muy dificil de dejar'. Esta definicion corresponde a:
 			a. Alcohol
-			b. Adicción <--
-			c. Estímulo
-			d. Atracción
+			b. Adiccion <--
+			c. Estimulo
+			d. Atraccion
 
 
-		50. 'Hábito de consumo que es muy difícil de dejar'. ¿A qué se refiere esta definición?
+		50. 'Habito de consumo que es muy dificil de dejar'. A que se refiere esta definicion?
 			a. Alcohol
-			b. Adicción <--
-			c. Estímulo
-			d. Atracción
+			b. Adiccion <--
+			c. Estimulo
+			d. Atraccion
+
+
+
+
+
+
+Desarrollo:
+		51. Que medidas de prevencion debes tomar cuando andas en bicicleta?
+
+		52. Que medidas de prevencion debes tomar cuando trotas?
+
+		53. Explica el proceso desde que se capta un estimulo hasta que se ejecuta una respuesta involuntaria
+
+		54. Explica el proceso desde que se capta un estimulo hasta que se ejecuta una respuesta voluntaria
+
+		55. Menciona 3 efectos de consumir alcohol en exceso
+
+		56. Menciona 3 factores de riesgo que favorecen el consumo de alcohol
+
+		57. Menciona 3 factores de proteccion que previenen el consumo de alcohol
+
+		58. Menciona 2 actividades que contribuyen al cuidado y fortalecimiento del sistema locomotor
+
+		59. Explica que ocurre en tu sistema nervioso cuando tocas algo caliente con la mano
+
+		60. Explica que ocurre en tu sistema nervioso cuando tocas algo que te pincha
+
 
 
 
