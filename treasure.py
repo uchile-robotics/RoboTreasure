@@ -102,7 +102,7 @@ class Iterator(smach.State):
             return "preempted"
         elif userdata.question_count == 2:
             userdata.question_count = 0
-            time.sleep(5)
+            time.sleep(20)
             return "succeeded"
 
 class Questions(smach.State):
