@@ -13,7 +13,7 @@ from maqui_skills.capabilities.tablet import TabletControllerSkill
 from uchile_states.navigation.states import GoState
 from uchile_states.interaction.states import Speak
 from uchile_states.interaction.tablet_states import ShowWebpage, WaitTouchScreen
-# from uchile_states.perception.school import QRDetector, AnswerSelection
+from uchile_states.perception.school import QRDetector, AnswerSelection
 #########from uchile_states.interaction.tablet_states import OperationMessage
 
 page = ""
@@ -58,15 +58,15 @@ class SingleSub(smach.State):
 class ChangeURL(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded"], io_keys=["qr", "page", "base_page"])
+        smach.State.__init__(self, outcomes=["succeeded"], io_keys=["qr", "page", "base_page", "qr_id"])
         self.robot = robot
 
     def execute(self, userdata):
-        qr_split = str(userdata.qr)
+        qr_split = str(userdata.qr_id)
         qr_split = qr_split.split()
         print qr_split
-        equipo = qr_split[4]
-        stage = qr_split[2]
+        equipo = qr_split[1]
+        stage = qr_split[3]
         userdata.page = userdata.base_page+"stage"+stage+"/"+equipo
         print "#####################"
         print "Equipo: "+equipo
@@ -86,6 +86,23 @@ class LoadURL(smach.State):
         page = userdata.page
         print "Page: "+page
         return "succeeded"
+
+class Iterator(smach.State):
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["succeeded", "preempted"], io_keys=["question_count"])
+        self.robot = robot
+
+    def execute(self, userdata):
+        print "########################"
+        print "Question count: "+str(userdata.question_count)
+        print "########################"
+        if userdata.question_count < 2:
+            userdata.question_count += 1
+            return "preempted"
+        elif userdata.question_count == 2:
+            userdata.question_count = 0
+            rospy.sleep(5)
+            return "succeeded"
 
 class Questions(smach.State):
     """docstring for subs"""
@@ -132,6 +149,8 @@ def getInstance(robot):
     sm.userdata.qr = ""
     sm.userdata.page = "http://198.18.0.1:8888/stage1/r1"
     sm.userdata.base_page = "http://198.18.0.1:8888/"
+    sm.userdata.qr_id = ""
+    sm.userdata.question_count = 0
 
     global page
 
@@ -156,9 +175,10 @@ def getInstance(robot):
             }
         )
 
-        smach.StateMachine.add('QR', SingleSub(robot),
+        smach.StateMachine.add('QR', QRDetector(robot),
             transitions={
-                'succeeded':'CHANGE_URL'
+                'succeeded':'CHANGE_URL',
+                'aborted':'QR'
             }
         )
 
@@ -183,7 +203,14 @@ def getInstance(robot):
 
         smach.StateMachine.add('HEAR_QUESTIONS', Questions(robot),
             transitions={
-                'succeeded':'HEAR_QUESTIONS'
+                'succeeded':'ITERATOR'
+            }
+        )
+
+        smach.StateMachine.add('ITERATOR', Iterator(robot),
+            transitions={
+                'succeeded':'PRE_WAIT',
+                'preempted':'HEAR_QUESTIONS'
             }
         )
 
