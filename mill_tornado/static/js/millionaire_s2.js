@@ -274,7 +274,7 @@ $(document).ready(function() {
 
 
 
-	$.getJSON("static/second_stage.json", function(data) {
+	$.getJSON("static/medium_questions.json", function(data) {
 		$("#pre-start").show();
 		$("#start").click(function() {
 			$("#pre-start").fadeOut('slow', function() {
