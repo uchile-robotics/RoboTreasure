@@ -238,8 +238,16 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 # Url's
 app = tornado.web.Application([
     (r'/', MainHandler),
-    (r'/stage2', Stage2Handler),
-    (r'/stage3', Stage3Handler),
+    (r'/stage2/1', Stage2Handler),
+    (r'/stage2/2', Stage2Handler),
+    (r'/stage2/3', Stage2Handler),
+    (r'/stage2/4', Stage2Handler),
+    (r'/stage2/5', Stage2Handler),
+    (r'/stage3/1', Stage3Handler),
+    (r'/stage3/2', Stage3Handler),
+    (r'/stage3/3', Stage3Handler),
+    (r'/stage3/4', Stage3Handler),
+    (r'/stage3/5', Stage3Handler),
     (r'/stage1/1', B1Handler),
     (r'/stage1/2', R1Handler),
     (r'/stage1/3', G1Handler),

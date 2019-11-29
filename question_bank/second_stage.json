@@ -200,7 +200,7 @@
 
 	"alcohol" : { "reconocer" :  [ 
 	
-		[	{ "question" : "Cual de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
+		[	{ "question" : "Cual de los siguientes no es un efecto de consumir alcohol en exceso?" ,
 
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
