@@ -1,0 +1,240 @@
+{
+	"sist_oseo" : { "cantidad" : 
+			[	{ "question" : "En que etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
+		
+							"content" : 
+									[ "Niñez" ,
+										"Adolescencia" ,
+										"Adultez" ,
+										"Vejez" ] ,
+		
+							"correct" : 0 } ,
+
+
+				{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene mas huesos" ,
+
+							"content" :
+								[ "Niñez" ,
+									"Adolescencia" ,
+									"Adultez" ,
+									"Vejez" ] ,
+		
+							"correct" : 0 }  ] ,
+
+
+			"reconocer" : [ 
+			
+			[	{ "question" : "El o los huesos que protegen al corazon y los pulmones son: " ,
+
+							"content" :
+								[ "Craneo" ,
+									"Costillas" ,
+									"Humero" ,
+									"Femur y Tibia" ] ,
+
+							"correct" : 1 } ,
+
+
+				{ "question" : "Cual o cuales son los huesos que protegen el corazon y los pulmones?" ,
+
+							"content" : 
+								[ "Craneo" ,
+									"Costillas" ,
+									"Humero" ,
+									"Femur y Tibia" ] ,
+
+							"correct" : 1 } ,
+
+
+				{ "question" : "Completa: 'La estructura que protege al corazon y los pulmones se llama, (  ) ' " ,
+
+							"content" : 
+								[ "Craneo" ,
+									"Costillas" ,
+									"Humero" ,
+									"Femur y Tibia" ] ,
+
+							"correct" : 1 } ] ,
+
+
+			[	{ "question" : "Completa: 'El o la, (  ) protege al cerebro de daños externos y accidentes' " ,
+
+							"content" :
+								[ "Craneo" ,
+									"Esternon" ,
+									"Cubito" ,
+									"Pelvis" ] ,
+		
+							"correct" : 0 } ,
+
+
+				{ "question" : "Cual es el hueso encargado de proteger el cerebro y los ojos?" ,
+
+							"content" :
+								[ "Craneo" ,
+									"Esternon" ,
+									"Cubito" ,
+									"Pelvis" ] ,
+
+							"correct" : 0 } ],
+
+
+			[	{ "question" : "Cual es la funcion del Sistema oseo?" ,
+
+							"content" :
+								[ "Digerir los alimentos que ingresan al cuerpo" ,
+									"Bombear sangre a todo el cuerpo" ,
+									"Recibir estimulos y dar una respuesta" ,
+									"Dar forma, soporte y proteccion al cuerpo" ] ,
+
+							"correct" : 3 } ,
+
+
+				{ "question" : "La funcion del Sistema oseo es:" ,
+
+							"content" :
+								[ "Digerir los alimentos que ingresan al cuerpo" ,
+									"Bombear sangre a todo el cuerpo" ,
+									"Recibir estimulos y dar una respuesta" ,
+									"Dar forma, soporte y proteccion al cuerpo" ] ,
+
+							"correct" : 3 } ] ] } ,
+
+				
+	"musculos" : { "reconocer" : [
+
+			[	{ "question" : "El Sistema Locomotor se compone por: " ,
+	
+							"content" : 
+								[ "Huesos y musculos" ,
+									"organos y nervios" ,
+									"Cerebro y medula espinal" ,
+									"Brazos y piernas" ] ,
+		
+							"correct" : 0 } ,
+
+
+				{ "question" : "Que estructuras componen el Sistema Locomotor?" ,
+
+							"content" : 
+								[ "Huesos y musculos" ,
+									"organos y nervios" ,
+									"Cerebro y medula espinal" ,
+									"Brazos y piernas" ] ,
+		
+							"correct" : 0 } ],
+
+
+			[	{ "question" : "Cual es la funcion del Sistema Locomotor?" ,
+	
+							"content" : 
+								[ "Digerir los alimentos" ,
+									"Permitir el movimiento del cuerpo humano" ,
+									"Permitir la respiracion" ,
+									"Intepretar estimulos del exterior" ] ,
+		
+							"correct" : 1 } ,
+
+
+				{ "question" : "La funcion del Sistema Locomotor es: " ,
+	
+							"content" : 
+								[ "Digerir los alimentos" ,
+									"Permitir el movimiento del cuerpo humano" ,
+									"Permitir la respiracion" ,
+									"Intepretar estimulos del exterior" ] ,
+		
+							"correct" : 1 }	] ] },
+
+
+
+								
+	"sist_nervioso" : { "estimulos" : [
+
+			[	{ "question" : "Los actos reflejos son controlados por: " ,
+
+							"content" :
+								[ "el corazon" ,
+									"la medula espinal" ,
+									"los nervios" ,
+									"la cabeza" ] ,
+
+							"correct" : 1 } ,
+
+
+				{ "question" : "Que controla los actos reflejos?" ,
+
+							"content" :
+								[ "el corazon" ,
+									"la medula espinal" ,
+									"los nervios" ,
+									"la cabeza"] ,
+
+							"correct" : 1 } ] ,
+
+
+			[	{ "question" : "Los actos voluntarios son controlados por: " ,
+
+							"content" : 
+								[ "los pulmones" ,
+									"los nervios" ,
+									"el cerebro" ,
+									"los movimientos" ] ,
+
+							"correct" : 2 } ,
+
+
+				{ "question" : "Que controla los actos voluntarios?" ,
+
+							"content" : 
+								[ "los pulmones" ,
+									"los nervios" ,
+									"el cerebro" ,
+									"los movimientos" ] ,
+
+							"correct" : 2 } ] ] } ,
+
+
+
+
+
+	"alcohol" : { "reconocer" :  [ 
+	
+		[	{ "question" : "Cual de los siguientes NO es un efecto de consumir alcohol en exceso?" ,
+
+							"content" :
+								[ "Afectar los movimientos del cuerpo" ,
+									"Perder el conocimiento" ,
+									"Caida del pelo" ,
+									"Dificultar la respiracion" ] ,
+
+							"correct" : 2 } ,
+
+
+			{ "question" : "Que es lo que no ocurre al consumir alcohol en exceso?" ,
+
+							"content" :
+								[ "Afectar los movimientos del cuerpo" ,
+									"Perder el conocimiento" ,
+									"Caida del pelo" ,
+									"Dificultar la respiracion" ] ,
+
+							"correct" : 2 } ,
+
+
+			{ "question" : "Lo que no le ocurre al cuerpo humano al consumir alcohol en exceso es: " ,
+
+							"content" :
+								[ "Afectar los movimientos del cuerpo" ,
+									"Perder el conocimiento" ,
+									"Caida del pelo" ,
+									"Dificultar la respiracion" ] ,
+
+							"correct" : 2 }	] ] } 
+
+
+
+
+} 
+
+
