@@ -181,7 +181,7 @@ var MillionaireModel = function(data) {
  			$("#" + elm).css('background', '#FF262E').slideDown('slow', function() {
 								
 				if(self.level() + 1 > 3) {
-					if(self.tries >= 1){
+					if(self.tries >= 0){
 						$("#game").fadeOut('slow', function() {
 							$("#hint").html('Pista: '+hints[stage - 1]);
 							$("#hint").fadeIn('slow');
@@ -202,7 +202,7 @@ var MillionaireModel = function(data) {
 					document.getElementById("display").innerHTML = "03s";
 					window.clearInterval(interval);
 					interval = window.setInterval(stopWatch, 1000);
-					if(self.tries >= 1){						
+					if(self.tries >= 0){						
 						self.level(self.level() + 1);
 						self.resetAnswers();				
 					}
@@ -254,7 +254,7 @@ $(document).ready(function() {
  
           // Close Websocket callback
           ws.onclose = function(evt) {
-            log("***Connection Closed***");
+            console.log("***Connection Closed***");
             alert("Connection close");
             $("#host").css("background", "#ff0000"); 
             $("#port").css("background", "#ff0000"); 
@@ -347,26 +347,28 @@ function stopWatch(){
 
 var mouseState;
 $( "input" ).change(function() {
-	console.log("Answer changed");
-	if(document.getElementById("detected_answer").innerHTML == "a"){
-		document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
-		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
-	}
-	else if(document.getElementById("detected_answer").innerHTML == "b"){
-		document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
-		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-two");
-	}
-	else if(document.getElementById("detected_answer").innerHTML == "c"){
-		document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
-		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-three");
-	}
-	else if(document.getElementById("detected_answer").innerHTML == "d"){
-		document.getElementById("img").src = "static/img/esqueleto_torse.png"; 
-		mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-four");
-	}
-	else{
-	console.log(document.getElementById("detected_answer").innerHTML);
-	clearTimeout(mouseState);
+	if(typeof myModel !== 'undefined'){
+		console.log("Answer changed");
+		if(document.getElementById("detected_answer").innerHTML === "a"){
+			document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
+			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
+		}
+		else if(document.getElementById("detected_answer").innerHTML === "b"){
+			document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
+			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-two");
+		}
+		else if(document.getElementById("detected_answer").innerHTML === "c"){
+			document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
+			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-three");
+		}
+		else if(document.getElementById("detected_answer").innerHTML === "d"){
+			document.getElementById("img").src = "static/img/esqueleto_torso.png"; 
+			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-four");
+		}
+		else{
+			console.log(document.getElementById("detected_answer").innerHTML);
+			clearTimeout(mouseState);
+		}
 	}
 });
 $("#answer-two").click(function() {

@@ -98,9 +98,9 @@ Author: Aaron Nech
 		<script type="text/javascript" type="text/javascript">
 		  // Connecting to ROS
 		  // -----------------
-
+		  console.log("Trying to create topic");
 		  var ros = new ROSLIB.Ros({
-		    url : 'ws://localhost:8888'
+		    url : 'ws://localhost:9090'
 		  });
 
 		  ros.on('connection', function() {
@@ -128,7 +128,7 @@ Author: Aaron Nech
 		    console.log('Received message on ' + listener.name + ': ' + message.data);
 		    document.getElementById("detected_answer").innerHTML = message.data;
 		    $("input").change();
-		    listener.unsubscribe();
 		  });
+	  	</script>
 	</body>
 </html>
