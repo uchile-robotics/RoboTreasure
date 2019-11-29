@@ -4,6 +4,7 @@ import smach
 import smach_ros
 from smach_ros import IntrospectionServer
 from std_msgs.msg import String
+import time
 
 #Robot building
 from maqui_skills import robot_factory
@@ -101,7 +102,7 @@ class Iterator(smach.State):
             return "preempted"
         elif userdata.question_count == 2:
             userdata.question_count = 0
-            rospy.sleep(5)
+            time.sleep(5)
             return "succeeded"
 
 class Questions(smach.State):
