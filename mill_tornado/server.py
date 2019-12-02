@@ -5,8 +5,8 @@ import tornado.websocket
 import socket
 import os.path
 
-from std_msgs.msg import String
-import rospy
+# from std_msgs.msg import String
+# import rospy
 
 from tornado.options import define, options, parse_command_line
 
@@ -111,6 +111,98 @@ class P1Handler(tornado.web.RequestHandler):
         team_name_def = "purple"
         print team_name_def
         self.redirect("/")
+
+
+################################################
+
+                    #STAGE2#
+
+################################################
+
+class B2Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "blue"
+        print team_name_def
+        self.redirect("/stage2")
+
+class G2Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "green"
+        print team_name_def
+        self.redirect("/stage2")
+
+class R2Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "red"
+        print team_name_def
+        self.redirect("/stage2")
+
+class Y2Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "yellow"
+        print team_name_def
+        self.redirect("/stage2")
+
+class P2Handler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading html"
+        global team_name_def
+        team_name_def = "purple"
+        print team_name_def
+        self.redirect("/stage2")
 
 ################################################
 
@@ -265,7 +357,19 @@ class Stage2Handler(tornado.web.RequestHandler):
 
     def get(self):
         print "loading html"
-        self.render("index_s2.html")
+        print "################################################"
+        print team_name_def
+        print "################################################"
+        if team_name_def == "yellow":
+            self.render("index_s2.html", team_name="Equipo Amarillo")
+        elif team_name_def == "red":
+            self.render("index_s2.html", team_name="Equipo Rojo")
+        elif team_name_def == "blue":
+            self.render("index_s2.html", team_name="Equipo Azul")
+        elif team_name_def == "purple":
+            self.render("index_s2.html", team_name="Equipo Morado")
+        elif team_name_def == "green":
+            self.render("index_s2.html", team_name="Equipo Verde")
 
 
 # Clase que renderiza el index Stage3
@@ -347,18 +451,20 @@ app = tornado.web.Application([
     (r'/', MainHandler),
     (r'/', MainHandler),
     (r'/stage3', Stage3Handler),
+    (r'/stage2', Stage2Handler),
 
-    (r'/stage2/1', Stage2Handler),
-    (r'/stage2/2', Stage2Handler),
-    (r'/stage2/3', Stage2Handler),
-    (r'/stage2/4', Stage2Handler),
-    (r'/stage2/5', Stage2Handler),
 
     (r'/stage3/1', B3Handler),
     (r'/stage3/2', R3Handler),
     (r'/stage3/3', G3Handler),
     (r'/stage3/4', Y3Handler),
     (r'/stage3/5', P3Handler),
+
+    (r'/stage2/1', B2Handler),
+    (r'/stage2/2', R2Handler),
+    (r'/stage2/3', G2Handler),
+    (r'/stage2/4', Y2Handler),
+    (r'/stage2/5', P2Handler),
 
     (r'/stage1/1', B1Handler),
     (r'/stage1/2', R1Handler),
