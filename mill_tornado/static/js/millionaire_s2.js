@@ -52,16 +52,29 @@ var MillionaireModel = function(data) {
 
 	var topics = Object.keys(data)
 
-	// Questions
+   // Questions
     this.questions = [];
+	var options = [];
+        
 		
-	for(var i = 1; i <= n_questions; i++) {
-		var topic = topics[Math.floor(Math.random() * topics.length)];
-		var types = Object.keys(data[topic]);
-		var type = types[Math.floor(Math.random() * types.length)];
-		var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
-		this.questions.push(current_question);
-	}
+    for(var i = 1; i <= n_questions; i++) {
+        var topic = topics[Math.floor(Math.random() * topics.length)];
+        var types = Object.keys(data[topic]);
+        var type = types[Math.floor(Math.random() * types.length)];
+        var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
+		options.push(question_options);
+		if (options.includes(question_options)){
+			var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
+			var current_question = question_options[Math.floor(Math.random() * question_options.length)];
+			this.questions.push(current_question);
+		}
+		else{
+			var current_question = question_options[Math.floor(Math.random() * question_options.length)];
+			this.questions.push(current_question);
+		}
+		
+    }
+	console.log(this.questions);
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -105,7 +118,7 @@ var MillionaireModel = function(data) {
  	// Attempts to answer the question with the specified
  	// answer index (0-3) from a click event of elm
  	self.answerQuestion = function(index, elm) {
-		document.getElementById("img").src = "static/img/esqueleto.png"; 
+		document.getElementById("img").src = "../static/img/esqueleto.png"; 
  		if(self.transitioning)
  			return;
  		self.transitioning = true;
@@ -273,8 +286,7 @@ $(document).ready(function() {
           	};
 
 
-
-	$.getJSON("static/medium_questions.json", function(data) {
+	$.getJSON("../static/second_stage.json", function(data) {
 		$("#pre-start").show();
 		$("#start").click(function() {
 			$("#pre-start").fadeOut('slow', function() {
@@ -350,24 +362,24 @@ $( "input" ).change(function() {
 	if(typeof myModel !== 'undefined'){
 		console.log("Answer changed");
 		if(document.getElementById("detected_answer").innerHTML === "a"){
-			document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
+			document.getElementById("img").src = "../static/img/esqueleto_cabeza.png"; 
 			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
 		}
 		else if(document.getElementById("detected_answer").innerHTML === "b"){
-			document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
+			document.getElementById("img").src = "../static/img/esqueleto_brazos.png"; 
 			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-two");
 		}
 		else if(document.getElementById("detected_answer").innerHTML === "c"){
-			document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
+			document.getElementById("img").src = "../static/img/esqueleto_piernas.png"; 
 			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-three");
 		}
 		else if(document.getElementById("detected_answer").innerHTML === "d"){
-			document.getElementById("img").src = "static/img/esqueleto_torso.png"; 
+			document.getElementById("img").src = "../static/img/esqueleto_torso.png"; 
 			mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-four");
 		}
 		else{
 			console.log(document.getElementById("detected_answer").innerHTML);
-			document.getElementById("img").src = "static/img/esqueleto.png"; 
+			document.getElementById("img").src = "../static/img/esqueleto.png"; 
 			clearTimeout(mouseState);
 		}
 	}
