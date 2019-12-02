@@ -71,5 +71,10 @@ Author: Aaron Nech
 		<script type="text/javascript" src="{{ static_url('js/jquery-2.0.3.min.js') }}"></script>
 		<script type="text/javascript" src="{{ static_url('js/knockout-3.0.0.js') }}"></script>
 		<script type="text/javascript" src="{{ static_url('js/millionaire_s3.js') }}"></script>
+		<script type="text/javascript">
+            var team = "{{team_name}}";
+            console.log(team);
+            document.getElementById("team").textContent = team; 
+        </script>
 	</body>
 </html>
