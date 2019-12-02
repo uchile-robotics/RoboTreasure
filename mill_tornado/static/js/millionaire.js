@@ -59,7 +59,10 @@ var MillionaireModel = function(data) {
         var topic = topics[Math.floor(Math.random() * topics.length)];
         var types = Object.keys(data[topic]);
         var type = types[Math.floor(Math.random() * types.length)];
-        var current_question = data[topic][type][Math.floor(Math.random() * data[topic][type].length)]
+		console.log(types);
+        var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
+		console.log(question_options);
+		var current_question = question_options[Math.floor(Math.random() * question_options.length)];
         this.questions.push(current_question);
     }
 
@@ -246,7 +249,7 @@ $(document).ready(function() {
     var yay = document.getElementById("team").textContent;
     console.log("Inside")
     console.log(yay);
-    $.getJSON("static/medium_questions.json", function(data) {
+    $.getJSON("static/first_stage.json", function(data) {
         $("#pre-start").show();
         $("#start").click(function() {
 
