@@ -48,7 +48,7 @@ startSound = function(id, loop) {
 var n_questions = 3;
 
 var MillionaireModel = function(data) {
-	
+    
     var self = this;
 
     var topics = Object.keys(data)
@@ -76,7 +76,7 @@ var MillionaireModel = function(data) {
 
     // Grabs the question text of the current question
     self.getQuestionText = function() {
-		ws.send(self.questions[self.level() - 1].question);
+        ws.send(self.questions[self.level() - 1].question);
         //self.questionID = Math.floor(Math.random() *)
         // params = { op: "hola" };
         // $.getJSON('http://198.18.0.2:8888/com', params);
@@ -103,14 +103,14 @@ var MillionaireModel = function(data) {
         if(self.transitioning)
             return;
         self.transitioning = true;
-		$("#game").fadeOut('slow', function() {
-			$("#hint").html('Hola');
-			$("#hint").fadeIn('slow');
-			$("#key").html(' ');
-		})      
-		if(index === 0){
-			self.money(self.money() + 100)
-		}
+        $("#game").fadeOut('slow', function() {
+            $("#hint").html('Hola');
+            $("#hint").fadeIn('slow');
+            $("#key").html(' ');
+        })      
+        if(index === 0){
+            self.money(self.money() + 100)
+        }
     }
     
     // Gets the money formatted string of the current won amount of money.
@@ -147,7 +147,7 @@ $(document).ready(function() {
                  
             // Close Websocket callback
             ws.onclose = function(evt) {
-                log("***Connection Closed***");
+                console.log("***Connection Closed***");
                 $("div#message_details").empty();
 
                 };

@@ -88,6 +88,21 @@ Author: Aaron Nech
             var team = "{{team_name}}";
             console.log(team);
             document.getElementById("team").textContent = team; 
+		if(team === "Equipo Azul"){
+			document.getElementById("team").style = "color:blue;font-weight:bold"; 
+		}
+		else if(team === "Equipo Rojo"){
+			document.getElementById("team").style = "color:red;font-weight:bold"; 
+		}
+		else if(team === "Equipo Verde"){
+			document.getElementById("team").style = "color:green;font-weight:bold"; 
+		}
+		else if(team === "Equipo Amarillo"){
+			document.getElementById("team").style = "color:yellow;font-weight:bold"; 
+		}
+		else if(team === "Equipo Morado"){
+			document.getElementById("team").style = "color:purple;font-weight:bold"; 
+		}
         </script>
     </body>
 </html>

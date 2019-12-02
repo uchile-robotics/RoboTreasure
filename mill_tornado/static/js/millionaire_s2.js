@@ -115,10 +115,12 @@ var MillionaireModel = function(data) {
         $(event.target).fadeOut('slow');
     }
 
+
+
     // Attempts to answer the question with the specified
     // answer index (0-3) from a click event of elm
     self.answerQuestion = function(index, elm) {
-        document.getElementById("img").src = "../static/img/esqueleto.png"; 
+        document.getElementById("img").src = "static/img/esqueleto.png"; 
         if(self.transitioning)
             return;
         self.transitioning = true;
@@ -256,7 +258,7 @@ var ws;
 // being created
 $(document).ready(function() {
     console.log("On Ready");
-    $.getJSON("../static/second_stage.json", function(data) {
+    $.getJSON("static/second_stage.json", function(data) {
         $("#pre-start").show();
         $("#start").click(function() {
 
@@ -307,6 +309,7 @@ $(document).ready(function() {
             
             });
         });
+
 });
 
 //Countdown
@@ -356,24 +359,24 @@ $( "input" ).change(function() {
     if(typeof myModel !== 'undefined'){
         console.log("Answer changed");
         if(document.getElementById("detected_answer").innerHTML === "a"){
-            document.getElementById("img").src = "../static/img/esqueleto_cabeza.png"; 
+            document.getElementById("img").src = "static/img/esqueleto_cabeza.png"; 
             mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-one");
         }
         else if(document.getElementById("detected_answer").innerHTML === "b"){
-            document.getElementById("img").src = "../static/img/esqueleto_brazos.png"; 
+            document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
             mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-two");
         }
         else if(document.getElementById("detected_answer").innerHTML === "c"){
-            document.getElementById("img").src = "../static/img/esqueleto_piernas.png"; 
+            document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
             mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-three");
         }
         else if(document.getElementById("detected_answer").innerHTML === "d"){
-            document.getElementById("img").src = "../static/img/esqueleto_torso.png"; 
+            document.getElementById("img").src = "static/img/esqueleto_torso.png"; 
             mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-four");
         }
         else{
             console.log(document.getElementById("detected_answer").innerHTML);
-            document.getElementById("img").src = "../static/img/esqueleto.png"; 
+            document.getElementById("img").src = "static/img/esqueleto.png"; 
             clearTimeout(mouseState);
         }
     }
