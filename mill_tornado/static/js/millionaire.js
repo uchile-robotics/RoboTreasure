@@ -54,16 +54,25 @@ var MillionaireModel = function(data) {
 
     // Questions
     this.questions = [];
+	var options = [];
         
+		
     for(var i = 1; i <= n_questions; i++) {
         var topic = topics[Math.floor(Math.random() * topics.length)];
         var types = Object.keys(data[topic]);
         var type = types[Math.floor(Math.random() * types.length)];
-		console.log(types);
         var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
-		console.log(question_options);
-		var current_question = question_options[Math.floor(Math.random() * question_options.length)];
-        this.questions.push(current_question);
+		options.push(question_options);
+		if (options.includes(question_options)){
+			var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
+			var current_question = question_options[Math.floor(Math.random() * question_options.length)];
+			this.questions.push(current_question);
+		}
+		else{
+			var current_question = question_options[Math.floor(Math.random() * question_options.length)];
+			this.questions.push(current_question);
+		}
+		
     }
 
     // A flag to keep multiple selections
