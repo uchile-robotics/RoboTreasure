@@ -146,7 +146,7 @@ $(document).ready(function() {
                  
             // Close Websocket callback
             ws.onclose = function(evt) {
-                log("***Connection Closed***");
+                console.log("***Connection Closed***");
                 $("div#message_details").empty();
 
                 };
