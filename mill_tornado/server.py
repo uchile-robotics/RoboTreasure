@@ -6,8 +6,8 @@ import socket
 import os.path
 
 
-#from std_msgs.msg import String
-#import rospy
+from std_msgs.msg import String
+import rospy
 
 from tornado.options import define, options, parse_command_line
 

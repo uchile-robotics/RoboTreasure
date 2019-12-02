@@ -1,5 +1,5 @@
 {
-	"sist_oseo" : { "cantidad" : 
+	"sist_oseo" : { "cantidad" : [
 			[	{ "question" : "En que etapa de la vida el cuerpo humano tiene mayor cantidad de huesos?" ,
 		
 							"content" : 
@@ -9,7 +9,7 @@
 										"Vejez" ] ,
 		
 							"correct" : 0 } ,
-
+				
 
 				{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene mas huesos" ,
 
@@ -19,7 +19,7 @@
 									"Adultez" ,
 									"Vejez" ] ,
 		
-							"correct" : 0 }  ] ,
+							"correct" : 0 }  ]] ,
 
 
 			"reconocer" : [ 

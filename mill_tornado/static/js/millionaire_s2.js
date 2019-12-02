@@ -51,30 +51,34 @@ var MillionaireModel = function(data) {
     var self = this;
 
     var topics = Object.keys(data)
+    
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    
+    
+    shuffle(topics);
 
-   // Questions
+    // Questions
     this.questions = [];
-    var options = [];
-        
-        
+                
     for(var i = 1; i <= n_questions; i++) {
-        var topic = topics[Math.floor(Math.random() * topics.length)];
+        var topic = topics[i-1];
         var types = Object.keys(data[topic]);
         var type = types[Math.floor(Math.random() * types.length)];
         var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
-        options.push(question_options);
-        if (options.includes(question_options)){
-            var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
-            var current_question = question_options[Math.floor(Math.random() * question_options.length)];
-            this.questions.push(current_question);
-        }
-        else{
-            var current_question = question_options[Math.floor(Math.random() * question_options.length)];
-            this.questions.push(current_question);
-        }
-        
+        var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
+        var current_question = question_options[Math.floor(Math.random() * question_options.length)];
+        this.questions.push(current_question);
     }
-    console.log(this.questions);
+
 
     // A flag to keep multiple selections
     // out while transitioning levels
@@ -262,8 +266,8 @@ $(document).ready(function() {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            // var host = "198.18.0.1";
-            var host = "localhost"; // For PC
+            var host = "198.18.0.1";
+            //var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 
@@ -297,7 +301,41 @@ $(document).ready(function() {
             startSound('background', true);
             $("#game").fadeIn('slow');
             interval = window.setInterval(stopWatch, 1000);
+            // Connecting to ROS
+            // -----------------
+            console.log("Trying to create topic");
+            var ros = new ROSLIB.Ros({
+              url : 'ws://198.18.0.1:9090'
             });
+
+            ros.on('connection', function() {
+              console.log('Connected to websocket server.');
+            });
+  
+            ros.on('error', function(error) {
+              console.log('Error connecting to websocket server: ', error);
+            });
+  
+            ros.on('close', function() {
+              console.log('Connection to websocket server closed.');
+            });
+
+            // Subscribing to a Topic
+            // ----------------------
+
+            var listener = new ROSLIB.Topic({
+              ros : ros,
+              name : '/listener',
+              messageType : 'std_msgs/String'
+            });
+
+            listener.subscribe(function(message) {
+              console.log('Received message on ' + listener.name + ': ' + message.data);
+              document.getElementById("detected_answer").innerHTML = message.data;
+              $("input").change();
+            });
+
+        });
             
     $.getJSON("static/keys_hints.json", function(keys_hints) {
         keys = keys_hints.keys; 
