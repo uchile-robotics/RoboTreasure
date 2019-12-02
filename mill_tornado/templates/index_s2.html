@@ -91,6 +91,26 @@ Author: Aaron Nech
 		<script type="text/javascript" src="{{ static_url('js/jquery-2.0.3.min.js') }}"></script>
 		<script type="text/javascript" src="{{ static_url('js/knockout-3.0.0.js') }}"></script>
 		<script type="text/javascript" src="{{ static_url('js/millionaire_s2.js') }}"></script>
+<script type="text/javascript">
+            var team = "{{team_name}}";
+            console.log(team);
+            document.getElementById("team").textContent = team; 
+		if(team === "Equipo Azul"){
+			document.getElementById("team").style = "color:blue;font-weight:bold"; 
+		}
+		else if(team === "Equipo Rojo"){
+			document.getElementById("team").style = "color:red;font-weight:bold"; 
+		}
+		else if(team === "Equipo Verde"){
+			document.getElementById("team").style = "color:green;font-weight:bold"; 
+		}
+		else if(team === "Equipo Amarillo"){
+			document.getElementById("team").style = "color:#AAAA00;font-weight:bold"; 
+		}
+		else if(team === "Equipo Morado"){
+			document.getElementById("team").style = "color:purple;font-weight:bold"; 
+		}
+        </script>
 		<!--
 
 		<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
