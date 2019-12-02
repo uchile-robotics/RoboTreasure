@@ -51,28 +51,32 @@ var MillionaireModel = function(data) {
     var self = this;
 
     var topics = Object.keys(data)
+	
+	function shuffle(a) {
+		var j, x, i;
+		for (i = a.length - 1; i > 0; i--) {
+			j = Math.floor(Math.random() * (i + 1));
+			x = a[i];
+			a[i] = a[j];
+			a[j] = x;
+		}
+		return a;
+	}
+	
+	
+	shuffle(topics);
 
     // Questions
     this.questions = [];
-	var options = [];
-        
-		
+        		
     for(var i = 1; i <= n_questions; i++) {
-        var topic = topics[Math.floor(Math.random() * topics.length)];
+        var topic = topics[i-1];
         var types = Object.keys(data[topic]);
         var type = types[Math.floor(Math.random() * types.length)];
         var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
-		options.push(question_options);
-		if (options.includes(question_options)){
-			var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
-			var current_question = question_options[Math.floor(Math.random() * question_options.length)];
-			this.questions.push(current_question);
-		}
-		else{
-			var current_question = question_options[Math.floor(Math.random() * question_options.length)];
-			this.questions.push(current_question);
-		}
-		
+		var question_options = data[topic][type][Math.floor(Math.random() * data[topic][type].length)];
+		var current_question = question_options[Math.floor(Math.random() * question_options.length)];
+		this.questions.push(current_question);
     }
 
     // A flag to keep multiple selections
