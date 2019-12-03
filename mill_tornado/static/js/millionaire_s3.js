@@ -73,7 +73,7 @@ var MillionaireModel = function(data) {
 
     // The current level(starting at 1) 
     this.level = new ko.observable(1);
-	
+    
     // Grabs the question text of the current question
     self.getQuestionText = function() {
         ws.send(self.questions[self.level() - 1].question);
@@ -103,30 +103,30 @@ var MillionaireModel = function(data) {
         if(self.transitioning)
             return;
         self.transitioning = true;
-        if(index === 0){		
+        if(index === 0){        
             self.money(self.money() + 100);
-			$("#game").fadeOut('slow', function() {
-				$("#score").html('Puntos: '+ self.money());
-				$("#score").fadeIn('slow');
-				$("#hint").html('Gracias!');
-				$("#hint").fadeIn('slow');
-				$("#key").html(' ');
-			})    
-			ws.send("Yes");			
+            $("#game").fadeOut('slow', function() {
+                $("#score").html('Puntos: '+ self.money());
+                $("#score").fadeIn('slow');
+                $("#hint").html('Gracias!');
+                $("#hint").fadeIn('slow');
+                $("#key").html(' ');
+            })    
+            ws.send("end");
         }
-		if(index === 1){
-			$("#game").fadeOut('slow', function() {
-				$("#score").html('Puntos: '+ self.money());
-				$("#score").fadeIn('slow');
-				$("#hint").html('Gracias!');
-				$("#hint").fadeIn('slow');
-				$("#key").html(' ');
-			})
-			ws.send("No");	
-		}
-		if(index === 2){
-			ws.send("end");
-		}
+        if(index === 1){
+            $("#game").fadeOut('slow', function() {
+                $("#score").html('Puntos: '+ self.money());
+                $("#score").fadeIn('slow');
+                $("#hint").html('Gracias!');
+                $("#hint").fadeIn('slow');
+                $("#key").html(' ');
+            })
+            ws.send("end");
+        }
+        if(index === 2){
+            ws.send("end");
+        }
     }
     
     // Gets the money formatted string of the current won amount of money.
@@ -179,7 +179,9 @@ $(document).ready(function() {
             for(var i = 1; i <= data.sist_oseo.length; i++) {
                 $("#problem-set").append('<option value="' + i + '">' + i + '</option>');
             }
-			
+
+            ws.send(document.getElementById("preg").innerHTML); 
+
             var index = 0;
             myModel = new MillionaireModel(data);
             ko.applyBindings(myModel);
@@ -187,7 +189,7 @@ $(document).ready(function() {
             $("#game").fadeIn('slow');
             //interval = window.setInterval(stopWatch, 1000);
             });
-    ws.send(document.getElementById("preg"));       
+
     $.getJSON("static/keys_hints.json", function(keys_hints) {
         keys = keys_hints.keys; 
         hints = keys_hints.hints; 
