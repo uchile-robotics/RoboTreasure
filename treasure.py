@@ -257,6 +257,24 @@ def getInstance(robot):
             }
         )
 
+################################################
+
+                    #STAGE3#
+
+################################################
+
+        smach.StateMachine.add('SPEAK_3', Speak(robot, "Wow, lo lograron, ahora solo queda responder una pregunta mas, la qual sera evaluada por su profesora"),
+            transitions={
+                'succeeded' : 'WEB_SHOW_3'
+            }
+        )
+
+        smach.StateMachine.add('WEB_SHOW_3', ShowWebpage(robot),
+            transitions={
+                'succeeded':'HEAR_QUESTIONS_3'
+            }
+        )
+
         return sm
 
 if __name__ == '__main__':
