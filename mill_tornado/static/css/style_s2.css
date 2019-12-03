@@ -99,6 +99,11 @@ audio {
 	margin-right: 15px;
     text-align: left;
 }
+.big-text-respond {
+	color: white;
+	font-size: 2em;
+    	text-align: center;
+}
 
 .content {
 	color: black;
@@ -182,6 +187,18 @@ audio {
 	text-align: left;
 	width: 960px;
 	margin: 0 auto;
+}
+
+.respond{
+	font-size: 1em;
+	color: white;
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	border-color: black;
+	border-width: 8px;
+	background-color:red;
+
 }
 
 #start{
