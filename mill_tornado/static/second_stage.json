@@ -11,7 +11,7 @@
 							"correct" : 0 } ,
 				
 
-				{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene mas huesos" ,
+				{ "question" : "Indica la etapa de la vida en que el cuerpo humano tiene más huesos" ,
 
 							"content" :
 								[ "Niñez" ,
@@ -24,29 +24,29 @@
 
 			"reconocer" : [ 
 			
-			[	{ "question" : "El o los huesos que protegen al corazon y los pulmones son: " ,
+			[	{ "question" : "El o los huesos que protegen al corazón y los púlmones son: " ,
 
 							"content" :
 								[ "Craneo" ,
 									"Costillas" ,
-									"Humero" ,
+									"Húmero" ,
 									"Femur y Tibia" ] ,
 
 							"correct" : 1 } ,
 
 
-				{ "question" : "Cual o cuales son los huesos que protegen el corazon y los pulmones?" ,
+				{ "question" : "Cuál o cuáles son los huesos que protegen el corazón y los púlmones?" ,
 
 							"content" : 
 								[ "Craneo" ,
 									"Costillas" ,
-									"Humero" ,
+									"Húmero" ,
 									"Femur y Tibia" ] ,
 
 							"correct" : 1 } ,
 
 
-				{ "question" : "Completa: 'La estructura que protege al corazon y los pulmones se llama, (  ) ' " ,
+				{ "question" : "Completa: 'La estructura que protege al corazon y los púlmones se llama, (  ) ' " ,
 
 							"content" : 
 								[ "Craneo" ,
@@ -60,43 +60,43 @@
 			[	{ "question" : "Completa: 'El o la, (  ) protege al cerebro de daños externos y accidentes' " ,
 
 							"content" :
-								[ "Craneo" ,
-									"Esternon" ,
+								[ "Cráneo" ,
+									"Esternón" ,
 									"Cubito" ,
 									"Pelvis" ] ,
 		
 							"correct" : 0 } ,
 
 
-				{ "question" : "Cual es el hueso encargado de proteger el cerebro y los ojos?" ,
+				{ "question" : "Cuál es el hueso encargado de proteger el cerebro y los ojos?" ,
 
 							"content" :
-								[ "Craneo" ,
-									"Esternon" ,
-									"Cubito" ,
+								[ "Cráneo" ,
+									"Esternón" ,
+									"Cúbito" ,
 									"Pelvis" ] ,
 
 							"correct" : 0 } ],
 
 
-			[	{ "question" : "Cual es la funcion del Sistema oseo?" ,
+			[	{ "question" : "Cuál es la función del Sistema oseo?" ,
 
 							"content" :
 								[ "Digerir los alimentos que ingresan al cuerpo" ,
 									"Bombear sangre a todo el cuerpo" ,
-									"Recibir estimulos y dar una respuesta" ,
-									"Dar forma, soporte y proteccion al cuerpo" ] ,
+									"Recibir estímulos y dar una respuesta" ,
+									"Dar forma, soporte y protección al cuerpo" ] ,
 
 							"correct" : 3 } ,
 
 
-				{ "question" : "La funcion del Sistema oseo es:" ,
+				{ "question" : "La función del Sistema Óseo es:" ,
 
 							"content" :
 								[ "Digerir los alimentos que ingresan al cuerpo" ,
 									"Bombear sangre a todo el cuerpo" ,
-									"Recibir estimulos y dar una respuesta" ,
-									"Dar forma, soporte y proteccion al cuerpo" ] ,
+									"Recibir estímulos y dar una respuesta" ,
+									"Dar forma, soporte y protección al cuerpo" ] ,
 
 							"correct" : 3 } ] ] } ,
 
@@ -106,42 +106,42 @@
 			[	{ "question" : "El Sistema Locomotor se compone por: " ,
 	
 							"content" : 
-								[ "Huesos y musculos" ,
-									"organos y nervios" ,
-									"Cerebro y medula espinal" ,
+								[ "Huesos y músculos" ,
+									"Órganos y nervios" ,
+									"Cerebro y médula espinal" ,
 									"Brazos y piernas" ] ,
 		
 							"correct" : 0 } ,
 
 
-				{ "question" : "Que estructuras componen el Sistema Locomotor?" ,
+				{ "question" : "Qué estructuras componen el Sistema Locomotor?" ,
 
 							"content" : 
-								[ "Huesos y musculos" ,
-									"organos y nervios" ,
-									"Cerebro y medula espinal" ,
+								[ "Huesos y músculos" ,
+									"Órganos y nervios" ,
+									"Cerebro y médula espinal" ,
 									"Brazos y piernas" ] ,
 		
 							"correct" : 0 } ],
 
 
-			[	{ "question" : "Cual es la funcion del Sistema Locomotor?" ,
+			[	{ "question" : "Cuál es la función del Sistema Locomotor?" ,
 	
 							"content" : 
 								[ "Digerir los alimentos" ,
 									"Permitir el movimiento del cuerpo humano" ,
-									"Permitir la respiracion" ,
-									"Intepretar estimulos del exterior" ] ,
+									"Permitir la respiración" ,
+									"Intepretar estímulos del exterior" ] ,
 		
 							"correct" : 1 } ,
 
 
-				{ "question" : "La funcion del Sistema Locomotor es: " ,
+				{ "question" : "La función del Sistema Locomotor es: " ,
 	
 							"content" : 
 								[ "Digerir los alimentos" ,
 									"Permitir el movimiento del cuerpo humano" ,
-									"Permitir la respiracion" ,
+									"Permitir la respiración" ,
 									"Intepretar estimulos del exterior" ] ,
 		
 							"correct" : 1 }	] ] },
@@ -154,21 +154,21 @@
 			[	{ "question" : "Los actos reflejos son controlados por: " ,
 
 							"content" :
-								[ "el corazon" ,
-									"la medula espinal" ,
-									"los nervios" ,
-									"la cabeza" ] ,
+								[ "El corazón" ,
+									"La médula espinal" ,
+									"Los nervios" ,
+									"La cabeza" ] ,
 
 							"correct" : 1 } ,
 
 
-				{ "question" : "Que controla los actos reflejos?" ,
+				{ "question" : "Qué controla los actos reflejos?" ,
 
 							"content" :
-								[ "el corazon" ,
-									"la medula espinal" ,
-									"los nervios" ,
-									"la cabeza"] ,
+								[ "El corazón" ,
+									"La médula espinal" ,
+									"Los nervios" ,
+									"La cabeza"] ,
 
 							"correct" : 1 } ] ,
 
@@ -176,21 +176,21 @@
 			[	{ "question" : "Los actos voluntarios son controlados por: " ,
 
 							"content" : 
-								[ "los pulmones" ,
-									"los nervios" ,
-									"el cerebro" ,
-									"los movimientos" ] ,
+								[ "Los púlmones" ,
+									"Los nervios" ,
+									"El cerebro" ,
+									"Los movimientos" ] ,
 
 							"correct" : 2 } ,
 
 
-				{ "question" : "Que controla los actos voluntarios?" ,
+				{ "question" : "Qué controla los actos voluntarios?" ,
 
 							"content" : 
-								[ "los pulmones" ,
-									"los nervios" ,
-									"el cerebro" ,
-									"los movimientos" ] ,
+								[ "Los púlmones" ,
+									"Los nervios" ,
+									"El cerebro" ,
+									"Los movimientos" ] ,
 
 							"correct" : 2 } ] ] } ,
 
@@ -200,24 +200,24 @@
 
 	"alcohol" : { "reconocer" :  [ 
 	
-		[	{ "question" : "Cual de los siguientes no es un efecto de consumir alcohol en exceso?" ,
+		[	{ "question" : "Cuál de los siguientes no es un efecto de consumir alcohol en exceso?" ,
 
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Caida del pelo" ,
-									"Dificultar la respiracion" ] ,
+									"Caída del pelo" ,
+									"Dificultar la respiración" ] ,
 
 							"correct" : 2 } ,
 
 
-			{ "question" : "Que es lo que no ocurre al consumir alcohol en exceso?" ,
+			{ "question" : "Qué es lo que no ocurre al consumir alcohol en exceso?" ,
 
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Caida del pelo" ,
-									"Dificultar la respiracion" ] ,
+									"Caída del pelo" ,
+									"Dificultar la respiración" ] ,
 
 							"correct" : 2 } ,
 
@@ -227,8 +227,8 @@
 							"content" :
 								[ "Afectar los movimientos del cuerpo" ,
 									"Perder el conocimiento" ,
-									"Caida del pelo" ,
-									"Dificultar la respiracion" ] ,
+									"Caída del pelo" ,
+									"Dificultar la respiración" ] ,
 
 							"correct" : 2 }	] ] } 
 
