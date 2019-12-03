@@ -104,6 +104,8 @@ var MillionaireModel = function(data) {
             return;
         self.transitioning = true;
         $("#game").fadeOut('slow', function() {
+            $("#score").html('Puntos: '+ self.money());
+            $("#score").fadeIn('slow');
             $("#hint").html('Hola');
             $("#hint").fadeIn('slow');
             $("#key").html(' ');
