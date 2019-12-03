@@ -57,7 +57,7 @@ class SingleSub(smach.State):
 class ChangeURL(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3"], io_keys=["qr", "page", "base_page", "qr_id"])
+        smach.State.__init__(self, outcomes=["succeeded", "stage1"], io_keys=["qr", "page", "base_page", "qr_id"])
         self.robot = robot
 
     def execute(self, userdata):
@@ -119,9 +119,13 @@ class Questions(smach.State):
     def execute(self, userdata):
         question = rospy.wait_for_message("question", String)
         print question
-        if question == "end":
+        question2 = str(question)
+        question2 = question2.replace('data:', '')
+        print question2
+        if "end" in question2:
+            time.sleep(20)
             return "preempted"
-        self.tts.say_with_gestures(str(question))
+        self.tts.say_with_gestures(str(question2))
         return "succeeded"
 
 class Image(smach.State):
