@@ -103,6 +103,15 @@ var MillionaireModel = function(data) {
         if(self.transitioning)
             return;
         self.transitioning = true;
+
+        $("#game").fadeOut('slow', function() {
+            $("#score").html('Puntos: '+ self.money());
+            $("#score").fadeIn('slow');
+            $("#hint").html('Hola');
+            $("#hint").fadeIn('slow');
+            $("#key").html(' ');
+        })      
+
         if(index === 0){
             self.money(self.money() + 100);
 			ws.send("Yes");

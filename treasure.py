@@ -17,8 +17,6 @@ from uchile_states.interaction.tablet_states import ShowWebpage, WaitTouchScreen
 from uchile_states.perception.school import QRDetector, AnswerSelection
 #########from uchile_states.interaction.tablet_states import OperationMessage
 
-page = ""
-
 class Setup(smach.State):
     def __init__(self,robot):
         smach.State.__init__(self, outcomes=["succeeded"])
@@ -59,7 +57,7 @@ class SingleSub(smach.State):
 class ChangeURL(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded"], io_keys=["qr", "page", "base_page", "qr_id"])
+        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3"], io_keys=["qr", "page", "base_page", "qr_id"])
         self.robot = robot
 
     def execute(self, userdata):
@@ -74,7 +72,13 @@ class ChangeURL(smach.State):
         print "Stage: "+stage
         print "URL: "+userdata.page
         print "#####################"
-        return "succeeded"
+
+        if stage == "1":
+            return "stage1"
+        elif stage == "2":
+            return "stage2"
+        elif stage == "3":
+            return "stage3"
 
 class LoadURL(smach.State):
     """docstring for subs"""
@@ -108,14 +112,15 @@ class Iterator(smach.State):
 class Questions(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded"])
+        smach.State.__init__(self, outcomes=["succeeded", "preempted"])
         self.robot = robot
         self.tts = self.robot.get("tts")
 
     def execute(self, userdata):
         question = rospy.wait_for_message("question", String)
         print question
-        print type(question)
+        if question == "end":
+            return "preempted"
         self.tts.say_with_gestures(str(question))
         return "succeeded"
 
@@ -153,8 +158,6 @@ def getInstance(robot):
     sm.userdata.qr_id = ""
     sm.userdata.question_count = 0
 
-    global page
-
     with sm:
 
         smach.StateMachine.add('SETUP', Setup(robot),
@@ -185,35 +188,25 @@ def getInstance(robot):
 
         smach.StateMachine.add('CHANGE_URL', ChangeURL(robot),
             transitions={
-                'succeeded':'WEB_SHOW'
+                'stage1':'WEB_SHOW_1',
+                # 'stage2':'WEB_SHOW_2',
+                # 'stage3':'WEB_SHOW_3',
             }
         )
 
-        # smach.StateMachine.add('LOAD_URL', LoadURL(robot),
-        #     transitions={
-        #         'succeeded':'WEB_SHOW'
-        #     }
-        # )
-
-
-        smach.StateMachine.add('WEB_SHOW', ShowWebpage(robot),
+        smach.StateMachine.add('WEB_SHOW_1', ShowWebpage(robot),
             transitions={
-                'succeeded':'HEAR_QUESTIONS'
+                'succeeded':'HEAR_QUESTIONS_1'
             }
         )
 
-        smach.StateMachine.add('HEAR_QUESTIONS', Questions(robot),
+        smach.StateMachine.add('HEAR_QUESTIONS_1', Questions(robot),
             transitions={
-                'succeeded':'ITERATOR'
+                'succeeded':'HEAR_QUESTIONS_1',
+                'preempted':'PRE_WAIT'
             }
         )
 
-        smach.StateMachine.add('ITERATOR', Iterator(robot),
-            transitions={
-                'succeeded':'PRE_WAIT',
-                'preempted':'HEAR_QUESTIONS'
-            }
-        )
 
 
 
