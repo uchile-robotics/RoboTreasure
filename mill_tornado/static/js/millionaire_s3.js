@@ -73,7 +73,7 @@ var MillionaireModel = function(data) {
 
     // The current level(starting at 1) 
     this.level = new ko.observable(1);
-
+	
     // Grabs the question text of the current question
     self.getQuestionText = function() {
         ws.send(self.questions[self.level() - 1].question);
@@ -179,6 +179,7 @@ $(document).ready(function() {
             for(var i = 1; i <= data.sist_oseo.length; i++) {
                 $("#problem-set").append('<option value="' + i + '">' + i + '</option>');
             }
+			
             var index = 0;
             myModel = new MillionaireModel(data);
             ko.applyBindings(myModel);
@@ -186,7 +187,7 @@ $(document).ready(function() {
             $("#game").fadeIn('slow');
             //interval = window.setInterval(stopWatch, 1000);
             });
-            
+    ws.send(document.getElementsByClassName("content"));       
     $.getJSON("static/keys_hints.json", function(keys_hints) {
         keys = keys_hints.keys; 
         hints = keys_hints.hints; 
