@@ -17,7 +17,7 @@ body {
     width: 100%;
     font-size: 50px;
     text-align: center;
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: monospace;
 }
 
 #state{

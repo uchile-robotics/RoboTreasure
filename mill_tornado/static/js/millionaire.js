@@ -22,7 +22,7 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
           (fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
-var question_sec = 15;
+var question_sec = 15
 var stage = 1;
 
 /**
@@ -145,11 +145,11 @@ var MillionaireModel = function(data) {
                         $("#key").fadeIn('slow');
                     });
                 } else {
-                    question_seconds = question_sec + 1
-                    prep_seconds = 3;
-                    document.getElementById("display").innerHTML = "03s";
+                    question_seconds = question_sec*100 + 100
+                    prep_sec = prep_seconds*100
+                    document.getElementById("display").innerHTML = "03.00";
                     window.clearInterval(interval);
-                    interval = window.setInterval(stopWatch, 1000);
+                    interval = window.setInterval(stopWatch, 10);
                     
                     self.level(self.level() + 1);
                     $("#container").css('background', 'white');
@@ -176,11 +176,11 @@ var MillionaireModel = function(data) {
                         $("#key").fadeIn('slow');
                     });
                 } else {
-                    question_seconds = question_sec + 1
-                    prep_seconds = 3;
-                    document.getElementById("display").innerHTML = "03s";
+                    question_seconds = question_sec*100 + 100
+                    prep_sec = prep_seconds*100
+                    document.getElementById("display").innerHTML = "03.00";
                     window.clearInterval(interval);
-                    interval = window.setInterval(stopWatch, 1000);
+                    interval = window.setInterval(stopWatch, 10);
                     
                     self.level(self.level() + 1);
                     self.resetAnswers();
@@ -213,11 +213,11 @@ var MillionaireModel = function(data) {
                     }
                 
                 } else {
-                    question_seconds = question_sec + 1
-                    prep_seconds = 3;
-                    document.getElementById("display").innerHTML = "03s";
+                    question_seconds = question_sec*100 + 100
+                    prep_sec = prep_seconds*100
+                    document.getElementById("display").innerHTML = "03.00";
                     window.clearInterval(interval);
-                    interval = window.setInterval(stopWatch, 1000);
+                    interval = window.setInterval(stopWatch, 10);
                     if(self.tries >= 1){                        
                         self.level(self.level() + 1);
                         self.resetAnswers();                
@@ -266,8 +266,8 @@ $(document).ready(function() {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            // var host = "198.18.0.1"; // For Pepper
-            var host = "localhost"; // For PC
+            var host = "198.18.0.1"; // For Pepper
+             // var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 
@@ -279,7 +279,7 @@ $(document).ready(function() {
                  
             // Close Websocket callback
             ws.onclose = function(evt) {
-                log("***Connection Closed***");
+                console.log("***Connection Closed***");
                 $("div#message_details").empty();
 
                 };
@@ -300,7 +300,8 @@ $(document).ready(function() {
             ko.applyBindings(myModel);
             startSound('background', true);
             $("#game").fadeIn('slow');
-            interval = window.setInterval(stopWatch, 1000);
+			window.clearInterval(interval);
+            interval = window.setInterval(stopWatch, 10);
             });
             
     $.getJSON("static/keys_hints.json", function(keys_hints) {
@@ -316,26 +317,30 @@ $(document).ready(function() {
 });
 
 //Countdown
-var question_seconds = 1 + question_sec;
-var prep_seconds = 3;
-var display_seconds = 0;
+
 var question_num = 0;
 var states = ["Tiempo restante:","Ya!","Listos","Preparados"];
 var interval = null;
 var status = "stopped";
 var answer_time = 0;
 var score = 0;
+var question_seconds = 100 + question_sec*100;
+var prep_seconds = 3;
+var prep_sec = prep_seconds*100
+var display_seconds = 0;
 
 function stopWatch(){
-    if(prep_seconds > 0){
-        prep_seconds--;
+	var fixed;
+    if(prep_sec > 0){
+        prep_sec--;
     }   
-    if(prep_seconds < 10){
-        display_seconds = "0" + prep_seconds.toString() + "s";
+    if(prep_sec < 1000){
+		s =  prep_sec/100;
+        display_seconds = "0" + s.toFixed(2);
         document.getElementById("display").innerHTML = display_seconds;
     }
-    document.getElementById("state").innerHTML = states[prep_seconds]
-    if(prep_seconds  === 0){
+    document.getElementById("state").innerHTML = states[Math.ceil(prep_sec/100)]
+    if(prep_sec  === 0){
         if(question_seconds > 0){
             question_seconds--;
         }   
@@ -345,12 +350,15 @@ function stopWatch(){
                 myModel.timeOut();
             }
         }
-        if(question_seconds < 10){
-            display_seconds = "0" + question_seconds.toString() + "s";  
+        if(question_seconds < 1000){
+			s = question_seconds/100;
+            display_seconds = "0" + s.toFixed(2);  
         }   
         else{
-            display_seconds = question_seconds + "s";
+			s = question_seconds/100;
+            display_seconds = s.toFixed(2);
         }
         document.getElementById("display").innerHTML = display_seconds;
     }
 }
+
