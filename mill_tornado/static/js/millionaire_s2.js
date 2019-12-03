@@ -274,8 +274,8 @@ $(document).ready(function() {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            //var host = "198.18.0.1";
-            var host = "localhost"; // For PC
+            var host = "198.18.0.1";
+            //var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 
@@ -312,7 +312,8 @@ $(document).ready(function() {
             // Connecting to ROS
             // -----------------
             var ros = new ROSLIB.Ros({
-              url : 'ws://localhost:9090'
+              //url : 'ws://localhost:9090' //for pc
+              url : 'ws://198.18.0.1:9090' //for pepper
             });
 
             ros.on('connection', function() {
