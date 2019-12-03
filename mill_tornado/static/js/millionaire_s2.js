@@ -364,13 +364,13 @@ $(document).ready(function() {
 //Countdown
 
 var question_num = 0;
-var states = ["Tiempo restante:","Ya!","Listos","Preparados"];
+var states = ["Tiempo restante:","Ya!","Listos","Preparados", "Preparados"];
 var interval = null;
 var status = "stopped";
 var answer_time = 0;
 var score = 0;
 var question_seconds = 100 + question_sec*100;
-var prep_seconds = 3;
+var prep_seconds = 4;
 var prep_sec = prep_seconds*100
 var display_seconds = 0;
 
