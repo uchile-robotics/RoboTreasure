@@ -57,7 +57,7 @@ class SingleSub(smach.State):
 class ChangeURL(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3"], io_keys=["qr", "page", "base_page", "qr_id"])
+        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3"], io_keys=["qr", "page", "base_page", "qr_id", "actualTeam"])
         self.robot = robot
 
     def execute(self, userdata):
@@ -65,6 +65,7 @@ class ChangeURL(smach.State):
         qr_split = qr_split.split()
         print qr_split
         equipo = qr_split[1]
+        userdata.actualTeam = equipo
         stage = qr_split[3]
         userdata.page = userdata.base_page+"stage"+stage+"/"+equipo
         print "#####################"
@@ -79,8 +80,8 @@ class ChangeURL(smach.State):
             return "stage2"
         elif stage == "3":
             return "stage3"
-	elif stage == "0":
-	    return "stage0"
+        elif stage == "0":
+            return "stage0"
 
 class LoadURL(smach.State):
     """docstring for subs"""
@@ -150,6 +151,21 @@ class Image(smach.State):
     
         return "preempted"
 
+class Stage3Check(smach.State):
+    def __init__(self, robot):
+        smach.State.__init__(self, outcomes=["first", "after"], io_keys=["s3", "actualTeam"])
+        self.robot = robot
+
+    def execute(self, userdata):
+        print "########################"
+        print "Team Iteration: "+str(userdata.s3[userdata.actualTeam-1])
+        print "########################"
+        if userdata.s3[userdata.actualTeam-1] == 0:
+            userdata.s3[userdata.actualTeam-1] += 1
+            return "first"
+        else:
+            return "after"
+
 
 
 def getInstance(robot):
@@ -163,6 +179,10 @@ def getInstance(robot):
     sm.userdata.base_page = "http://198.18.0.1:8888/"
     sm.userdata.qr_id = ""
     sm.userdata.question_count = 0
+
+    sm.userdata.s3 = [0,0,0,0,0]
+    sm.userdata.actualTeam = 0
+
 
     with sm:
 
@@ -263,7 +283,20 @@ def getInstance(robot):
 
 ################################################
 
-        smach.StateMachine.add('SPEAK_3', Speak(robot, "UWU, lo lograron, ahora solo queda responder una pregunta mas, la qual sera evaluada por su profesora"),
+        smach.StateMachine.add('S3CHECK', Stage3Check(robot),
+            transitions={
+                'first':'SPEAK_3_FIRST',
+                'after':'SPEAK_3_AFTER'
+            }
+        )
+
+        smach.StateMachine.add('SPEAK_3_FIRST', Speak(robot, "UWU, lo lograron, ahora solo queda responder una pregunta mas, la qual sera evaluada por su profesora"),
+            transitions={
+                'succeeded' : 'WEB_SHOW_3'
+            }
+        )
+
+        smach.StateMachine.add('SPEAK_3_AFTER', Speak(robot, "Espero que hayan pensado muy bien su respuesta. La pregunta aparecera nuevamente en pantalla. Profesora por favor indique con los botones si la pregunta es correcta o deben pensarla de nuevo"),
             transitions={
                 'succeeded' : 'WEB_SHOW_3'
             }
@@ -278,7 +311,13 @@ def getInstance(robot):
         smach.StateMachine.add('HEAR_QUESTIONS_3', Questions(robot),
             transitions={
                 'succeeded':'HEAR_QUESTIONS_3',
-                'preempted':'PRE_WAIT'
+                'preempted':'SPEAK_3_LAST'
+            }
+        )
+
+        smach.StateMachine.add('SPEAK_3_LAST', Speak(robot, "Felicitaciones a su equipo, ahora deben esperar que todos los equipos terminen para poder saber al ganador"),
+            transitions={
+                'succeeded' : 'PRE_WAIT'
             }
         )
 
