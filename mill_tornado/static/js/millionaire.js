@@ -139,6 +139,8 @@ var MillionaireModel = function(data) {
             $("#container").css('background', '#FF262E').fadeIn('slow', function() {
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
+                        $("#score").html('Puntos: '+ self.money());
+                        $("#score").fadeIn('slow');
                         $("#hint").html('Pista: '+hints[stage - 1]);
                         $("#hint").fadeIn('slow');
                         $("#key").html('Clave: '+keys[stage - 1]);
@@ -170,10 +172,12 @@ var MillionaireModel = function(data) {
                 self.money(self.money() + 10 - 2*self.tries + question_seconds);
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
+                            $("#score").html('Puntos: '+ self.money());
+                            $("#score").fadeIn('slow');
+                            $("#hint").html('Pista: '+hints[stage - 1]);
+                            $("#hint").fadeIn('slow');
+                            $("#key").html('Clave: '+keys[stage - 1]);
+                            $("#key").fadeIn('slow');
                     });
                 } else {
                     question_seconds = question_sec*100 + 100
@@ -199,6 +203,8 @@ var MillionaireModel = function(data) {
                 if(self.level() + 1 > 3) {
                     if(self.tries >= 1){
                         $("#game").fadeOut('slow', function() {
+                            $("#score").html('Puntos: '+ self.money());
+                            $("#score").fadeIn('slow');
                             $("#hint").html('Pista: '+hints[stage - 1]);
                             $("#hint").fadeIn('slow');
                             $("#key").html('Clave: '+keys[stage - 1]);
@@ -207,9 +213,12 @@ var MillionaireModel = function(data) {
                     }
                     else{
                         self.tries += 1;
-                    
-                    self.transitioning = false;
-                        
+						self.transitioning = false;
+						question_seconds = question_sec*100 + 100
+						prep_sec = prep_seconds*100
+						document.getElementById("display").innerHTML = "03:00";
+						window.clearInterval(interval);
+						interval = window.setInterval(stopWatch, 10);                        
                     }
                 
                 } else {

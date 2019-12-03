@@ -145,6 +145,18 @@ audio {
     padding: 50px;
 }
 
+#score {
+	display: none;
+	font-size: 7em;
+	font-weight: bold;
+	color: black;
+	width: 980px;
+	margin-top: 300px;
+	margin: 0 auto;
+	text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 50px;
+}
 
 #fifty {
 	background: url('../img/50-50.png') no-repeat 0 0;
