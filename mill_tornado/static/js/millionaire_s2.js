@@ -442,9 +442,10 @@ $( "input" ).change(function() {
 });
 $("#answer-two").click(function() {
     $("input").change();
+	
 });
 
 $("#respond").click(function() {
     server_ready.publish({data:"ready"});
-    console.log("Server ready");
+    ws.send("ready");
 });

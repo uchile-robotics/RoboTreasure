@@ -194,7 +194,7 @@ def getInstance(robot):
 
         smach.StateMachine.add('CHANGE_URL', ChangeURL(robot),
             transitions={
-                'stage1':'WEB_SHOW_1',
+                'stage1':'SPEAK_1',
                 'stage2':'TUTORIAL_2',
                 # 'stage3':'WEB_SHOW_3',
             }
@@ -205,6 +205,12 @@ def getInstance(robot):
                     #STAGE1#
 
 ################################################
+
+        smach.StateMachine.add('SPEAK_1', Speak(robot, "Estan en la etapa 1, suerte con el juego"),
+            transitions={
+                'succeeded' : 'WEB_SHOW_1'
+            }
+        )
 
         smach.StateMachine.add('WEB_SHOW_1', ShowWebpage(robot),
             transitions={
