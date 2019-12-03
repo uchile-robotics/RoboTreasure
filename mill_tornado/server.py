@@ -427,6 +427,46 @@ class WhiteHandler(tornado.web.RequestHandler):
         print "loading blank html"
         self.render("blank.html")
 
+class WrongHandler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        print "setting headers for main page!!!"
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.2:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.1:8888/")
+        self.set_header("Access-Control-Allow-Headers", "x-requested-with")
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading wrong html"
+        self.render("wrong.html")
+
+class TutorialHandler(tornado.web.RequestHandler):
+    SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
+    def set_default_headers(self):
+        print "setting headers for main page!!!"
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://localhost:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.2:8888/")
+        self.set_header("Access-Control-Allow-Origin", "http://198.18.0.1:8888/")
+        self.set_header("Access-Control-Allow-Headers", "x-requested-with")
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
+
+    def head(self):
+        print "head"
+        self.get()
+        print "head finish"
+
+    def get(self):
+        print "loading tutorial html"
+        self.render("tutorial.html")
+
 class WSHandler(tornado.websocket.WebSocketHandler):
     def open(self):
         print 'new connection'
@@ -474,6 +514,8 @@ app = tornado.web.Application([
     (r'/stage1/5', P1Handler),
 
     (r'/b', WhiteHandler),
+    (r'/wrong', WrongHandler),
+    (r'/tutorial', TutorialHandler),
     (r'/(launch_details\.json)', tornado.web.StaticFileHandler, {'path': ''}),
     (r'/ws', WSHandler),
 ], **settings)
