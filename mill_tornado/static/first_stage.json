@@ -3,7 +3,7 @@
 		
 			{ "cantidad" : [
 				
-					[	{ "question" : "Cuantos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
+					[	{ "question" : "Cuántos huesos tiene aproximadamente el cuerpo humano en etapa adulta?" ,
 
 							"content" : 
 									[ "157" ,
@@ -32,46 +32,46 @@
 
 				"reconocer" : [
 		
-					[	{ "question" : "Cual de los siguientes es un hueso?" ,
+					[	{ "question" : "Cuál de los siguientes es un hueso?" ,
 			
 							"content" : 
-									[ "Estomago" ,
+									[ "Estómago" ,
 										"Cerebro" ,
 										"Femur" ,
-										"Corazon" ] ,
+										"Corazón" ] ,
 			
 							"correct" : 2 } ,
 
 
-						{ "question" : "Indica cual de los siguientes es un hueso" ,
+						{ "question" : "Indica cuál de los siguientes es un hueso" ,
 
 							"content" :
 								[ "Estomago" ,
 										"Cerebro" ,
 										"Femur" ,
-										"Corazon" ] ,
+										"Corazón" ] ,
 			
 							"correct" : 2 } ],
 
 
-					[	{ "question" : "Cual de los siguientes no es un hueso?" ,
+					[	{ "question" : "Cuál de los siguientes no es un hueso?" ,
 
 							"content" :
 									[ "Costilla" ,
 										"Craneo" ,
 										"Pelvis" ,
-										"Pulmon" ] ,
+										"Pulmón" ] ,
 
 							"correct" : 3 } ,
 
 
-						{ "question" : "Indica cual de los siguientes no es un hueso" ,
+						{ "question" : "Indica cuál de los siguientes no es un hueso" ,
 
 							"content" :
 									[ "Costilla" ,
 										"Craneo" ,
 										"Pelvis" ,
-										"Pulmon" ] ,
+										"Pulmón" ] ,
 
 							"correct" : 3 } ] ,
 
@@ -87,16 +87,16 @@
 								[ "Costilla" ,
 									"Cabeza" ,
 									"Pelvis" ,
-									"Clavicula" ] ,
+									"Clavícula" ] ,
 	
 							"correct" : 2 } ,
 
 
-						{ "question" : "Cual es la funcion de la pelvis?" ,
+						{ "question" : "Cuál es la función de la pelvis?" ,
 
 							"content" :
 								[ "Dar soporte al cuerpo humano" ,
-									"Proteger el corazon y los pulmones" ,
+									"Proteger el corazón y los pulmones" ,
 									"Proteger el cerebro y los ojos" ,
 									"Permitirle caminar al ser humano" ] ,
 
@@ -112,44 +112,44 @@
 				
 		{ "reconocer" : [
 										
-					[	{ "question" : "Que son los musculos?" ,
+					[	{ "question" : "Qué son los músculos?" ,
 	
 							"content" : 
-								[ "organos que digieren alimentos" ,
+								[ "Órganos que digieren alimentos" ,
 				 					"Receptores de estimulos" ,
 									"Estructuras duras que protegen el cuerpo" ,
-									"organos blandos que se contraen y relajan" ] ,
+									"Órganos blandos que se contraen y relajan" ] ,
 		
 							"correct" : 3 } ,
 
 
-						{ "question" : "Los musculos son: " ,
+						{ "question" : "Los músculos son: " ,
 
 							"content" :
-								[ "organos que digieren alimentos" ,
-				 					"Receptores de estimulos" ,
+								[ "Órganos que digieren alimentos" ,
+				 					"Receptores de estímulos" ,
 									"Estructuras duras que protegen el cuerpo" ,
-									"organos blandos que se contraen y relajan" ] ,
+									"Órganos blandos que se contraen y relajan" ] ,
 
 							"correct" : 3 } ],
 
 
-					[	{ "question" : "Cual es la funcion de los musculos?" ,
+					[	{ "question" : "Cuál es la función de los músculos?" ,
 	
 							"content" : 
 								[ "Proteger al cuerpo de los daños" ,
-									"Interpretar los estimulos del exterior" ,
+									"Interpretar los estímulos del exterior" ,
 									"Permitir la movilidad de los huesos" ,
 									"Dar estabilidad al cuerpo" ] ,
 		
 							"correct" : 2 } , 
 
 
-						{ "question" : "La funcion de los musculos es: " ,
+						{ "question" : "La función de los músculos es: " ,
 
 							"content" :
 								[ "Proteger al cuerpo de los daños" ,
-									"Interpretar los estimulos del exterior" ,
+									"Interpretar los estímulos del exterior" ,
 									"Permitir la movilidad de los huesos" ,
 									"Dar estabilidad al cuerpo" ] ,
 
@@ -161,29 +161,29 @@
 
 			"movimiento" : [
 										
-				[	{ "question" : "Completa: 'Los, (  ) unen a los huesos en cada articulacion' " ,
+				[	{ "question" : "Completa: 'Los, (  ) unen a los huesos en cada articulación' " ,
 							
 							"content" : 
 								[ "Tendones" ,
-									"Musculos" ,
+									"Músculos" ,
 									"Ligamentos" ,
 									"Nervios" ] ,
 
 							"correct" : 2 } ,
 
 
-						{ "question" : "A traves de que estructura se unen los huesos en cada articulacion?" ,
+						{ "question" : "A través de que estructura se unen los huesos en cada articulación?" ,
 
 							"content" : 
 								[ "Tendones" ,
-									"Musculos" ,
+									"Músculos" ,
 									"Ligamentos" ,
 									"Nervios" ] ,
 
 							"correct" : 2 } ],
 
 
-					[	{ "question" : "Completa: 'Los musculos se unen a los huesos gracias a los o las, (  ) '" ,
+					[	{ "question" : "Completa: 'Los músculos se unen a los huesos gracias a los o las, (  ) '" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -194,7 +194,7 @@
 							"correct" : 3 } , 
 
 
-						{ "question" : "A traves de que estructura se unen los musculos a los huesos?" ,
+						{ "question" : "A través de que estructura se unen los músculos a los huesos?" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -209,7 +209,7 @@
 
 			"cuidados" : [
 			
-					[	{ "question" : "Cuanto tiempo diario minimo se recomienda realizar actividad fisica?" ,
+					[	{ "question" : "Cuánto tiempo diario mínimo se recomienda realizar actividad física?" ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -220,7 +220,7 @@
 							"correct" : 0 } ,
 
 
-						{ "question" : "Completa: 'Las personas debieran realizar minimo, (  ) diarios de actividad fisica' " ,
+						{ "question" : "Completa: 'Las personas debieran realizar mínimo, (  ) diarios de actividad física' " ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -231,7 +231,7 @@
 							"correct" : 0 } ],
 
 
-					[	{ "question" : " 'Se refiere a la poca actividad fisica, provocando sobrepeso e incluso obesidad'. Esta definicion corresponde a: " ,
+					[	{ "question" : " 'Se refiere a la poca actividad física, provocando sobrepeso e incluso obesidad'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Ejercicio" ,
@@ -242,12 +242,12 @@
 							"correct" : 1 } , 
 
 
-						{ "question" : " 'Poca actividad fisica. Provoca problemas de sobrepeso y obesidad'. A que se refiere esta definicion?" ,
+						{ "question" : " 'Poca actividad física. Provoca problemas de sobrepeso y obesidad'. A que se refiere esta definición?" ,
 
 							"content" :
 								[ "Ejercicio" ,
 									"Sedentarismo" ,
-									"Educacion Fisica" ,
+									"Educación Física" ,
 									"Estudiar" ] ,
 
 							"correct" : 1 } ] ]
@@ -265,13 +265,13 @@
 		
 		{ "reconocer" : [
 			
-					[	{ "question" : "Como se divide el Sistema Nervioso?" ,
+					[	{ "question" : "Cómo se divide el Sistema Nervioso?" ,
 
 							"content" : 
 								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
 									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
 
 							"correct" : 3 } ,
 
@@ -281,19 +281,19 @@
 							"content" : 
 								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
 									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
+									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso Óseo (SNO)" , 
+									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periférico (SNP)" ] ,
 
 							"correct" : 3 } ] ,
 
 
-					[	{ "question" : "Cuales son los componentes del Sistema Nervioso?" ,
+					[	{ "question" : "Cuáles son los componentes del Sistema Nervioso?" ,
 
 							"content" :
-								[ "Pulmones, corazon y estomago" ,
+								[ "Pulmones, corazón y estómago" ,
 									"Cerebro, medula espinal y nervios" ,
-									"Musculos, huesos y articulaciones" ,
-									"Ojos, nariz, boca y oidos" ] ,
+									"Músculos, huesos y articulaciones" ,
+									"Ojos, nariz, boca y oídos" ] ,
 
 							"correct" : 1 } ,
 
@@ -302,7 +302,7 @@
 
 							"content" :
 								[ "Pulmones, corazon y estomago" ,
-									"Cerebro, medula espinal y nervios" ,
+									"Cerebro, médula espinal y nervios" ,
 									"Musculos, huesos y articulaciones" ,
 									"Ojos, nariz, boca y oidos" ] ,
 
@@ -313,8 +313,8 @@
 
 							"content" :
 								[ "Pulmones, corazon y estomago" ,
-									"Cerebro, medula espinal y nervios" ,
-									"Musculos, huesos y articulaciones" ,
+									"Cerebro, médula espinal y nervios" ,
+									"Músculos, huesos y articulaciones" ,
 									"Ojos, nariz, boca y oidos" ] ,
 
 							"correct" : 1 }	]
@@ -326,33 +326,33 @@
 
 			"estimulos" : [
 
-					[	{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definicion corresponde a: " ,
+					[	{ "question" : " 'Son señales que indican que algo ha cambiado en el medio que nos rodea'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Nervios" ,
 									"Tendones" ,
-									"Estimulos" ,
+									"Estímulos" ,
 									"Sentidos" ] ,
 
 							"correct" : 2 } ],
 
 
-					[	{ "question" : "Recibimos los estimulos del exterior a traves de los: " ,
+					[	{ "question" : "Recibimos los estímulos del exterior a través de los: " ,
 
 							"content" :
-								[ "sentidos" ,
-									"musculos" ,
-									"nervios" ,
-									"huesos" ] ,
+								[ "Sentidos" ,
+									"Músculos" ,
+									"Nervios" ,
+									"Huesos" ] ,
 
 							"correct" : 0 } ,
 
 
-						{ "question" : "A traves de que recibimos los estimulos del exterior?" ,
+						{ "question" : "A través de qué recibimos los estímulos del exterior?" ,
 
 							"content" :
 								[ "Sentidos" ,
-									"Musculos" ,
+									"Músculos" ,
 									"Nervios" ,
 									"Huesos" ] ,
 
@@ -373,24 +373,24 @@
 		{ "reconocer" : [
 
 
-					[	{ "question" : "'Habito de consumo que es dificil de dejar'. Esta definicion corresponde a: " ,
+					[	{ "question" : "'Hábito de consumo que es difícil de dejar'. Esta definición corresponde a: " ,
 
 							"content" :
 								[ "Alcohol" ,
-									"Adiccion" ,
+									"Adicción" ,
 									"Estimulo" ,
-									"Atraccion" ] ,
+									"Atracción" ] ,
 
 							"correct" : 1 } , 
 
 
-						{ "question" : "'Habito de consumo que es dificil de dejar'. A que se refiere esta definicion?" ,
+						{ "question" : "'Hábito de consumo que es difícil de dejar'. A que se refiere esta definición?" ,
 
 							"content" :
 								[ "Alcohol" ,
-									"Adiccion" ,
-									"Estimulo" ,
-									"Atraccion" ] ,
+									"Adicción" ,
+									"Estímulo" ,
+									"Atracción" ] ,
 
 							"correct" : 1 } ] ] }
 
