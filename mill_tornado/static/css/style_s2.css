@@ -126,7 +126,7 @@ audio {
 
 #hint {
 	display: none;
-	font-size: 7em;
+	font-size: 6em;
 	font-weight: bold;
 	color: black;
 	width: 980px;
@@ -139,7 +139,7 @@ audio {
 
 #key {
 	display: none;
-	font-size: 7em;
+	font-size: 6em;
 	font-weight: bold;
 	color: black;
 	width: 980px;
@@ -152,7 +152,7 @@ audio {
 
 #score {
 	display: none;
-	font-size: 7em;
+	font-size: 6em;
 	font-weight: bold;
 	color: black;
 	width: 980px;
