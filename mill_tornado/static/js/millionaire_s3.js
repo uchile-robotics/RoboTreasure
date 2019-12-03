@@ -104,7 +104,7 @@ var MillionaireModel = function(data) {
             return;
         self.transitioning = true;
         if(index === 0){        
-            self.money(self.money() + 100);
+            self.money(self.money() + 5000);
             $("#game").fadeOut('slow', function() {
                 $("#score").html('Puntos: '+ self.money());
                 $("#score").fadeIn('slow');
@@ -112,7 +112,7 @@ var MillionaireModel = function(data) {
                 $("#hint").fadeIn('slow');
                 $("#key").html(' ');
             })    
-            ws.send("end");
+            ws.send("congrats3");
         }
         if(index === 1){
             $("#game").fadeOut('slow', function() {
@@ -125,7 +125,7 @@ var MillionaireModel = function(data) {
             ws.send("end");
         }
         if(index === 2){
-            ws.send("end");
+            ws.send("now3");
         }
     }
     

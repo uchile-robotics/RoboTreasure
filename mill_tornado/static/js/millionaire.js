@@ -171,7 +171,7 @@ var MillionaireModel = function(data) {
         $("#" + elm).slideUp('slow', function() {
             startSound('rightsound', false);
             $("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
-                self.money(self.money() + 10 - 2*self.tries + question_seconds);
+                self.money(self.money() + 1000 - 200*self.tries + question_seconds);
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
                             ws.send("end");

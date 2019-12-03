@@ -65,7 +65,7 @@ class ChangeURL(smach.State):
         qr_split = qr_split.split()
         print qr_split
         equipo = qr_split[1]
-        userdata.actualTeam = equipo
+        userdata.actualTeam = int(equipo)
         stage = qr_split[3]
         userdata.page = userdata.base_page+"stage"+stage+"/"+equipo
         print "#####################"
@@ -115,7 +115,7 @@ class Iterator(smach.State):
 class Questions(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded", "preempted"])
+        smach.State.__init__(self, outcomes=["succeeded", "preempted", "return3", "final3"])
         self.robot = robot
         self.tts = self.robot.get("tts")
 
@@ -128,6 +128,10 @@ class Questions(smach.State):
         if "end" in question2:
             time.sleep(20)
             return "preempted"
+        elif "now3" in question2:
+            return "return3"
+        elif "congrats3" in question2:
+            return "final3"
         self.tts.say_with_gestures(str(question2))
         return "succeeded"
 
@@ -157,8 +161,14 @@ class Stage3Check(smach.State):
         self.robot = robot
 
     def execute(self, userdata):
+        print userdata.actualTeam
+        print type(userdata.actualTeam)
+        print type(userdata.s3)
+        
+        a = str(userdata.s3[userdata.actualTeam-1])
+        print type(a)
         print "########################"
-        print "Team Iteration: "+str(userdata.s3[userdata.actualTeam-1])
+        print "Team Iteration: " + a
         print "########################"
         if userdata.s3[userdata.actualTeam-1] == 0:
             userdata.s3[userdata.actualTeam-1] += 1
@@ -216,7 +226,7 @@ def getInstance(robot):
             transitions={
                 'stage1':'SPEAK_1',
                 'stage2':'TUTORIAL_2',
-                'stage3':'SPEAK_3',
+                'stage3':'S3CHECK',
             }
         )
 
@@ -241,7 +251,9 @@ def getInstance(robot):
         smach.StateMachine.add('HEAR_QUESTIONS_1', Questions(robot),
             transitions={
                 'succeeded':'HEAR_QUESTIONS_1',
-                'preempted':'PRE_WAIT'
+                'preempted':'PRE_WAIT',
+                'return3':'PRE_WAIT',
+                'final3':'PRE_WAIT'
             }
         )
 
@@ -266,14 +278,16 @@ def getInstance(robot):
 
         smach.StateMachine.add('WEB_SHOW_2', ShowWebpage(robot),
             transitions={
-                'succeeded':'HEAR_QUESTIONS_1'
+                'succeeded':'HEAR_QUESTIONS_2'
             }
         )
 
         smach.StateMachine.add('HEAR_QUESTIONS_2', Questions(robot),
             transitions={
                 'succeeded':'HEAR_QUESTIONS_2',
-                'preempted':'PRE_WAIT'
+                'preempted':'PRE_WAIT',
+                'return3':'PRE_WAIT',
+                'final3':'PRE_WAIT'
             }
         )
 
@@ -311,11 +325,19 @@ def getInstance(robot):
         smach.StateMachine.add('HEAR_QUESTIONS_3', Questions(robot),
             transitions={
                 'succeeded':'HEAR_QUESTIONS_3',
-                'preempted':'SPEAK_3_LAST'
+                'preempted':'PRE_WAIT',
+                'return3':'SPEAK_RETURN',
+                'final3':'SPEAK_3_LAST'
             }
         )
 
         smach.StateMachine.add('SPEAK_3_LAST', Speak(robot, "Felicitaciones a su equipo, ahora deben esperar que todos los equipos terminen para poder saber al ganador"),
+            transitions={
+                'succeeded' : 'PRE_WAIT'
+            }
+        )
+
+        smach.StateMachine.add('SPEAK_RETURN', Speak(robot, "Suerte con la pregunta"),
             transitions={
                 'succeeded' : 'PRE_WAIT'
             }

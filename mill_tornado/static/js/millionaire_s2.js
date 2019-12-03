@@ -170,11 +170,11 @@ var MillionaireModel = function(data) {
     // the player to the next level (or winning the game if all
     // levels have been completed)
     self.rightAnswer = function(elm) {
-        ws.send("yay");
         $("#" + elm).slideUp('slow', function() {
+            ws.send("muy bien");
             startSound('rightsound', false);
             $("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
-                self.money(self.money() + 10 - 2*self.tries + question_seconds);
+                self.money(self.money() + 1000 - 20*self.tries + question_seconds);
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
                         ws.send("end")
