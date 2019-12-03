@@ -19,6 +19,7 @@ img{
 }
 
 .texto{
+    text-align: center;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 25px;
     color: black;
@@ -59,6 +60,10 @@ audio {
 
 #game {
 	display: none;
+	text-align: center;
+}
+
+#tutorial {
 	text-align: center;
 }
 
@@ -196,6 +201,7 @@ audio {
 }
 
 .respond{
+    text-align: center;
 	font-size: 1em;
 	color: white;
 	width: 250px;
