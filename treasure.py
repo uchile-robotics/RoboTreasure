@@ -79,6 +79,8 @@ class ChangeURL(smach.State):
             return "stage2"
         elif stage == "3":
             return "stage3"
+	elif stage == "0":
+	    return "stage0"
 
 class LoadURL(smach.State):
     """docstring for subs"""
