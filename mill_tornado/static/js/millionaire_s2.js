@@ -141,6 +141,7 @@ var MillionaireModel = function(data) {
             $("#container").css('background', '#FF262E').fadeIn('slow', function() {
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
+                        ws.send("end")
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
                         $("#hint").html('Pista: '+hints[stage - 1]);
@@ -175,6 +176,7 @@ var MillionaireModel = function(data) {
                 self.money(self.money() + 10 - 2*self.tries + question_seconds);
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
+                        ws.send("end")
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
                         $("#hint").html('Pista: '+hints[stage - 1]);
@@ -206,6 +208,7 @@ var MillionaireModel = function(data) {
                 if(self.level() + 1 > 3) {
                     if(self.tries >= 0){
                         $("#game").fadeOut('slow', function() {
+                            ws.send("end")
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
                         $("#hint").html('Pista: '+hints[stage - 1]);
