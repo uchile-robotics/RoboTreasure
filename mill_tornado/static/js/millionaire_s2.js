@@ -22,7 +22,7 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
           (fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
-var question_sec = 5;
+var question_sec = 15;
 var stage = 1;
 
 /**
@@ -124,7 +124,6 @@ var MillionaireModel = function(data) {
     // Attempts to answer the question with the specified
     // answer index (0-3) from a click event of elm
     self.answerQuestion = function(index, elm) {
-        document.getElementById("img").src = "static/img/esqueleto.png"; 
         if(self.transitioning)
             return;
         self.transitioning = true;
@@ -142,10 +141,13 @@ var MillionaireModel = function(data) {
             $("#container").css('background', '#FF262E').fadeIn('slow', function() {
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
+                        $("#score").html('Puntos: '+ self.money());
+                        $("#score").fadeIn('slow');
                         $("#hint").html('Pista: '+hints[stage - 1]);
                         $("#hint").fadeIn('slow');
                         $("#key").html('Clave: '+keys[stage - 1]);
                         $("#key").fadeIn('slow');
+                        
                     });
                 } else {
                     question_seconds = question_sec + 1
@@ -173,6 +175,8 @@ var MillionaireModel = function(data) {
                 self.money(self.money() + 10 - 2*self.tries + question_seconds);
                 if(self.level() + 1 > 3) {
                     $("#game").fadeOut('slow', function() {
+                        $("#score").html('Puntos: '+ self.money());
+                        $("#score").fadeIn('slow');
                         $("#hint").html('Pista: '+hints[stage - 1]);
                         $("#hint").fadeIn('slow');
                         $("#key").html('Clave: '+keys[stage - 1]);
@@ -202,10 +206,12 @@ var MillionaireModel = function(data) {
                 if(self.level() + 1 > 3) {
                     if(self.tries >= 0){
                         $("#game").fadeOut('slow', function() {
-                            $("#hint").html('Pista: '+hints[stage - 1]);
-                            $("#hint").fadeIn('slow');
-                            $("#key").html('Clave: '+keys[stage - 1]);
-                            $("#key").fadeIn('slow');
+                        $("#score").html('Puntos: '+ self.money());
+                        $("#score").fadeIn('slow');
+                        $("#hint").html('Pista: '+hints[stage - 1]);
+                        $("#hint").fadeIn('slow');
+                        $("#key").html('Clave: '+keys[stage - 1]);
+                        $("#key").fadeIn('slow');
                         });
                     }
                     else{
@@ -243,6 +249,8 @@ var MillionaireModel = function(data) {
         $("#answer-two").show();
         $("#answer-three").show();
         $("#answer-four").show();
+        document.getElementById("detected_answer").innerHTML = "";
+        $("input").change();
         self.tries = 0; 
     }
     // Gets the money formatted string of the current won amount of money.
@@ -266,8 +274,8 @@ $(document).ready(function() {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            var host = "198.18.0.1";
-            //var host = "localhost"; // For PC
+            //var host = "198.18.0.1";
+            var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 
@@ -303,9 +311,8 @@ $(document).ready(function() {
             interval = window.setInterval(stopWatch, 1000);
             // Connecting to ROS
             // -----------------
-            console.log("Trying to create topic");
             var ros = new ROSLIB.Ros({
-              url : 'ws://198.18.0.1:9090'
+              url : 'ws://localhost:9090'
             });
 
             ros.on('connection', function() {
@@ -402,15 +409,15 @@ $( "input" ).change(function() {
         }
         else if(document.getElementById("detected_answer").innerHTML === "b"){
             document.getElementById("img").src = "static/img/esqueleto_brazos.png"; 
-            mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-two");
+            mouseState = setTimeout(myModel.answerQuestion, 3000, 1, "answer-two");
         }
         else if(document.getElementById("detected_answer").innerHTML === "c"){
             document.getElementById("img").src = "static/img/esqueleto_piernas.png"; 
-            mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-three");
+            mouseState = setTimeout(myModel.answerQuestion, 3000, 2, "answer-three");
         }
         else if(document.getElementById("detected_answer").innerHTML === "d"){
             document.getElementById("img").src = "static/img/esqueleto_torso.png"; 
-            mouseState = setTimeout(myModel.answerQuestion, 3000, 0, "answer-four");
+            mouseState = setTimeout(myModel.answerQuestion, 3000, 3, "answer-four");
         }
         else{
             console.log(document.getElementById("detected_answer").innerHTML);

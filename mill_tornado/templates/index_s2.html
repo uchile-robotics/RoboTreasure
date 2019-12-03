@@ -26,6 +26,8 @@ Author: Aaron Nech
 			<button id="start">Start</button>
 		</div>
 		<!-- Shown when the player wins/loses -->
+		<div id="score">
+		</div>
 		<div id="hint">
 		</div>
         <div id="key">
@@ -79,10 +81,16 @@ Author: Aaron Nech
 				</button>
             </div>
             <div class="answer-box"> 
-				<p>Alternativa seleccionada:</p>
-				<h3 id="detected_answer">c</h3>
+            	<table>
+            		<tr>
+						<td>Alternativa seleccionada:</td>
+						<td></td>
+						<td id="detected_answer"></td>
+					</tr>
+				</table>
+				
 				<input type="hidden">
-                <img id="img" src="../static/img/esqueleto.png" height="400px" padding>
+                <img id="img" src="static/img/esqueleto.png" height="400px" padding>
             </div>
 		  </div> 
         
