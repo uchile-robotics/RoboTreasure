@@ -207,9 +207,12 @@ var MillionaireModel = function(data) {
                     }
                     else{
                         self.tries += 1;
-                    
-                    self.transitioning = false;
-                        
+						self.transitioning = false;
+						question_seconds = question_sec*100 + 100
+						prep_sec = prep_seconds*100
+						document.getElementById("display").innerHTML = "03:00";
+						window.clearInterval(interval);
+						interval = window.setInterval(stopWatch, 10);                        
                     }
                 
                 } else {
