@@ -187,7 +187,7 @@ $(document).ready(function() {
             $("#game").fadeIn('slow');
             //interval = window.setInterval(stopWatch, 1000);
             });
-    ws.send(document.getElementsByClassName("content"));       
+    ws.send(document.getElementsByClassName("content")[0]);       
     $.getJSON("static/keys_hints.json", function(keys_hints) {
         keys = keys_hints.keys; 
         hints = keys_hints.hints; 
