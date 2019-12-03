@@ -434,9 +434,9 @@ class WSHandler(tornado.websocket.WebSocketHandler):
     def on_message(self, message):
         message = message.encode('ascii', 'ignore').decode('ascii')
         print 'message received:  %s' % message
-        # pub = rospy.Publisher('/question', String, queue_size=10)
-        # rospy.init_node("hola")
-        # pub.publish(message)
+        pub = rospy.Publisher('/question', String, queue_size=10)
+        rospy.init_node("hola")
+        pub.publish(message)
         # Reverse Message and send it back
         # print 'sending back message: %s' % message[::-1]
         # self.write_message(message[::-1])
