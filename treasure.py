@@ -232,7 +232,7 @@ def getInstance(robot):
             }
         )
 
-        smach.StateMachine.add('SPEAK_2', Speak(robot, "Felicitaciones, estan en la etapa 2. En esta parte para seleccionar la respueta deben presionar el boton y luego escoger con la pose adecuada"),
+        smach.StateMachine.add('SPEAK_2', Speak(robot, "Felicitaciones, estan en la etapa 2. En esta parte para seleccionar la respuesta deben presionar el boton y luego escoger con la pose adecuada"),
             transitions={
                 'succeeded' : 'WEB_SHOW_2'
             }
