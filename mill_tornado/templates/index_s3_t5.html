@@ -55,14 +55,17 @@ Author: Aaron Nech
 			</div>
 			<div id="question-box">
 				<span class="big-text"></span>
-				<span class="content" data-bind="text: getQuestionText()"></span>
+				<span class="content">¿Pregunta Equipo 5?</span>
 			</div>
 			<div id="answer-box">
 				<div id="answer-one" class="answer" data-bind="click: function() { answerQuestion(0, $element.id) }">
-					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)"></span>
+					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)">Sí</span>
 				</div>
 				<div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(1, $element.id) }">
-					<span class="big-text">B.</span><span data-bind="text: getAnswerText(1)"></span>
+					<span class="big-text">B.</span><span>No</span>
+				</div>
+                <div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(2, $element.id) }">
+					<span class="big-text">C.</span><span>Responder después</span>
 				</div>
 			</div>
 		</div>
