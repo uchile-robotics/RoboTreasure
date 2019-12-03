@@ -397,15 +397,15 @@ class Stage3Handler(tornado.web.RequestHandler):
         print team_name_def
         print "################################################"
         if team_name_def == "yellow":
-            self.render("index_s3.html", team_name="Equipo Amarillo")
+            self.render("index_s3_t4.html", team_name="Equipo Amarillo")
         elif team_name_def == "red":
-            self.render("index_s3.html", team_name="Equipo Rojo")
+            self.render("index_s3_t2.html", team_name="Equipo Rojo")
         elif team_name_def == "blue":
-            self.render("index_s3.html", team_name="Equipo Azul")
+            self.render("index_s3_t1.html", team_name="Equipo Azul")
         elif team_name_def == "purple":
-            self.render("index_s3.html", team_name="Equipo Morado")
+            self.render("index_s3_t5.html", team_name="Equipo Morado")
         elif team_name_def == "green":
-            self.render("index_s3.html", team_name="Equipo Verde")
+            self.render("index_s3_t3.html", team_name="Equipo Verde")
 
 class WhiteHandler(tornado.web.RequestHandler):
     SUPPORTED_METHODS = ("CONNECT", "GET", "HEAD", "POST", "DELETE", "PATCH", "PUT", "OPTIONS")
