@@ -34,7 +34,7 @@ Author: Aaron Nech
 		</div>
 
 		<!-- The actual game markup -->
-		<div id="game">
+	<div id="game">
             <p id="state">Preparados</p>
             <div id="container">
                 <div id="display">03s</div>
@@ -79,20 +79,26 @@ Author: Aaron Nech
                 <button id="answer-four" class="answer">
 					<span class="big-text">D.</span><span data-bind="text: getAnswerText(3)"></span>
 				</button>
-            </div>
+
+            		</div>
+					
             <div class="answer-box"> 
             	<table>
             		<tr>
 						<td>Alternativa seleccionada:</td>
 						<td></td>
-						<td id="detected_answer">c</td>
+						<td id="detected_answer"></td>
 					</tr>
 				</table>
-				
 				<input type="hidden">
-                <img id="img" src="static/img/esqueleto2.png" height="300px" padding>
+
             </div>
-		  </div> 
+	    <div>
+		<button id="respond" class="respond">
+										<span class="big-text-respond">Responder</span>
+						</button>
+	    </div>
+	  </div> 
         
 
 		<!-- Script inclusion: JQuery for effects, Knockout for MVVM, millionaire.js for application -->
