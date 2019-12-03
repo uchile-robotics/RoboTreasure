@@ -57,7 +57,7 @@ class SingleSub(smach.State):
 class ChangeURL(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2"], io_keys=["qr", "page", "base_page", "qr_id"])
+        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3"], io_keys=["qr", "page", "base_page", "qr_id"])
         self.robot = robot
 
     def execute(self, userdata):
@@ -196,7 +196,7 @@ def getInstance(robot):
             transitions={
                 'stage1':'SPEAK_1',
                 'stage2':'TUTORIAL_2',
-                # 'stage3':'WEB_SHOW_3',
+                'stage3':'SPEAK_3',
             }
         )
 
@@ -263,7 +263,7 @@ def getInstance(robot):
 
 ################################################
 
-        smach.StateMachine.add('SPEAK_3', Speak(robot, "Wow, lo lograron, ahora solo queda responder una pregunta mas, la qual sera evaluada por su profesora"),
+        smach.StateMachine.add('SPEAK_3', Speak(robot, "UWU, lo lograron, ahora solo queda responder una pregunta mas, la qual sera evaluada por su profesora"),
             transitions={
                 'succeeded' : 'WEB_SHOW_3'
             }
@@ -272,6 +272,13 @@ def getInstance(robot):
         smach.StateMachine.add('WEB_SHOW_3', ShowWebpage(robot),
             transitions={
                 'succeeded':'HEAR_QUESTIONS_3'
+            }
+        )
+
+        smach.StateMachine.add('HEAR_QUESTIONS_3', Questions(robot),
+            transitions={
+                'succeeded':'HEAR_QUESTIONS_3',
+                'preempted':'PRE_WAIT'
             }
         )
 

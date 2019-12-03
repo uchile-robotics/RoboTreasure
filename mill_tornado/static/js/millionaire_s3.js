@@ -125,7 +125,7 @@ var MillionaireModel = function(data) {
 			ws.send("No");	
 		}
 		if(index === 2){
-			ws.send("Later");
+			ws.send("end");
 		}
     }
     
@@ -150,8 +150,8 @@ $(document).ready(function() {
         $("#pre-start").show();
         $("#start").click(function() {
 
-            // var host = "198.18.0.1";
-            var host = "localhost"; // For PC
+            var host = "198.18.0.1";
+            // var host = "localhost"; // For PC
             var port = "8888";
             var uri = "/ws";
 
