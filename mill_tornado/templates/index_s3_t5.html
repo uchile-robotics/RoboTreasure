@@ -26,6 +26,8 @@ Author: Aaron Nech
 			<button id="start">Start</button>
 		</div>
 		<!-- Shown when the player wins/loses -->
+        <div id="score">
+		</div>
 		<div id="hint">
 		</div>
         <div id="key">
@@ -59,7 +61,7 @@ Author: Aaron Nech
 			</div>
 			<div id="answer-box">
 				<div id="answer-one" class="answer" data-bind="click: function() { answerQuestion(0, $element.id) }">
-					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)">Sí</span>
+					<span class="big-text">A.</span><span>Sí</span>
 				</div>
 				<div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(1, $element.id) }">
 					<span class="big-text">B.</span><span>No</span>

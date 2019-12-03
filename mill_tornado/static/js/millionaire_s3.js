@@ -103,26 +103,26 @@ var MillionaireModel = function(data) {
         if(self.transitioning)
             return;
         self.transitioning = true;
-        if(index === 0){
+        if(index === 0){		
             self.money(self.money() + 100);
-			ws.send("Yes");
 			$("#game").fadeOut('slow', function() {
 				$("#score").html('Puntos: '+ self.money());
 				$("#score").fadeIn('slow');
-				$("#hint").html('Hola');
+				$("#hint").html('Gracias!');
 				$("#hint").fadeIn('slow');
 				$("#key").html(' ');
-        })      
+			})    
+			ws.send("Yes");			
         }
 		if(index === 1){
-			ws.send("No");	
 			$("#game").fadeOut('slow', function() {
 				$("#score").html('Puntos: '+ self.money());
 				$("#score").fadeIn('slow');
-				$("#hint").html('Chao');
+				$("#hint").html('Gracias!');
 				$("#hint").fadeIn('slow');
 				$("#key").html(' ');
-        })      			
+			})
+			ws.send("No");	
 		}
 		if(index === 2){
 			ws.send("Later");
