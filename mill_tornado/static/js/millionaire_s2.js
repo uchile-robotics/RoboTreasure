@@ -144,10 +144,6 @@ var MillionaireModel = function(data) {
                         ws.send("end")
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
                         
                     });
                 } else {
@@ -171,7 +167,6 @@ var MillionaireModel = function(data) {
     // levels have been completed)
     self.rightAnswer = function(elm) {
         $("#" + elm).slideUp('slow', function() {
-            ws.send("muy bien");
             startSound('rightsound', false);
             $("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
                 self.money(self.money() + 1000 - 20*self.tries + question_seconds);
@@ -180,10 +175,6 @@ var MillionaireModel = function(data) {
                         ws.send("end")
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
                     });
                 } else {
                     question_seconds = question_sec*100 + 100
@@ -212,10 +203,6 @@ var MillionaireModel = function(data) {
                             ws.send("end")
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
                         });
                     }
                     else{
@@ -447,6 +434,8 @@ $("#answer-two").click(function() {
 });
 
 $("#respond").click(function() {
-    server_ready.publish({data:"ready"});
-    ws.send("ready");
+    for(var i = 0; i< 5; i++){
+        server_ready.publish({data:"ready"});
+        ws.send("ready");
+    }
 });

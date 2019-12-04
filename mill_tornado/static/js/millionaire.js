@@ -142,10 +142,7 @@ var MillionaireModel = function(data) {
                         ws.send("end");
                         $("#score").html('Puntos: '+ self.money());
                         $("#score").fadeIn('slow');
-                        $("#hint").html('Pista: '+hints[stage - 1]);
-                        $("#hint").fadeIn('slow');
-                        $("#key").html('Clave: '+keys[stage - 1]);
-                        $("#key").fadeIn('slow');
+                        
                     });
                 } else {
                     question_seconds = question_sec*100 + 100
@@ -153,7 +150,6 @@ var MillionaireModel = function(data) {
                     document.getElementById("display").innerHTML = "03.00";
                     window.clearInterval(interval);
                     interval = window.setInterval(stopWatch, 10);
-                    
                     self.level(self.level() + 1);
                     $("#container").css('background', 'white');
                     self.resetAnswers();
@@ -167,7 +163,6 @@ var MillionaireModel = function(data) {
     // the player to the next level (or winning the game if all
     // levels have been completed)
     self.rightAnswer = function(elm) {
-        ws.send("yay");
         $("#" + elm).slideUp('slow', function() {
             startSound('rightsound', false);
             $("#" + elm).css('background', '#A0D94A').slideDown('slow', function() {
@@ -177,10 +172,6 @@ var MillionaireModel = function(data) {
                             ws.send("end");
                             $("#score").html('Puntos: '+ self.money());
                             $("#score").fadeIn('slow');
-                            $("#hint").html('Pista: '+hints[stage - 1]);
-                            $("#hint").fadeIn('slow');
-                            $("#key").html('Clave: '+keys[stage - 1]);
-                            $("#key").fadeIn('slow');
                     });
                 } else {
                     question_seconds = question_sec*100 + 100
@@ -209,10 +200,6 @@ var MillionaireModel = function(data) {
                             ws.send("end");
                             $("#score").html('Puntos: '+ self.money());
                             $("#score").fadeIn('slow');
-                            $("#hint").html('Pista: '+hints[stage - 1]);
-                            $("#hint").fadeIn('slow');
-                            $("#key").html('Clave: '+keys[stage - 1]);
-                            $("#key").fadeIn('slow');
                         });
                     }
                     else{

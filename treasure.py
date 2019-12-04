@@ -57,16 +57,19 @@ class SingleSub(smach.State):
 class ChangeURL(smach.State):
     """docstring for subs"""
     def __init__(self, robot):
-        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3"], io_keys=["qr", "page", "base_page", "qr_id", "actualTeam"])
+        smach.State.__init__(self, outcomes=["succeeded", "stage1", "stage2", "stage3", "stage0"], io_keys=["qr", "page", "base_page", "qr_id", "actualTeam"])
         self.robot = robot
 
     def execute(self, userdata):
-        qr_split = str(userdata.qr_id)
-        qr_split = qr_split.split()
-        print qr_split
-        equipo = qr_split[1]
-        userdata.actualTeam = int(equipo)
-        stage = qr_split[3]
+        # qr_split = str(userdata.qr_id)
+        # qr_split = qr_split.split()
+        # print qr_split
+        # equipo = qr_split[1]
+        # userdata.actualTeam = int(equipo)
+        # stage = qr_split[3]
+        qr = userdata.qr_id
+        equipo = qr[1]
+        stage = qr[4]
         userdata.page = userdata.base_page+"stage"+stage+"/"+equipo
         print "#####################"
         print "Equipo: "+equipo
@@ -227,6 +230,20 @@ def getInstance(robot):
                 'stage1':'SPEAK_1',
                 'stage2':'TUTORIAL_2',
                 'stage3':'S3CHECK',
+                'stage0':'WRONG'
+            }
+        )
+
+        smach.StateMachine.add('WRONG', ShowWebpage(robot, page = "http://198.18.0.1:8888/wrong"),
+            transitions={
+                'succeeded':'SPEAK_WRONG',
+                'preempted':'SPEAK_WRONG'
+            }
+        )
+
+        smach.StateMachine.add('SPEAK_WRONG', Speak(robot, "Haz encontrado el codigo equivocado, debes volver y encontrar el correcto"),
+            transitions={
+                'succeeded' : 'PRE_WAIT'
             }
         )
 
