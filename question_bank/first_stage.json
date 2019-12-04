@@ -268,10 +268,10 @@
 					[	{ "question" : "Como se divide el Sistema Nervioso?" ,
 
 							"content" : 
-								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
-									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
+								[ "Sistema Nervioso Interno y Sistema Nervioso Externo " ,
+									"Sistema Nervioso Bajo y Sistema Nervioso Alto" , 
+									"Sistema Nervioso Muscular y Sistema Nervioso oseo " , 
+									"Sistema Nervioso Central y Sistema Nervioso Periferico" ] ,
 
 							"correct" : 3 } ,
 
@@ -279,10 +279,10 @@
 						{ "question" : "El Sistema Nervioso se divide en:" ,
 
 							"content" : 
-								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
-									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
+								[ "Sistema Nervioso Interno y Sistema Nervioso Externo" ,
+									"Sistema Nervioso Bajo y Sistema Nervioso Alto" , 
+									"Sistema Nervioso Muscular y Sistema Nervioso oseo " , 
+									"Sistema Nervioso Central y Sistema Nervioso Periferico" ] ,
 
 							"correct" : 3 } ] ,
 
