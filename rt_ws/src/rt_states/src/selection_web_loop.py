@@ -19,8 +19,8 @@ class Setup(smach.State):
 
     def execute(self,userdata): # Userdata es informacion que se puede mover entre estados
         self.tts.set_language("Spanish")
-        self.tts.say("Inicio prueba de juego")
-        self.tts.wait_until_done()
+        #self.tts.say("Inicio prueba de juego")
+        #self.tts.wait_until_done()
         
 
         #return "preemted" 
@@ -35,10 +35,10 @@ class SaySelection(smach.State):
         #self.skill=self.robot.get("skill")
 
     def execute(self,userdata): # Userdata es informacion que se puede mover entre estados
-        self.tts.set_language("Spanish")
         text = "Alternativa seleccionada, " + userdata.answer 
         self.tts.say(text)
         self.tts.wait_until_done()
+        print("Ya lo dije")
         
 
         #return "preemted" 
@@ -71,27 +71,6 @@ def getInstance(robot):
     with sm:
         smach.StateMachine.add('SETUP',Setup(robot),
             transitions={
-                'succeeded':'INSTRUCTIONS_QR'
-            }
-        )
-        smach.StateMachine.add('INSTRUCTIONS_QR',Speak(robot,"Cuando se le indique levante medallon con q r "),
-            transitions={
-                'succeeded':'QR_EXAMPLE'
-            }
-        )
-        smach.StateMachine.add('QR_EXAMPLE',QRDetector(robot),
-            transitions={
-                'succeeded':'SAY_QR'
-            }
-        )
-        smach.StateMachine.add('SAY_QR',SayQR(robot),
-            transitions={
-                'succeeded':'INSTRUCTIONS_ANSWER'
-            },
-
-        )
-        smach.StateMachine.add('INSTRUCTIONS_ANSWER',Speak(robot,"Ahora se probara seleccion por brazo. Levante brazos para responder cuando se indique"),
-            transitions={
                 'succeeded':'SELECTION_EXAMPLE'
             }
         )
@@ -103,7 +82,7 @@ def getInstance(robot):
         )
         smach.StateMachine.add('SAY_ANSWER',SaySelection(robot),
             transitions={
-                'succeeded':'FINISH'
+                'succeeded':'SELECTION_EXAMPLE'
             },
 
         )
