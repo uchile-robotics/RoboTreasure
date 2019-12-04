@@ -26,11 +26,11 @@ Author: Aaron Nech
 			<button id="start">Start</button>
 		</div>
 		<!-- Shown when the player wins/loses -->
-        <div id="score">
+		<div id="score">
 		</div>
 		<div id="hint">
 		</div>
-        <div id="key">
+       		<div id="key">
 		</div>
 
 		<!-- The actual game markup -->
@@ -57,18 +57,14 @@ Author: Aaron Nech
 			</div>
 			<div id="question-box">
 				<span class="big-text"></span>
-				<span id="preg" class="content">Menciona 2 actividades que contribuyen al cuidado y fortalecimiento del sistema locomotor
-</span>
+				<span class="content" data-bind="text: getQuestionText()"></span>
 			</div>
 			<div id="answer-box">
 				<div id="answer-one" class="answer" data-bind="click: function() { answerQuestion(0, $element.id) }">
-					<span class="big-text">A.</span><span>Bien</span>
+					<span class="big-text">A.</span><span data-bind="text: getAnswerText(0)"></span>
 				</div>
 				<div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(1, $element.id) }">
-					<span class="big-text">B.</span><span>Mal</span>
-				</div>
-                <div id="answer-two" class="answer" data-bind="click: function() { answerQuestion(2, $element.id) }">
-					<span class="big-text">C.</span><span>Responder después</span>
+					<span class="big-text">B.</span><span data-bind="text: getAnswerText(1)"></span>
 				</div>
 			</div>
 		</div>

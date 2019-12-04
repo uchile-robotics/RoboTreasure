@@ -46,7 +46,7 @@
 							"correct" : 1 } ,
 
 
-				{ "question" : "Completa: 'La estructura que protege al corazon y los pulmones se llama, (  ) ' " ,
+				{ "question" : "Completa: 'La estructura que protege al corazon y los pulmones se llama, __________, ' " ,
 
 							"content" : 
 								[ "Craneo" ,
@@ -57,7 +57,7 @@
 							"correct" : 1 } ] ,
 
 
-			[	{ "question" : "Completa: 'El o la, (  ) protege al cerebro de daños externos y accidentes' " ,
+			[	{ "question" : "Completa: 'El o la, __________, protege al cerebro de daños externos y accidentes' " ,
 
 							"content" :
 								[ "Craneo" ,

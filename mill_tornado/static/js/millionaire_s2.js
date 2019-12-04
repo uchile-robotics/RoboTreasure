@@ -437,5 +437,4 @@ $("#respond").click(function() {
     for(var i = 0; i< 5; i++){
         server_ready.publish({data:"ready"});
         ws.send("ready");
-    }
-});
+    }}

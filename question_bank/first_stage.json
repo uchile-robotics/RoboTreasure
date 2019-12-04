@@ -14,7 +14,7 @@
 							"correct" : 1 } ,
 			
 			
-						{ "question" : "Completa: 'El cuerpo humano en etapa adulta esta formado aproximadamente por, (  )  huesos'. " ,
+						{ "question" : "Completa: 'El cuerpo humano en etapa adulta esta formado aproximadamente por, __________,   huesos'. " ,
 				
 							"content" : 
 									[ "206" ,
@@ -81,7 +81,7 @@
 					
 
 
-					[	{ "question" : "Completa: 'La, (  ) le da soporte al cuerpo humano' " ,
+					[	{ "question" : "Completa: 'La, __________,  le da soporte al cuerpo humano' " ,
 
 							"content" :
 								[ "Costilla" ,
@@ -161,7 +161,7 @@
 
 			"movimiento" : [
 										
-				[	{ "question" : "Completa: 'Los, (  ) unen a los huesos en cada articulacion' " ,
+				[	{ "question" : "Completa: 'Los, __________,  unen a los huesos en cada articulacion' " ,
 							
 							"content" : 
 								[ "Tendones" ,
@@ -183,7 +183,7 @@
 							"correct" : 2 } ],
 
 
-					[	{ "question" : "Completa: 'Los musculos se unen a los huesos gracias a los o las, (  ) '" ,
+					[	{ "question" : "Completa: 'Los musculos se unen a los huesos gracias a los o las, __________,  '" ,
 
 							"content" :
 								[ "Ligamentos" ,
@@ -220,7 +220,7 @@
 							"correct" : 0 } ,
 
 
-						{ "question" : "Completa: 'Las personas debieran realizar minimo, (  ) diarios de actividad fisica' " ,
+						{ "question" : "Completa: 'Las personas debieran realizar minimo, __________,  diarios de actividad fisica' " ,
 
 							"content" :
 								[ "60 minutos" ,
@@ -268,10 +268,10 @@
 					[	{ "question" : "Como se divide el Sistema Nervioso?" ,
 
 							"content" : 
-								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
-									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
+								[ "Sistema Nervioso Interno y Sistema Nervioso Externo " ,
+									"Sistema Nervioso Bajo y Sistema Nervioso Alto" , 
+									"Sistema Nervioso Muscular y Sistema Nervioso oseo " , 
+									"Sistema Nervioso Central y Sistema Nervioso Periferico" ] ,
 
 							"correct" : 3 } ,
 
@@ -279,10 +279,10 @@
 						{ "question" : "El Sistema Nervioso se divide en:" ,
 
 							"content" : 
-								[ "Sistema Nervioso Interno (SNI) y Sistema Nervioso Externo (SNE)" ,
-									"Sistema Nervioso Bajo (SNB) y Sistema Nervioso Alto (SNA)" , 
-									"Sistema Nervioso Muscular (SNM) y Sistema Nervioso oseo (SNO)" , 
-									"Sistema Nervioso Central (SNC) y Sistema Nervioso Periferico (SNP)" ] ,
+								[ "Sistema Nervioso Interno y Sistema Nervioso Externo" ,
+									"Sistema Nervioso Bajo y Sistema Nervioso Alto" , 
+									"Sistema Nervioso Muscular y Sistema Nervioso oseo " , 
+									"Sistema Nervioso Central y Sistema Nervioso Periferico" ] ,
 
 							"correct" : 3 } ] ,
 
@@ -309,7 +309,7 @@
 							"correct" : 1 } ,
 
 
-						{ "question" : "Completa: ', (  ) componen el Sistema Nervioso' " ,
+						{ "question" : "Completa: ', __________,  componen el Sistema Nervioso' " ,
 
 							"content" :
 								[ "Pulmones, corazon y estomago" ,
