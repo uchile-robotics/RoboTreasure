@@ -22,7 +22,7 @@ Number.prototype.money = function(fixed, decimalDelim, breakDelim){
           (fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
-var question_sec = 15;
+var question_sec = 30;
 var stage = 1;
 
 /**
@@ -411,16 +411,16 @@ $( "input" ).change(function() {
     if(typeof myModel !== 'undefined'){
         console.log("Answer changed");
         if(document.getElementById("detected_answer").innerHTML === "a"){
-            mouseState = setTimeout(myModel.answerQuestion, 2000, 0, "answer-one");
+            mouseState = setTimeout(myModel.answerQuestion, 500, 0, "answer-one");
         }
         else if(document.getElementById("detected_answer").innerHTML === "b"){
-            mouseState = setTimeout(myModel.answerQuestion, 2000, 1, "answer-two");
+            mouseState = setTimeout(myModel.answerQuestion, 500, 1, "answer-two");
         }
         else if(document.getElementById("detected_answer").innerHTML === "c"){
-            mouseState = setTimeout(myModel.answerQuestion, 2000, 2, "answer-three");
+            mouseState = setTimeout(myModel.answerQuestion, 500, 2, "answer-three");
         }
         else if(document.getElementById("detected_answer").innerHTML === "d"){
-            mouseState = setTimeout(myModel.answerQuestion, 2000, 3, "answer-four");
+            mouseState = setTimeout(myModel.answerQuestion, 500, 3, "answer-four");
         }
         else{
             console.log(document.getElementById("detected_answer").innerHTML);
